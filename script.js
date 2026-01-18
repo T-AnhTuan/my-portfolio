@@ -1,39 +1,20 @@
-﻿// Thay đổi background của Navbar khi cuộn chuột
-window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
-        navbar.style.padding = "15px 0";
-    } else {
-        navbar.style.boxShadow = "none";
-        navbar.style.padding = "20px 0";
-    }
-});
+﻿const filterButtons = document.querySelectorAll('.filter-btn');
+const projectItems = document.querySelectorAll('.project-item');
 
-// Hiệu ứng hiện dần khi cuộn trang (Simple Reveal)
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 150;
-        if (top >= offset) {
-            sec.classList.add('show-animate');
-        }
-    });
-});
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Xóa class active ở nút cũ, thêm vào nút mới
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        const filterValue = button.getAttribute('data-filter');
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70, // Trừ đi chiều cao của thanh Menu để không bị đè chữ
-                behavior: 'smooth'
-            });
-        }
+        projectItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
     });
 });
