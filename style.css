@@ -1,142 +1,37 @@
-﻿/* 1. Thiết lập chung */
-body {
-    background-color: #1a1a1a;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* 2. Menu nằm ngang */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #111;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 24px;
-}
-
-    .logo span {
-        background: #00c3a5;
-        padding: 0 8px;
-        margin-right: 5px;
-    }
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-    nav ul li {
-        margin-left: 20px;
-    }
-
-        nav ul li a {
-            color: #888;
-            text-decoration: none; /* Bỏ gạch chân */
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-            nav ul li a:hover {
-                color: #00c3a5;
-            }
-
-/* 3. Khung nội dung */
-.info-card {
-    background: #2d2d2d;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 5px;
-}
-
-.badge {
-    background: #00c3a5;
-    padding: 5px 15px;
-    font-weight: bold;
-}
-
-.subtitle {
-    color: #888;
-    margin-top: 20px;
-    letter-spacing: 2px;
-}
-
-h1 {
-    font-size: 48px;
-    margin: 10px 0 30px 0;
-}
-
-.content-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.details {
-    list-style: none;
-    padding: 0;
-    flex: 1;
-}
-
-    .details li {
-        padding: 10px 0;
-        border-bottom: 1px dashed #444;
-        font-size: 14px;
-    }
-
-    .details strong {
-        width: 100px;
-        display: inline-block;
-        color: #888;
-    }
-
-.profile-pic img {
-    max-width: 300px;
-    border: 10px solid #333;
-    margin-left: 30px;
-}
-/* Thiết lập font tiếng Việt */
+﻿/* RESET CHUNG */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
-    line-height: 1.6;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Thanh điều hướng nằm ngang */
+/* NAVBAR CHUẨN */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: #1a1a1a;
+    padding: 20px 10%;
+    background: #1a1a1a;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
     .logo span {
-        background-color: #00c3a5;
-        padding: 2px 10px;
+        background: #00c3a5;
+        padding: 2px 8px;
         margin-right: 5px;
     }
 
@@ -146,14 +41,14 @@ body {
 }
 
     .nav-links li {
-        margin-left: 25px;
+        margin-left: 20px;
     }
 
     .nav-links a {
-        color: #aaaaaa;
-        text-decoration: none; /* Bỏ gạch chân */
+        color: #888;
+        text-decoration: none;
+        font-size: 13px;
         font-weight: 600;
-        font-size: 14px;
         transition: 0.3s;
     }
 
@@ -161,18 +56,26 @@ body {
             color: #00c3a5;
         }
 
-/* Bố cục nội dung */
-.container {
-    padding: 60px 8%;
+/* BỐ CỤC HERO */
+#hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
 }
 
-.info-box {
-    background-color: #1e1e1e;
-    padding: 40px;
-    border-radius: 8px;
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
 }
 
-.greeting {
+.hero-text {
+    flex: 1.5;
+}
+
+.badge {
     background: #00c3a5;
     padding: 5px 15px;
     font-weight: bold;
@@ -181,56 +84,69 @@ body {
 
 .role {
     color: #888;
-    margin-top: 15px;
+    margin-top: 20px;
     letter-spacing: 3px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
-h1 {
-    font-size: 42px;
-    margin: 15px 0 30px 0;
-    color: #fff;
-}
-
-.profile-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.personal-details {
-    list-style: none;
-    flex: 1;
-}
-
-    .personal-details li {
-        padding: 12px 0;
-        border-bottom: 1px dashed #333;
-        font-size: 15px;
-    }
-
-    .personal-details strong {
-        width: 120px;
-        display: inline-block;
-        color: #00c3a5;
-    }
-
-.image-area img {
-    max-width: 350px;
-    border: 12px solid #252525;
+/* THẺ THÔNG TIN */
+.info-card {
+    background: #222;
+    padding: 40px;
+    margin-top: 20px;
     border-radius: 4px;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
 }
 
-/* Tương thích điện thoại */
-@media (max-width: 768px) {
-    .profile-wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
+    .info-card h1 {
+        font-size: 45px;
+        margin-bottom: 25px;
     }
 
-    .nav-links {
-        display: none;
+.details {
+    list-style: none;
+}
+
+    .details li {
+        padding: 12px 0;
+        border-bottom: 1px dashed #444;
+        font-size: 14px;
     }
-    /* Ẩn menu trên mobile để đơn giản */
+
+    .details strong {
+        width: 110px;
+        display: inline-block;
+        color: #888;
+    }
+
+/* FIX LỖI ẢNH XANH KHỔNG LỒ */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px; /* Cố định độ rộng để không bị tràn màn hình */
+        height: auto;
+        border: 12px solid #222;
+        box-shadow: 15px 15px 0px #00c3a5; /* Đổ bóng màu xanh đặc trưng PREFACE */
+    }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+        margin-top: 30px;
+    }
+
+    .details li {
+        text-align: left;
+    }
 }
