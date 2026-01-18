@@ -483,3 +483,97 @@ h1 {
         transform: translateX(-50%);
     }
 }
+/* --- THIẾT KẾ PHẦN GIÁO DỤC --- */
+#edu {
+    padding: 80px 10%;
+}
+
+.edu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.edu-card {
+    background: var(--card-bg); /* Màu xanh đen sâu */
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    gap: 25px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: 0.3s ease;
+}
+
+    .edu-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color); /* Viền xanh ngọc khi hover */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+.edu-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    display: flex;
+    align-items: flex-start;
+}
+
+.edu-info {
+    flex: 1;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .edu-header h3 {
+        font-size: 1.4rem;
+        color: var(--text-main);
+    }
+
+.edu-date {
+    font-family: 'Space Mono', monospace;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.edu-major {
+    color: var(--text-main);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.edu-details {
+    list-style: none;
+}
+
+    .edu-details li {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+        .edu-details li::before {
+            content: "▹"; /* Dấu mũi tên nhỏ đặc trưng của Ashutosh style */
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .edu-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
