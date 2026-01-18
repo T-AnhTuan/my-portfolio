@@ -442,7 +442,7 @@ h1 {
 }
 .user-info img {
     width: 60px !important;
-    height: 50px !important;
+    height: 60px !important;
     border-radius: 50% !important;
     object-fit: cover;
     border: 2px solid var(--accent-color);
@@ -461,7 +461,7 @@ h1 {
 
     .partner-logos img {
         /* Khống chế chiều cao thấp xuống vì logo ngang thường dài hơn */
-        height: 50px !important;
+        height: 70px !important;
         width: auto !important;
         object-fit: contain;
         /* Hiệu ứng mờ nhẹ, sáng lên khi di chuột */
