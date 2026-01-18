@@ -110,6 +110,15 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+#hero {
+    padding-top: 20px !important; /* Giảm padding phía trên (trước đó có thể là 50px hoặc 80px) */
+    min-height: 70vh !important; /* Giảm nhẹ chiều cao tối thiểu để đẩy mọi thứ lên */
+}
+
+/* 3. Tinh chỉnh khoảng cách khối container nếu cần */
+.hero-container {
+    margin-top: -30px !important; /* Sử dụng lề âm để kéo toàn bộ khối nội dung lên sát menu hơn */
+}
 
 .profile-main {
     width: 100%;
