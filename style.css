@@ -314,10 +314,11 @@ h1 {
     }
 .exp-header {
     display: grid !important;
-    grid-template-columns: 1fr 180px;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 20px; /* Khoảng cách tối thiểu giữa tên và ngày */
+    /* Cột 1 (Tên): Tự động giãn | Cột 2 (Ngày): Cố định 160px */
+    grid-template-columns: 1fr 160px;
+    align-items: baseline; /* Căn theo chân chữ để trông tự nhiên nhất */
+    gap: 20px;
+    width: 100%;
 }
     .exp-header h3 {
         font-size: 1.4rem;
@@ -327,8 +328,11 @@ h1 {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
     font-size: 0.9rem;
-    text-align: right; /* Căn thời gian về phía bên phải của cột cố định */
-    white-space: nowrap; /* Ngăn chặn việc ngày tháng bị xuống dòng */
+    /* 🔥 CÁC DÒNG QUAN TRỌNG ĐỂ THẲNG HÀNG */
+    text-align: right; /* Căn chữ về lề phải */
+    min-width: 160px; /* Đảm bảo mọi ô chứa ngày đều rộng bằng nhau */
+    white-space: nowrap; /* Không cho phép xuống dòng */
+    display: inline-block;
 }
 .company {
     color: var(--accent-color);
@@ -497,12 +501,12 @@ h1 {
     }
     .exp-header {
         grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
-        flex-direction: column;
-        align-items: flex-start;
         gap: 5px;
     }
+
     .exp-date {
-        text-align: left; /* Căn trái ngày tháng trên mobile cho dễ đọc */
+        text-align: left; /* Căn trái trên mobile cho dễ nhìn */
+        min-width: auto;
     }
     .partner-logos {
         gap: 30px; /* Thu hẹp khoảng cách trên mobile */
