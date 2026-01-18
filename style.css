@@ -126,25 +126,15 @@ h1 {
             color: var(--accent-color);
             transform: translateY(-3px);
         }
-
-            .social-bar a:hover .fa-github {
-                color: #fff;
+            .social-bar a:hover .fa-github {color: #fff;
             }
-
-            .social-bar a:hover .fa-linkedin {
-                color: #0077b5;
+            .social-bar a:hover .fa-linkedin {color: #0077b5;
             }
-
-            .social-bar a:hover .fa-facebook {
-                color: #1877f2;
+            .social-bar a:hover .fa-facebook {color: #1877f2;
             }
-
-            .social-bar a:hover .fa-instagram {
-                color: #e4405f;
+            .social-bar a:hover .fa-instagram {color: #e4405f;
             }
-
-            .social-bar a:hover .fa-tiktok {
-                color: #ff0050;
+            .social-bar a:hover .fa-tiktok {color: #ff0050;
             }
 
 .btn-primary {
@@ -321,7 +311,9 @@ h1 {
     padding: 30px;
     border-radius: 12px;
     border-left: 4px solid var(--accent-color); /* Vạch xanh ngọc đặc trưng */
-    transition: all 0.3s ease;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
 }
 
     .exp-card:hover {
@@ -347,6 +339,7 @@ h1 {
     color: var(--accent-color);
     font-size: 0.9rem;
     white-space: nowrap;
+    min-width: 150px;
 }
 
 .company {
@@ -367,17 +360,24 @@ h1 {
     width: 100%;
     display: flex;
     padding: 20px 0;
+    position: relative; /* Đảm bảo mặt nạ định vị đúng */
+    /* 🔥 CODE TẠO HIỆU ỨNG SÁNG DẦN/MỜ DẦN 🔥 */
+    /* Sử dụng gradient làm mặt nạ: transparent = mờ, black = rõ */
+    /* Dành cho trình duyệt Chrome, Safari, Edge mới */
+    -webkit-mask-image: linear-gradient( to right, /* Hướng từ trái sang phải */
+    transparent 0%, /* Mép trái ngoài cùng: Hoàn toàn trong suốt (mờ) */
+    black 15%, /* Cách mép trái 15%: Bắt đầu rõ hoàn toàn */
+    black 85%, /* Cách mép phải 15%: Vẫn rõ hoàn toàn */
+    transparent 100% /* Mép phải ngoài cùng: Hoàn toàn trong suốt (mờ) */
+    );
+    /* Dành cho chuẩn Firefox và các trình duyệt tương lai */
+    mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% );
+    /* Giúp hiệu ứng mượt mà hơn trên một số trình duyệt */
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
-
-.marquee-content {
-    display: flex;
-    width: max-content;
-    animation: infinite-scroll 25s linear infinite;
-}
-
-    .marquee-content:hover {
-        animation-play-state: paused;
-    }
 
 @keyframes infinite-scroll {
     from {
