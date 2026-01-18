@@ -468,6 +468,107 @@ h1 {
     border-top: 1px solid #233554;
     color: var(--text-dim);
 }
+/* --- THIẾT KẾ DỰ ÁN MỚI --- */
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột như mẫu */
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 35px;
+    position: relative; /* Cần thiết để chứa bóng sáng chạy nền */
+    overflow: hidden; /* Cắt phần bóng sáng thừa ra ngoài */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--accent-color);
+    }
+
+/* --- HIỆU ỨNG BÓNG SÁNG CHẠY NỀN --- */
+.bg-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Tạo vệt sáng mờ ảo */
+    background: radial-gradient( circle at var(--x, 50%) var(--y, 50%), rgba(100, 255, 218, 0.15) 0%, transparent 50% );
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none; /* Không cản trở việc click vào thẻ */
+}
+
+.project-card:hover .bg-glow {
+    opacity: 1;
+    /* Hiệu ứng bóng sáng di chuyển nhẹ nhàng */
+    animation: glow-move 4s infinite linear;
+}
+
+@keyframes glow-move {
+    0% {
+        transform: translate(-20%, -20%);
+    }
+
+    50% {
+        transform: translate(20%, 20%);
+    }
+
+    100% {
+        transform: translate(-20%, -20%);
+    }
+}
+
+/* --- BỐ CỤC NỘI DUNG BÊN TRONG --- */
+.project-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    position: relative;
+    z-index: 2; /* Nổi lên trên lớp bóng sáng */
+}
+
+.project-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Dòng kỹ năng ở cuối cùng */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .tags span {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.8rem;
+        color: var(--accent-color);
+        background: rgba(100, 255, 218, 0.1);
+        padding: 5px 12px;
+        border-radius: 15px;
+    }
+
 
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
@@ -490,7 +591,6 @@ h1 {
     }
     .section-heading::after {width: 100px;
     }
-
     .social-bar {justify-content: center;
     }
     h1 {
@@ -503,17 +603,26 @@ h1 {
         grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
         gap: 5px;
     }
-
     .exp-date {
         text-align: left; /* Căn trái trên mobile cho dễ nhìn */
         min-width: auto;
+    }
+    .edu-date {
+        text-align: left;
     }
     .partner-logos {
         gap: 30px; /* Thu hẹp khoảng cách trên mobile */
         margin-top: 50px;
     }
-
         .partner-logos img {
             height: 45px; /* Logo nhỏ lại một chút trên mobile cho vừa vặn */
         }
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
