@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trần Anh Tuấn | MIS-er</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">T-<span>ANH TUAN</span></div>
+        <div class="logo">MIS<span>CORE</span></div>
         <ul class="nav-links">
             <li><a href="#hero">DASHBOARD</a></li>
             <li><a href="#about">PROFILE</a></li>
+            <li><a href="#analytics">INSIGHTS</a></li>
             <li><a href="#work">PROJECTS</a></li>
-            <li><a href="#">SYSTEMS</a></li>
-            <li><a href="#">CONTACT</a></li>
         </ul>
     </nav>
+
     <section id="hero" class="dark-section">
         <div class="container">
             <div class="hero-content">
@@ -28,44 +28,44 @@
                     <h1>DATA STRATEGIST</h1>
                     <span class="badge">BRIDGING BUSINESS & TECH</span>
                 </div>
-
                 <div class="hero-main-img">
-                    <img src="pictures/avatar.jpg" alt="Profile Large" class="profile-main">
+                    <img src="pictures/background.jpg" alt="Profile Large" class="profile-main">
                     <div class="img-decorator"></div>
                 </div>
             </div>
 
             <div id="about" class="about-card">
                 <div class="about-img">
-                    <img src="pictures/avatar.jpg" alt="Profile Small" class="profile-thumb">
+                    <img src="pictures/background.jpg" alt="Profile Small" class="profile-thumb">
                 </div>
                 <div class="about-text">
-                    <p class="sub-title">System Analysis</p>
-                    <h2>HELLO, I'M ANH TUẤN</h2>
-                    <p>Sinh viên chuyên ngành MIS với đam mê tối ưu hóa quy trình doanh nghiệp và khai phá giá trị từ dữ liệu.</p>
+                    <p class="sub-title">Who am i</p>
+                    <h2>SYSTEM ANALYST</h2>
+                    <p>Chuyên gia tối ưu hóa quy trình doanh nghiệp và khai phá giá trị từ dữ liệu. Tôi xây dựng cầu nối giữa mục tiêu kinh doanh và giải pháp công nghệ.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="analytics-section">
+    <section id="analytics" class="analytics-section">
         <div class="container">
             <div class="analytics-grid">
                 <div class="chart-container">
-                    <h3>System Skill Proficiency</h3>
+                    <h3>Core Technical Skills</h3>
                     <canvas id="skillsChart"></canvas>
                 </div>
                 <div class="chart-container">
-                    <h3>Project Impact Analysis</h3>
+                    <h3>Project Performance Radar</h3>
                     <canvas id="impactChart"></canvas>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="work" class="light-section">
         <div class="container">
             <div class="work-header">
-                <h1>PORTFOLIO<span>.</span></h1>
+                <h1>MY WORK<span>.</span></h1>
                 <p>Strategic Systems & Data Solutions</p>
             </div>
 
@@ -74,21 +74,19 @@
                 <button class="filter-btn" data-filter="data">DATA ANALYTICS</button>
                 <button class="filter-btn" data-filter="erp">ERP SYSTEM</button>
                 <button class="filter-btn" data-filter="db">DATABASE</button>
-                <button class="filter-btn" data-filter="business">BUSINESS PROCESS</button>
             </div>
 
             <div class="projects-grid">
-                <div class="project-item data"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=Data+Analytics" alt="Work 1"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=ERP+Design" alt="Work 2"></div>
-                <div class="project-item db"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=SQL+Database" alt="Work 3"></div>
-                <div class="project-item business"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=BPMN+Chart" alt="Work 4"></div>
-                <div class="project-item data"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=Power+BI" alt="Work 5"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400x400/0a192f/64ffda?text=System+Audit" alt="Work 6"></div>
+                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 1"></div>
+                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 2"></div>
+                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 3"></div>
+                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 4"></div>
+                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 5"></div>
+                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 6"></div>
             </div>
-
-            <button class="load-more">VIEW ALL PROJECTS</button>
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
