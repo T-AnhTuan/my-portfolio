@@ -26,17 +26,35 @@ body {
 
 /* --- 2. ĐIỀU HƯỚNG (NAVBAR) --- */
 .navbar {
+    position: fixed;
+    top: 20px; /* Đặt cách mép trên một chút cho giống mẫu */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa thanh menu */
+    width: 90%;
+    max-width: 1000px;
+    /* 1. Màu nền trong suốt (RGBA) */
+    background: rgba(17, 34, 64, 0.7) !important;
+    /* 2. Hiệu ứng làm mờ lớp nền phía dưới */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px); /* Hỗ trợ trình duyệt Safari */
+    /* 3. Viền mờ để tạo khối */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 50px; /* Bo tròn dài như hình mẫu */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(11, 25, 46, 0.85);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 30px;
+    z-index: 2000;
+    transition: all 0.3s ease;
 }
+
+    /* Hiệu ứng khi di chuột vào toàn thanh menu */
+    .navbar:hover {
+        background: rgba(17, 34, 64, 0.85) !important;
+        border-color: var(--accent-color);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 
 .logo {
     font-family: 'Space Mono', monospace;
