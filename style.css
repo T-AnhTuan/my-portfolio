@@ -249,3 +249,77 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* --- THIẾT LẬP CHO ĐIỆN THOẠI --- */
+@media (max-width: 768px) {
+    /* 1. Thu nhỏ Padding của toàn bộ trang để có thêm không gian */
+    body, section, .navbar, .container {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    /* 2. Chỉnh Menu: Chuyển thành dạng cột hoặc ẩn bớt */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        .nav-links li {
+            margin: 0 5px;
+        }
+
+    /* 3. Chỉnh phần nội dung chính (Hero): Xếp chồng theo chiều dọc */
+    .hero-container {
+        flex-direction: column !important; /* Đưa ảnh xuống dưới chữ hoặc ngược lại */
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* 4. Thu nhỏ cỡ chữ tiêu đề khổng lồ */
+    h1 {
+        font-size: 2.2rem !important; /* Giảm cỡ chữ DATA STRATEGIST */
+        line-height: 1.2;
+    }
+
+    .info-card h1 {
+        font-size: 1.8rem !important;
+    }
+
+    /* 5. Sửa lỗi Ảnh đè lên nhau */
+    .hero-image {
+        width: 100%;
+        order: -1; /* Đưa ảnh lên trên cùng nếu muốn, hoặc xóa dòng này để để dưới */
+    }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 10px 10px 0px #00c3a5; /* Thu nhỏ bóng đổ cho cân đối */
+        }
+
+    /* 6. Chỉnh lại các khung thông tin (Cards) */
+    .info-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details li {
+        text-align: left;
+        font-size: 13px;
+    }
+
+    .details strong {
+        width: 90px;
+    }
+}
