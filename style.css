@@ -719,3 +719,72 @@ h1 {
     padding: 10px;
     box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
 }
+/* --- TỐI ƯU BỐ CỤC HERO & SỬA LỖI ẢNH TO --- */
+.hero-section {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    min-height: 90vh; /* Chiều cao tối thiểu */
+    padding: 80px 8%;
+    gap: 50px; /* Khoảng cách hợp lý giữa chữ và ảnh */
+}
+
+.hero-text {
+    flex: 1.5; /* Phần chữ chiếm 1.5 phần không gian (rộng hơn ảnh) */
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* --- KHỐI CHỨA ẢNH & ẢNH --- */
+.hero-img-container {
+    flex: 1; /* Phần ảnh chiếm 1 phần không gian */
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh trong khu vực của nó */
+    align-items: center;
+}
+
+.profile-img {
+    /* 🔥 DÒNG QUAN TRỌNG NHẤT: Đặt kích thước cố định vừa phải */
+    width: 320px !important;
+    height: 320px !important; /* Đặt chiều cao bằng chiều rộng để đảm bảo tròn vo */
+
+    object-fit: cover; /* Đảm bảo ảnh không bị méo nếu ảnh gốc không phải hình vuông */
+    border-radius: 50%; /* Bo tròn */
+    /* Hiệu ứng viền và bóng */
+    border: 4px solid var(--accent-color);
+    padding: 8px; /* Khoảng cách giữa ảnh và viền */
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.2); /* Bóng mờ màu xanh */
+    transition: transform 0.3s ease;
+}
+
+    /* Hiệu ứng khi di chuột vào ảnh */
+    .profile-img:hover {
+        transform: scale(1.05); /* Phóng to nhẹ */
+        box-shadow: 0 0 45px rgba(100, 255, 218, 0.4);
+    }
+
+/* --- MOBILE RESPONSIVE (Cho điện thoại) --- */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column-reverse; /* Ảnh lên trên, chữ xuống dưới */
+        text-align: center;
+        gap: 30px;
+        padding-top: 120px;
+    }
+
+    .hero-text {
+        align-items: center; /* Căn giữa chữ trên mobile */
+    }
+
+    .social-bar {
+        justify-content: center;
+    }
+
+    .profile-img {
+        /* Trên điện thoại thì cho nhỏ hơn một chút */
+        width: 220px !important;
+        height: 220px !important;
+    }
+}
