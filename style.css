@@ -350,3 +350,19 @@ body {
         text-align: left;
     }
 }
+body {
+    /* Chèn ảnh nền */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg');
+    /* Làm cho ảnh phủ kín toàn bộ màn hình */
+    background-size: cover;
+    /* Giữ ảnh cố định khi cuộn trang (hiệu ứng Parallax) */
+    background-attachment: fixed;
+    /* Căn giữa ảnh */
+    background-position: center;
+    /* Không lặp lại ảnh */
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
