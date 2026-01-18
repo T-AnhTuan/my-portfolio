@@ -1,43 +1,104 @@
-﻿/* 1. Định dạng toàn bộ trang */
+﻿/* 1. Thiết lập chung */
 body {
-    background-color: #1a1a1a; /* Nền màu tối */
-    color: white; /* Chữ màu trắng */
+    background-color: #1a1a1a;
+    color: white;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* 2. Khung chứa thông tin (giống mẫu Preface) */
+/* 2. Menu nằm ngang */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #111;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+    .logo span {
+        background: #00c3a5;
+        padding: 0 8px;
+        margin-right: 5px;
+    }
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+        nav ul li a {
+            color: #888;
+            text-decoration: none; /* Bỏ gạch chân */
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+            nav ul li a:hover {
+                color: #00c3a5;
+            }
+
+/* 3. Khung nội dung */
 .info-card {
     background: #2d2d2d;
-    padding: 40px;
+    max-width: 900px;
     margin: 50px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 5px;
 }
 
-/* 3. Chỉnh lại kích thước ảnh (để không bị to quá) */
-img {
-    max-width: 400px; /* Chỉnh lại độ rộng ảnh phù hợp */
-    height: auto;
-    border: 10px solid #333;
-    display: block;
-    margin: 20px 0;
+.badge {
+    background: #00c3a5;
+    padding: 5px 15px;
+    font-weight: bold;
 }
 
-/* 4. Định dạng chữ */
+.subtitle {
+    color: #888;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
 h1 {
-    font-size: 40px;
-    color: #00c3a5;
+    font-size: 48px;
+    margin: 10px 0 30px 0;
 }
 
-ul {
+.content-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details {
     list-style: none;
     padding: 0;
+    flex: 1;
 }
 
-li {
-    margin-bottom: 10px;
-    border-bottom: 1px dashed #444;
+    .details li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #444;
+        font-size: 14px;
+    }
+
+    .details strong {
+        width: 100px;
+        display: inline-block;
+        color: #888;
+    }
+
+.profile-pic img {
+    max-width: 300px;
+    border: 10px solid #333;
+    margin-left: 30px;
 }
