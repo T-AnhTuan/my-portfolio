@@ -1,110 +1,6 @@
-﻿/* RESET CHUNG */
-* { margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif;
-}
-
-/* NAVBAR CHUẨN */
-.navbar {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 20px 10%; 
-    background: #1a1a1a; 
-    position: sticky; 
-    top: 0; 
-    z-index: 100;
-}
-.logo { 
-    font-weight: bold; 
-    font-size: 22px; }
-.logo span { 
-    background: #00c3a5; 
-    padding: 2px 8px; 
-    margin-right: 5px; }
-.nav-links { 
-    display: flex; 
-    list-style: none; }
-.nav-links li { 
-    margin-left: 20px; }
-.nav-links a { 
-    color: #888; 
-    text-decoration: none; 
-    font-size: 13px; 
-    font-weight: 600; 
-    transition: 0.3s; }
-.nav-links a:hover { 
-    color: #00c3a5; }
-
-/* BỐ CỤC HERO */
-#hero { 
-    min-height: 85vh; 
-    display: flex; 
-    align-items: center; 
-    padding: 50px 10%; }
-.hero-container { 
-    display: flex; 
-    align-items: flex-start; 
-    gap: 50px; 
-    width: 100%; }
-.hero-text { 
-    flex: 1.5; }
-.badge { 
-    background: #00c3a5; 
-    padding: 5px 15px; 
-    font-weight: bold; 
-    font-size: 14px; }
-.role { 
-    color: #888; 
-    margin-top: 20px; 
-    letter-spacing: 3px; 
-    font-size: 14px; }
-
-/* THẺ THÔNG TIN */
-.info-card { 
-    background: #222; 
-    padding: 40px; 
-    margin-top: 20px; 
-    border-radius: 4px; 
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.3); }
-.info-card h1 { 
-    font-size: 45px; 
-    margin-bottom: 25px; }
-.details { 
-    list-style: none; }
-.details li { 
-    padding: 12px 0; 
-    border-bottom: 1px dashed #444; 
-    font-size: 14px; }
-.details strong { 
-    width: 110px; 
-    display: inline-block; 
-    color: #888; }
-.hero-image { 
-    flex: 1; 
-    display: flex; 
-    justify-content: center; }
-.hero-image img {
-    width: 100%;
-    max-width: 400px; /* Cố định độ rộng để không bị tràn màn hình */
-    height: auto;
-    border: 12px solid #222;
-    box-shadow: 15px 15px 0px #00c3a5; /* Đổ bóng màu xanh đặc trưng PREFACE */
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 992px) {
-    .hero-container { 
-        flex-direction: column; 
-        text-align: center; }
-    .hero-image img { 
-        max-width: 300px; 
-        margin-top: 30px; }
-    .details li { 
-        text-align: left; }
-}
-/* RESET CHUNG */
+﻿/* =========================================
+   1. RESET & CÀI ĐẶT CHUNG
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -112,151 +8,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR CHUẨN */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #1a1a1a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 22px;
-}
-
-    .logo span {
-        background: #00c3a5;
-        padding: 2px 8px;
-        margin-right: 5px;
-    }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-.nav-links li {
-    margin-left: 20px;
-}
-.nav-links a {
-    color: #888;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.nav-links a:hover {
-    color: #00c3a5;
-}
-    
-/* BỐ CỤC HERO */
-#hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    padding: 50px 10%;
-}
-.hero-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-    width: 100%;
-}
-.hero-text {
-    flex: 1.5;
-}
-.badge {
-    background: #00c3a5;
-    padding: 5px 15px;
-    font-weight: bold;
-    font-size: 14px;
-}
-.role {
-    color: #888;
-    margin-top: 20px;
-    letter-spacing: 3px;
-    font-size: 14px;
-}
-
-/* THẺ THÔNG TIN */
-.info-card {
-    background: #222;
-    padding: 40px;
-    margin-top: 20px;
-    border-radius: 4px;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
-}
-
-    .info-card h1 {
-        font-size: 45px;
-        margin-bottom: 25px;
-    }
-
-.details {
-    list-style: none;
-}
-
-    .details li {
-        padding: 12px 0;
-        border-bottom: 1px dashed #444;
-        font-size: 14px;
-    }
-
-    .details strong {
-        width: 110px;
-        display: inline-block;
-        color: #888;
-    }
-
-/* FIX LỖI ẢNH XANH KHỔNG LỒ */
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-    .hero-image img {
-        width: 100%;
-        max-width: 400px; /* Cố định độ rộng để không bị tràn màn hình */
-        height: auto;
-        border: 12px solid #222;
-        box-shadow: 15px 15px 0px #00c3a5; /* Đổ bóng màu xanh đặc trưng PREFACE */
-    }
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image img {
-        max-width: 300px;
-        margin-top: 30px;
-    }
-
-    .details li {
-        text-align: left;
-    }
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+html {
+    scroll-behavior: smooth; /* Cuộn trang mượt mà */
 }
 
 body {
     background-color: #111;
+    /* Thiết lập ảnh nền với hiệu ứng Parallax */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pictures/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     overflow-x: hidden;
 }
 
-/* FIX MENU: Giúp menu nằm ngang và mất dấu chấm tròn */
+/* =========================================
+   2. THANH ĐIỀU HƯỚNG (NAVBAR)
+   ========================================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -285,7 +55,7 @@ body {
     display: flex !important;
     list-style: none !important;
 }
-    /* Cố định nằm ngang */
+
     .nav-links li {
         margin-left: 25px;
     }
@@ -302,7 +72,9 @@ body {
             color: #00c3a5;
         }
 
-/* BỐ CỤC HERO */
+/* =========================================
+   3. PHẦN GIỚI THIỆU (HERO SECTION)
+   ========================================= */
 #hero {
     min-height: 85vh;
     display: flex;
@@ -337,6 +109,7 @@ body {
     font-weight: 600;
 }
 
+/* THẺ THÔNG TIN CHI TIẾT */
 .info-card {
     background: #222;
     padding: 40px;
@@ -366,7 +139,7 @@ body {
         color: #888;
     }
 
-/* FIX ẢNH: Xử lý mảng xanh không còn bị tràn */
+/* HÌNH ẢNH HERO */
 .hero-image {
     flex: 1;
     display: flex;
@@ -381,6 +154,9 @@ body {
         box-shadow: 15px 15px 0px #00c3a5;
     }
 
+/* =========================================
+   4. PHẢN HỒI DI ĐỘNG (RESPONSIVE)
+   ========================================= */
 @media (max-width: 992px) {
     .hero-container {
         flex-direction: column;
@@ -395,20 +171,4 @@ body {
     .details li {
         text-align: left;
     }
-}
-body {
-    /* Chèn ảnh nền */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg');
-    /* Làm cho ảnh phủ kín toàn bộ màn hình */
-    background-size: cover;
-    /* Giữ ảnh cố định khi cuộn trang (hiệu ứng Parallax) */
-    background-attachment: fixed;
-    /* Căn giữa ảnh */
-    background-position: center;
-    /* Không lặp lại ảnh */
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
 }
