@@ -276,3 +276,137 @@ h1 {
     .social-bar a:hover .fa-tiktok {
         color: #ff0050;
     }
+/* --- KINH NGHIỆM LÀM VIỆC --- */
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exp-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+}
+
+    .exp-card:hover {
+        background: rgba(100, 255, 218, 0.05);
+    }
+
+.exp-date {
+    color: var(--accent-color);
+    font-family: 'Space Mono', monospace;
+    min-width: 150px;
+}
+
+.company {
+    color: var(--text-dim);
+    font-weight: bold;
+}
+
+/* --- HIỆU ỨNG CHẠY NGANG (MARQUEE) --- */
+.marquee-container {
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 30s linear infinite; /* Chạy liên tục */
+}
+
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
+/* Dừng khi di chuột vào */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #112240 0%, #0b192e 100%);
+    border: 1px solid #233554;
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.review-text {
+    color: var(--text-main);
+    margin-bottom: 25px;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+    .user-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+.user-name {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.user-role {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+
+/* --- LOGO ĐỐI TÁC --- */
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+    font-size: 2.5rem;
+    color: var(--text-dim);
+    opacity: 0.6;
+}
+
+    .partner-logos i:hover {
+        color: var(--accent-color);
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .exp-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial-card {
+        width: 300px;
+    }
+
+    .partner-logos {
+        gap: 30px;
+        font-size: 1.8rem;
+    }
+}
