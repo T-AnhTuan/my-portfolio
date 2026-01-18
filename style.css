@@ -317,9 +317,10 @@ h1 {
 
 .marquee-content {
     display: flex;
-    gap: 30px;
-    width: max-content;
-    animation: scroll 30s linear infinite; /* Chạy liên tục */
+    width: max-content; /* Để dải nội dung tự kéo dài */
+    animation: infinite-scroll 20s linear infinite;
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    white-space: nowrap;
 }
 
     .marquee-content:hover {
@@ -464,15 +465,6 @@ h1 {
     overflow: hidden; /* Che phần nội dung thừa bên ngoài màn hình */
     white-space: nowrap; /* Đảm bảo các thẻ nằm trên một hàng */
     display: flex;
-}
-
-/* Dải nội dung chứa các thẻ */
-.marquee-content {
-    display: flex;
-    width: max-content; /* Để dải nội dung tự kéo dài theo số lượng thẻ */
-    animation: infinite-scroll 25s linear infinite; /* Chạy liên tục */
-    /* Giữ nowrap ở đây để các THẺ nằm trên một hàng */
-    white-space: nowrap;
 }
 
     /* Hiệu ứng di chuột vào thì dừng lại để đọc */
