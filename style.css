@@ -425,6 +425,32 @@ h1 {
     border: 2px solid var(--accent-color);
     flex-shrink: 0;
 }
+/* --- LOGO ĐỐI TÁC THỰC TẾ --- */
+.partner-logos {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 60px; /* Khoảng cách rộng rãi giữa các logo */
+    margin-top: 80px; /* Khoảng cách với phần trên */
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+    .partner-logos img {
+        height: 60px; /* Đặt chiều cao cố định lớn hơn (trước đây khoảng 30-40px) */
+        width: auto; /* Chiều rộng tự động theo tỉ lệ ảnh */
+        object-fit: contain; /* Đảm bảo logo không bị méo */
+        /* Hiệu ứng chuyên nghiệp: Ban đầu hơi tối và xám */
+        filter: grayscale(100%) opacity(0.6);
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+        /* Khi di chuột vào: Hiện màu thực tế và sáng lên */
+        .partner-logos img:hover {
+            filter: grayscale(0%) opacity(1) !important; /* !important để ghi đè các filter inline nếu có */
+            transform: scale(1.1); /* Phóng to nhẹ */
+        }
+
 /* --- 7. LIÊN HỆ & FOOTER --- */
 .contact-box {
     background: var(--card-bg);
@@ -478,4 +504,12 @@ h1 {
     .exp-date {
         text-align: left; /* Căn trái ngày tháng trên mobile cho dễ đọc */
     }
+    .partner-logos {
+        gap: 30px; /* Thu hẹp khoảng cách trên mobile */
+        margin-top: 50px;
+    }
+
+        .partner-logos img {
+            height: 45px; /* Logo nhỏ lại một chút trên mobile cho vừa vặn */
+        }
 }
