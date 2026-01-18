@@ -569,6 +569,40 @@ h1 {
         border-radius: 15px;
     }
 
+/* --- TIÊU ĐỀ CÓ GẠCH 2 BÊN CÂN XỨNG --- */
+.centered-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Đưa tiêu đề ra giữa */
+    text-align: center;
+    gap: 20px; /* Khoảng cách giữa chữ và đường gạch */
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Xóa bỏ định dạng gạch cũ nếu có để tránh trùng lặp */
+.section-heading::after {display: none !important;
+}
+
+/* Tạo đường gạch bên trái và bên phải */
+.centered-heading::before,
+.centered-heading::after {
+    content: "";
+    height: 1px;
+    flex: 1; /* Tự động kéo dài để lấp đầy không gian */
+    max-width: 150px; /* Giới hạn độ dài đường gạch cho đẹp */
+    background: linear-gradient(to var(--direction, right), transparent, var(--accent-color)); /* Hiệu ứng mờ dần */
+}
+
+/* Đảo ngược hướng gradient cho đường gạch bên trái */
+.centered-heading::before {
+    --direction: left;
+}
+
+/* Đảo ngược hướng gradient cho đường gạch bên phải */
+.centered-heading::after {
+    --direction: right;
+}
 
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
@@ -609,6 +643,14 @@ h1 {
     }
     .edu-date {
         text-align: left;
+    }
+    .centered-heading::before,
+    .centered-heading::after {
+        max-width: 50px;
+    }
+
+    .centered-heading {
+        font-size: 1.5rem;
     }
     .partner-logos {
         gap: 30px; /* Thu hẹp khoảng cách trên mobile */
