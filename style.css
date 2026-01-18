@@ -178,8 +178,60 @@ h1 {
         border-radius: 20px !important;
         box-shadow: 20px 20px 0px rgba(100, 255, 218, 0.4);
     }
+/* --- HIỆU ỨNG VIỀN CHẠY CHO NÚT CONTACT --- */
 
+.glow-button-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 2px; /* Đây chính là độ dày của viền màu */
+    border-radius: 6px; /* Bo góc nhẹ cho nút */
+    overflow: hidden; /* Cắt phần màu thừa bên ngoài */
+    z-index: 1;
+}
 
+    /* Lớp màu chuyển động phía dưới */
+    .glow-button-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        /* Dải màu: Bạn có thể thay đổi màu ở đây */
+        background: conic-gradient( transparent, var(--accent-color), transparent 30% );
+        animation: rotate-border 3s linear infinite;
+        z-index: -1;
+    }
+
+/* Nút bấm nằm trên lớp màu */
+.btn-primary-glow {
+    display: block;
+    background: var(--bg-color) !important; /* Phải trùng màu nền để che lớp màu ở giữa */
+    color: var(--accent-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    transition: 0.3s;
+    border: none !important; /* Bỏ viền cũ */
+}
+    /* Hiệu ứng khi di chuột vào nút */
+    .btn-primary-glow:hover {
+        background: rgba(100, 255, 218, 0.1) !important;
+        color: #fff;
+    }
+
+/* Hoạt ảnh xoay tròn dải màu */
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /* --- 4. GIÁO DỤC & GIẢI THƯỞNG (SPLIT GRID) --- */
 .section {padding: 100px 10%;
 }
