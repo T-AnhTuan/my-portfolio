@@ -3,139 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trần Anh Tuấn | MIS-er</title>
+    <title>Trần Anh Tuấn | Portfolio</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">T-<span>ANH TUAN</span></div>
+        <div class="logo">&lt; T-AnhTuan /&gt;</div>
         <ul class="nav-links">
-            <li><a href="#hero">TRANG CHỦ</a></li>
-            <li><a href="#about">PROFILE</a></li>
-            <li><a href="#analytics">KỸ NĂNG</a></li>
-            <li><a href="#work">PROJECTS</a></li>
-            <li><a href="#contact">LIÊN HỆ</a></li>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
         </ul>
     </nav>
 
-    <section id="hero" class="dark-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h3>HỌC VIỆN TÀI CHÍNH | HỆ THỐNG THÔNG TIN QUẢN LÝ</h3>
-                    <h1>TRẦN ANH TUẤN</h1>
-                    <span class="badge">Thực tập sinh Hệ thống</span>
-                </div>
-                <div class="hero-main-img">
-                    <img src="pictures/anhto.jpg" alt="Profile Large" class="profile-main">
-                    <div class="img-decorator"></div>
-                </div>
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Chào, mình là <span class="name-highlight">Anh Tuấn</span> <span class="wave">👋</span></h1>
+            <p class="title-sub">DATA STRATEGIST | SYSTEM ANALYST</p>
+            <p class="description">
+                Sinh viên <strong>Chuyên ngành Tin học - Tài chính - Kế toán, Học viện Tài chính</strong>. Mình chuyên tối ưu hóa quy trình doanh nghiệp
+                và khai phá giá trị từ dữ liệu.
+            </p>
+            <div class="social-bar">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">Kết nối với mình</a>
+                <a href="#" class="btn-outline">Tải Resume</a>
+            </div>
+        </div>
+        <div class="hero-img-container">
+            <img src="pictures/avatar.jpg" alt="Trần Anh Tuấn" class="profile-img">
+        </div>
+    </section>
 
-            <div id="about" class="about-card">
-                <div class="about-img">
-                    <img src="pictures/avatar.jpg" alt="Profile Small" class="profile-thumb">
-                </div>
-                <div class="about-text">
-                    <p class="sub-title">Who am I?</p>
-                    <h2>SYSTEM ANALYST</h2>
-                    <p>Chuyên gia tối ưu hóa quy trình doanh nghiệp và khai phá giá trị từ dữ liệu. Tôi xây dựng cầu nối giữa mục tiêu kinh doanh và giải pháp công nghệ.</p>
-                </div>
+    <section id="skills" class="section">
+        <h2 class="section-heading">Kỹ năng chuyên môn</h2>
+        <div class="skills-grid">
+            <div class="skill-item"><i class="fas fa-database"></i><p>SQL & Database</p></div>
+            <div class="skill-item"><i class="fas fa-chart-line"></i><p>Data Analysis</p></div>
+            <div class="skill-item"><i class="fas fa-code"></i><p>HTML/CSS</p></div>
+            <div class="skill-item"><i class="fas fa-project-diagram"></i><p>MIS System</p></div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-heading">Dự án tiêu biểu</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Website cá nhân xây dựng trên nền tảng GitHub Pages.</p>
+                <div class="tags"><span>HTML</span> <span>CSS</span> <span>Git</span></div>
+            </div>
+            <div class="project-card">
+                <h3>System Optimization</h3>
+                <p>Phân tích và tối ưu hóa quy trình tại Học viện Tài chính.</p>
+                <div class="tags"><span>Data</span> <span>Analysis</span></div>
             </div>
         </div>
     </section>
 
-    <section id="analytics" class="analytics-section">
-        <div class="container">
-            <div class="analytics-grid">
-                <div class="chart-container">
-                    <h3>Core Technical Skills</h3>
-                    <canvas id="skillsChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3>Project Performance Radar</h3>
-                    <canvas id="impactChart"></canvas>
-                </div>
+    <section id="contact" class="section">
+        <div class="contact-box">
+            <h2>LIÊN HỆ VỚI MÌNH</h2>
+            <div class="contact-details">
+                <p><strong>HỌ TÊN:</strong> TRẦN ANH TUẤN</p>
+                <p><strong>ĐỊA CHỈ:</strong> Vinhomes Smart City, Hà Nội</p>
+                <p><strong>ĐIỆN THOẠI:</strong> 0868 936 960</p>
+                <p><strong>EMAIL:</strong> tuan2k5.work@gmail.com</p>
             </div>
         </div>
     </section>
 
-    <section id="work" class="light-section">
-        <div class="container">
-            <div class="work-header">
-                <h1>MY WORK<span>.</span></h1>
-                <p>Strategic Systems & Data Solutions</p>
-            </div>
+    <footer class="footer">
+        <p>© 2026 - Bản quyền thuộc về T-ANH TUAN</p>
+    </footer>
 
-            <div class="filter-menu">
-                <button class="filter-btn active" data-filter="all">ALL</button>
-                <button class="filter-btn" data-filter="data">DATA ANALYTICS</button>
-                <button class="filter-btn" data-filter="erp">ERP SYSTEM</button>
-                <button class="filter-btn" data-filter="db">DATABASE</button>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 1"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 2"></div>
-                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 3"></div>
-                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 4"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 5"></div>
-                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 6"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">LIÊN HỆ</h2>
-            <div class="contact-card">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <span class="icon">📧</span>
-                        <div>
-                            <strong>EMAIL:</strong>
-                            <p>tuan2k5.ptvn@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">📞</span>
-                        <div>
-                            <strong>SỐ ĐIỆN THOẠI:</strong>
-                            <p>.........</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">📍</span>
-                        <div>
-                            <strong>ĐỊA CHỈ:</strong>
-                            <p>...... Hà Nội</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-social">
-                    <h3>KẾT NỐI VỚI TÔI</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">Facebook</a>
-                        <a href="#" class="social-btn">Instagram</a>
-                        <a href="#" class="social-btn">TikTok</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script src="script.js"></script>
-
-    <footer id="main-footer">
-        <div class="footer-bottom">
-            <p>@2026 - Bản quyền thuộc về T-AnhTuan</p>
-            <p>Khi sử dụng lại thông tin từ website này, xin vui lòng ghi rõ nguồn "AnhTuanPro.id.vn"</p>
-        </div>
-    </footer>
 </body>
 </html>
