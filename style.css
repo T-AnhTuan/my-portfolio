@@ -298,14 +298,12 @@ h1 {
     margin-right: 10px;
     font-family: 'Space Mono', monospace;
 }
-
 /* --- THIẾT KẾ Ô KINH NGHIỆM --- */
 .exp-container {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Khoảng cách giữa các ô */
 }
-
 .exp-card {
     background: var(--card-bg); /* #112240 */
     padding: 30px;
@@ -315,13 +313,11 @@ h1 {
     gap: 30px;
     transition: 0.3s;
 }
-
     .exp-card:hover {
         transform: translateY(-5px); /* Nhấc nhẹ ô lên khi di chuột */
         background: rgba(100, 255, 218, 0.05);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-
 .exp-header {
     display: flex;
     justify-content: space-between;
@@ -333,7 +329,6 @@ h1 {
         font-size: 1.4rem;
         color: var(--text-main);
     }
-
 .exp-date {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
@@ -341,44 +336,56 @@ h1 {
     white-space: nowrap;
     min-width: 150px;
 }
-
 .company {
     color: var(--accent-color);
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
-
 .exp-desc {
     color: var(--text-dim);
     margin-bottom: 15px;
 }
 
 /* --- 6. NHẬN XÉT (INFINITE SCROLL) --- */
+/* --- KHUNG CHỨA (CỬA SỔ NHÌN) --- */
 .marquee-container {
-    overflow: hidden;
     width: 100%;
-    display: flex;
-    padding: 20px 0;
-    position: relative; /* Đảm bảo mặt nạ định vị đúng */
-    /* 🔥 CODE TẠO HIỆU ỨNG SÁNG DẦN/MỜ DẦN 🔥 */
-    /* Sử dụng gradient làm mặt nạ: transparent = mờ, black = rõ */
-    /* Dành cho trình duyệt Chrome, Safari, Edge mới */
-    -webkit-mask-image: linear-gradient( to right, /* Hướng từ trái sang phải */
-    transparent 0%, /* Mép trái ngoài cùng: Hoàn toàn trong suốt (mờ) */
-    black 15%, /* Cách mép trái 15%: Bắt đầu rõ hoàn toàn */
-    black 85%, /* Cách mép phải 15%: Vẫn rõ hoàn toàn */
-    transparent 100% /* Mép phải ngoài cùng: Hoàn toàn trong suốt (mờ) */
-    );
-    /* Dành cho chuẩn Firefox và các trình duyệt tương lai */
-    mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% );
-    /* Giúp hiệu ứng mượt mà hơn trên một số trình duyệt */
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Đảm bảo luôn là flex để chứa content */
+    padding: 30px 0;
+    /* HIỆU ỨNG MỜ 2 ĐẦU */
+    -webkit-mask-image: linear-gradient( to right, transparent 0%, black 10%, black 90%, transparent 100% );
+    mask-image: linear-gradient( to right, transparent 0%, black 10%, black 90%, transparent 100% );
 }
 
+/* --- DẢI NỘI DUNG (DÒNG CHẠY NGANG) --- */
+.marquee-content {
+    display: flex !important; /* ÉP BUỘC nằm ngang */
+    flex-direction: row !important; /* Đảm bảo hướng là hàng ngang */
+    width: max-content; /* Để dải nội dung tự kéo dài vô tận */
+    white-space: nowrap; /* Ngăn chặn việc tự động xuống dòng */
+    animation: infinite-scroll 25s linear infinite;
+}
+
+/* --- THẺ NHẬN XÉT --- */
+.testimonial-card {
+    flex-shrink: 0; /* 🔥 QUAN TRỌNG: Ngăn các thẻ bị bóp méo hoặc đẩy xuống dưới */
+    width: 450px; /* Độ rộng cố định cho mỗi thẻ */
+    margin: 0 15px;
+    background: #112240;
+    padding: 30px;
+    border-radius: 15px;
+    white-space: normal; /* Chữ bên trong thẻ vẫn xuống dòng bình thường */
+}
+
+/* HIỆU ỨNG DỪNG KHI DI CHUỘT */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+/* ANIMATION CHẠY 50% ĐỂ NỐI LIỀN */
 @keyframes infinite-scroll {
     from {
         transform: translateX(0);
@@ -388,25 +395,12 @@ h1 {
         transform: translateX(-50%);
     }
 }
-
-.testimonial-card {
-    width: 400px;
-    flex-shrink: 0;
-    background: #112240;
-    margin: 0 15px;
-    padding: 30px;
-    border-radius: 12px;
-    white-space: normal !important;
-    word-wrap: break-word;
-}
-
 .user-info img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
-
 /* --- 7. LIÊN HỆ & FOOTER --- */
 .contact-box {
     background: var(--card-bg);
@@ -414,7 +408,6 @@ h1 {
     border-radius: 8px;
     text-align: center;
 }
-
 .footer {
     text-align: center;
     padding: 40px;
@@ -430,39 +423,27 @@ h1 {
         padding-top: 120px;
         gap: 30px;
     }
-
-    .hero-text {
-        align-items: center;
+    .hero-text {align-items: center;
     }
-
     .profile-img {
         width: 250px !important;
         height: 250px !important;
         border-radius: 30px !important;
     }
-
-    .split-grid {
-        grid-template-columns: 1fr;
+    .split-grid {grid-template-columns: 1fr;
+    }
+    .nav-links {display: none;
+    }
+    .section-heading::after {width: 100px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    .section-heading::after {
-        width: 100px;
-    }
-
-    .social-bar {
-        justify-content: center;
+    .social-bar {justify-content: center;
     }
     h1 {
         font-size: 2.2rem;
         white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
     }
-
-    .testimonial-card {
-        width: 300px;
+    .testimonial-card {width: 300px;
     }
     .exp-header {
         flex-direction: column;
