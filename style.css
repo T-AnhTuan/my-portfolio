@@ -323,3 +323,104 @@ body {
         width: 90px;
     }
 }
+/* --- THIẾT LẬP FOOTER --- */
+#main-footer {
+    background-color: #f3f0ff; /* Màu nền tím nhạt */
+    color: #4b0082; /* Màu chữ tím đậm */
+    padding: 50px 10% 20px;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Tự động xuống dòng trên điện thoại */
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+    .footer-col h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+/* Hình ảnh cái bắt tay */
+.footer-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+}
+
+/* Sơ đồ website */
+.footer-links {
+    list-style: square; /* Dấu chấm vuông giống ảnh mẫu */
+    padding-left: 20px;
+}
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #4b0082;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+/* Thông tin liên hệ */
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.social-title {
+    margin-top: 25px !important;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+    .social-icons img {
+        width: 30px; /* Kích thước icon mạng xã hội */
+        height: 30px;
+    }
+
+/* Dòng bản quyền ở dưới cùng */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Mobile Responsive cho Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
