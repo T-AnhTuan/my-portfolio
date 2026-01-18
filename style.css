@@ -179,58 +179,7 @@ h1 {
         box-shadow: 20px 20px 0px rgba(100, 255, 218, 0.4);
     }
 
-/* --- HIỆU ỨNG VIỀN RGB CHUYỂN ĐỘNG --- */
 
-/* 1. Chiếc hộp bao bọc ảnh */
-.img-box-glow {
-    position: relative;
-    width: 350px; /* Kích thước bằng với ảnh */
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px; /* Bo góc giống ảnh */
-    background: var(--bg-color); /* Màu nền để che phần giữa của gradient */
-    z-index: 1; /* Đảm bảo nó nằm trên lớp màu xoay */
-    /* Thêm chút bóng sáng lan tỏa */
-    box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
-}
-
-    /* 2. Lớp giả tạo dải màu xoay (Chìa khóa của hiệu ứng) */
-    .img-box-glow::before {
-        content: '';
-        position: absolute;
-        top: -6px; /* Viền dày 6px, điều chỉnh số này nếu muốn dày/mỏng hơn */
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
-        z-index: -1; /* Nằm bên dưới chiếc hộp chứa ảnh */
-        border-radius: inherit; /* Kế thừa độ bo góc 40px */
-        /* 🔥 Dải màu "Conic Gradient" tạo hiệu ứng cầu vồng */
-        background: conic-gradient( from 0deg, var(--accent-color), /* Xanh ngọc */
-        #ff4545, /* Đỏ */
-        #ffff00, /* Vàng */
-        #00ff99, /* Xanh lá */
-        #00aaff, /* Xanh dương */
-        #ff00ff, /* Tím */
-        var(--accent-color) /* QUAN TRỌNG: Màu cuối phải trùng màu đầu để nối liền mạch */
-        );
-        /* Áp dụng hoạt ảnh xoay */
-        animation: spin-rgb 4s linear infinite;
-    }
-
-/* 3. Định nghĩa hoạt ảnh xoay tròn */
-@keyframes spin-rgb {
-    0% {
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg); /* Thay đổi tông màu nhẹ khi xoay */
-    }
-
-    100% {
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-}
 /* --- 4. GIÁO DỤC & GIẢI THƯỞNG (SPLIT GRID) --- */
 .section {padding: 100px 10%;
 }
