@@ -309,6 +309,58 @@ h1 {
     font-family: 'Space Mono', monospace;
 }
 
+/* --- THIẾT KẾ Ô KINH NGHIỆM --- */
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các ô */
+}
+
+.exp-card {
+    background: var(--card-bg); /* #112240 */
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color); /* Vạch xanh ngọc đặc trưng */
+    transition: all 0.3s ease;
+}
+
+    .exp-card:hover {
+        transform: translateY(-5px); /* Nhấc nhẹ ô lên khi di chuột */
+        background: rgba(100, 255, 218, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .exp-header h3 {
+        font-size: 1.4rem;
+        color: var(--text-main);
+    }
+
+.exp-date {
+    font-family: 'Space Mono', monospace;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.company {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.exp-desc {
+    color: var(--text-dim);
+    margin-bottom: 15px;
+}
+
 /* --- 6. NHẬN XÉT (INFINITE SCROLL) --- */
 .marquee-container {
     overflow: hidden;
@@ -411,5 +463,10 @@ h1 {
 
     .testimonial-card {
         width: 300px;
+    }
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 }
