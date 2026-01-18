@@ -742,229 +742,136 @@ h1 {
         color: var(--text-main);
         font-weight: 500;
     }
-/* --- BỐ CỤC GIÁO DỤC MỚI --- */
-.education-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px; /* Khoảng cách giữa các trường */
-    max-width: 900px;
-}
 
-.education-item {
-    display: flex;
-    gap: 30px; /* Khoảng cách giữa logo và chữ */
-    align-items: flex-start;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1); /* Đường kẻ mờ ngăn cách */
-}
-
-    .education-item:last-child {
-        border-bottom: none; /* Bỏ đường kẻ ở mục cuối cùng */
-    }
-
-/* Tối ưu logo bên trái */
-.edu-logo img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    background: #fff; /* Tạo nền trắng cho logo nếu cần */
-    padding: 10px;
-    border-radius: 50%; /* Làm logo hình tròn giống mẫu */
-}
-
-/* Tối ưu nội dung bên phải */
-.edu-content h3 {
-    font-size: 1.5rem;
-    color: var(--text-main);
-    margin-bottom: 5px;
-}
-
-.edu-content .degree {
-    font-weight: bold;
-    color: var(--accent-color); /* Dùng màu xanh ngọc cho tên bằng cấp */
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-}
-
-.edu-content .time {
-    color: var(--text-dim);
-    font-size: 0.95rem;
-    font-style: italic;
-    margin-bottom: 15px;
-}
-
-/* Danh sách chi tiết */
-.edu-details {
-    padding-left: 20px;
-    list-style-type: disc;
-    color: var(--text-dim);
-}
-
-    .edu-details li {
-        margin-bottom: 10px;
-        line-height: 1.6;
-        font-size: 0.95rem;
-    }
-
-/* --- TÍCH HỢP GIẢI THƯỞNG VÀO BỐ CỤC GIÁO DỤC --- */
-
-.edu-awards {
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(100, 255, 218, 0.05); /* Tạo lớp nền mờ màu xanh ngọc */
-    border-left: 3px solid var(--accent-color); /* Vạch kẻ dọc tạo điểm nhấn */
-    border-radius: 8px;
-}
-
-    .edu-awards h4 {
-        color: var(--accent-color);
-        font-size: 1.1rem;
-        margin-bottom: 12px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .edu-awards ul {
-        list-style: none; /* Bỏ dấu chấm tròn mặc định */
-        padding: 0;
-    }
-
-    .edu-awards li {
-        color: var(--text-main);
-        font-size: 0.95rem;
-        margin-bottom: 8px;
-        position: relative;
-        padding-left: 20px;
-    }
-
-        /* Thêm icon nhỏ trước mỗi giải thưởng */
-        .edu-awards li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        .edu-awards li strong {
-            color: #fff; /* Làm đậm các từ khóa như "Giải Nhì", "Học bổng" */
-        }
-
-/* Giữ nguyên bo góc logo như các phần trước */
-.edu-logo img {
-    border-radius: 40px !important;
-    border: 2px solid rgba(100, 255, 218, 0.2);
-}
-/* --- BỐ CỤC 2 CỘT: HỌC TẬP | GIẢI THƯỞNG --- */
-.edu-awards-grid {
+/* --- BỐ CỤC 2 CỘT: HỌC TẬP & CHỨNG CHỈ --- */
+.edu-awards-layout {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Cột học tập rộng hơn một chút */
-    gap: 50px;
+    grid-template-columns: 1fr 1fr; /* Chia đều 2 cột song song */
+    gap: 40px;
     align-items: start;
 }
 
-/* THIẾT KẾ CỘT HỌC TẬP (BÊN TRÁI) */
+.column-title {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+    /* Đường gạch trang trí dưới tiêu đề cột */
+    .column-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--accent-color);
+    }
+
+/* THIẾT KẾ CÁC Ô (CARDS) */
+.info-box {
+    background: rgba(17, 34, 64, 0.6); /* Nền mờ hiện đại */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+    .info-box:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+/* Chi tiết cho cột Học tập */
 .school-header {
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.school-logo img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    background: #fff; /* Nền trắng để nổi bật logo */
+.school-logo-round {
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    border-radius: 50%; /* Logo tròn chuyên nghiệp */
     padding: 5px;
-    border-radius: 50%; /* Logo tròn */
-    border: 2px solid var(--accent-color);
+    object-fit: contain;
 }
 
-.school-info h3 {
-    font-size: 1.4rem;
+.school-meta h3 {
     color: var(--text-main);
+    font-size: 1.3rem;
 }
 
-.school-info .degree {
+.sub-text {
     color: var(--accent-color);
     font-weight: bold;
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
-.school-info .time {
+.time-text {
     color: var(--text-dim);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-style: italic;
 }
 
-.edu-details-list {
+.detail-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 15px;
 }
 
-    .edu-details-list li {
+    .detail-list li {
         color: var(--text-dim);
-        margin-bottom: 12px;
+        font-size: 0.95rem;
         line-height: 1.6;
-        position: relative;
+        margin-bottom: 8px;
         padding-left: 20px;
+        position: relative;
     }
 
-        .edu-details-list li::before {
+        .detail-list li::before {
             content: "▹";
             position: absolute;
             left: 0;
             color: var(--accent-color);
         }
 
-/* THIẾT KẾ CỘT GIẢI THƯỞNG (BÊN PHẢI) */
-.awards-card-v2 {
-    background: rgba(17, 34, 64, 0.6);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    border-left: 4px solid var(--accent-color); /* Vạch kẻ dọc bên trái */
+/* Chi tiết cho cột Chứng chỉ */
+.award-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-    .awards-card-v2 h4 {
+    .award-item i {
+        font-size: 1.5rem;
         color: var(--accent-color);
-        margin-bottom: 20px;
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        flex-shrink: 0;
     }
 
-.awards-list-v2 {
-    list-style: none;
-    padding: 0;
+.award-content {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-    .awards-list-v2 li {
-        color: var(--text-main);
-        margin-bottom: 15px;
-        line-height: 1.5;
-        font-size: 0.95rem;
+    .award-content strong {
+        color: #fff;
     }
 
-        .awards-list-v2 li span {
-            color: var(--accent-color);
-            margin-right: 8px;
-        }
 
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
-    .edu-awards-grid {
+    .edu-awards-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
     }
-    .education-item {
-        flex-direction: column; /* Chuyển thành hàng dọc trên mobile */
-        gap: 20px;
-        align-items: flex-start;
-    }
-
     .edu-logo img {
         width: 60px;
         height: 60px;
