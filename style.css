@@ -577,3 +577,37 @@ h1 {
         gap: 5px;
     }
 }
+/* --- CHIA CỘT GIÁO DỤC & GIẢI THƯỞNG --- */
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đôi màn hình */
+    gap: 40px;
+    align-items: start;
+}
+
+.academic-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tái sử dụng và tối ưu edu-card từ bước trước */
+.edu-card {
+    background: var(--card-bg); /* #112240 */
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color); /* Vạch xanh ngọc tạo điểm nhấn */
+    transition: 0.3s ease;
+}
+
+    .edu-card:hover {
+        transform: translateX(5px);
+        background: rgba(100, 255, 218, 0.05);
+    }
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .split-grid {
+        grid-template-columns: 1fr; /* Xếp chồng trên điện thoại */
+        gap: 50px;
+    }
+}
