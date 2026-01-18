@@ -410,3 +410,46 @@ h1 {
         font-size: 1.8rem;
     }
 }
+/* Container chứa dải nhận xét */
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background: #0b192e; /* Trùng màu nền để không lộ vết cắt */
+    padding: 20px 0;
+}
+
+/* Nội dung chạy ngang */
+.marquee-content.seamless {
+    display: flex;
+    width: max-content;
+    gap: 0; /* XÓA KHOẢNG CÁCH để các thẻ nối liền nhau */
+    animation: scroll-seamless 20s linear infinite;
+}
+
+/* Thẻ nhận xét khi nối liền */
+.testimonial-card {
+    width: 400px; /* Cố định độ rộng để tính toán animation chuẩn */
+    flex-shrink: 0;
+    background: #112240;
+    border: 1px solid #233554; /* Viền mờ để phân biệt nhẹ giữa các thẻ */
+    padding: 30px;
+    margin: 0; /* Đảm bảo không có lề ngoài */
+    border-radius: 0; /* Chỉnh về 0 nếu muốn chúng khít hoàn toàn như một dải băng */
+}
+
+/* Animation chạy mượt không hẫng */
+@keyframes scroll-seamless {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Chạy đúng 50% tổng chiều dài dải thẻ để lặp lại vô tận */
+        transform: translateX(-50%);
+    }
+}
+
+/* Dừng lại khi di chuột vào để khách xem kỹ */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
