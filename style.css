@@ -91,7 +91,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 100px 8%;
-    gap: 60px; /* Khoảng cách giữa chữ và ảnh */
+    gap: 40px; /* Khoảng cách giữa chữ và ảnh */
+    width: 100%;
 }
 
 .hero-text {
@@ -102,7 +103,11 @@ body {
     align-items: flex-start;
     text-align: left;
 }
-
+.hero-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Đẩy ảnh về bên phải */
+}
 .name-highlight {color: var(--accent-color);
 }
 
@@ -171,13 +176,6 @@ h1 {
     .btn-primary:hover {
         background: rgba(100, 255, 218, 0.1);
     }
-
-/* Ảnh Profile (Sửa lỗi khổng lồ) */
-.hero-img-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
 
 .profile-img {
     /* Khóa chết kích thước để không bao giờ bị méo */
