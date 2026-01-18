@@ -639,7 +639,6 @@ h1 {
     .profile-img {
         width: 250px !important;
         height: 250px !important;
-        border-radius: 30px !important;
     }
     .split-grid {grid-template-columns: 1fr;
     }
