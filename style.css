@@ -674,6 +674,83 @@ h1 {
             transform: translateY(-3px);
         }
 
+/* --- BỐ CỤC LƯỚI CHO CONTACT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đều 2 cột */
+    gap: 80px;
+    align-items: center;
+}
+
+/* TỐI ƯU CỘT TRÁI */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* SỬA LỖI NÚT EMAIL KHÓ ĐỌC */
+.glow-button-wrapper {
+    width: fit-content;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--accent-color), #fff, var(--accent-color));
+    background-size: 200%;
+    border-radius: 8px;
+    animation: glow-move 3s linear infinite;
+}
+
+.btn-primary-glow {
+    display: inline-block;
+    background: #0a192f !important; /* Màu nền tối của bạn */
+    color: var(--accent-color) !important; /* Chuyển sang xanh ngọc cho dễ đọc */
+    padding: 15px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .btn-primary-glow:hover {
+        background: rgba(100, 255, 218, 0.1) !important;
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    }
+
+/* TỐI ƯU CỘT PHẢI (THẺ THÔNG TIN) */
+.info-card {
+    background: rgba(17, 34, 64, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+    .info-item i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        width: 30px;
+    }
+
+    .info-item span {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .info-item p {
+        color: var(--text-main);
+        font-weight: 500;
+    }
+
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
     .hero-section {
@@ -749,5 +826,9 @@ h1 {
 
     .contact-text {
         font-size: 1rem;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 }
