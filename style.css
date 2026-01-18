@@ -855,8 +855,110 @@ h1 {
     border-radius: 40px !important;
     border: 2px solid rgba(100, 255, 218, 0.2);
 }
+/* --- BỐ CỤC 2 CỘT: HỌC TẬP | GIẢI THƯỞNG --- */
+.edu-awards-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Cột học tập rộng hơn một chút */
+    gap: 50px;
+    align-items: start;
+}
+
+/* THIẾT KẾ CỘT HỌC TẬP (BÊN TRÁI) */
+.school-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.school-logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background: #fff; /* Nền trắng để nổi bật logo */
+    padding: 5px;
+    border-radius: 50%; /* Logo tròn */
+    border: 2px solid var(--accent-color);
+}
+
+.school-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+}
+
+.school-info .degree {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.school-info .time {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.edu-details-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .edu-details-list li {
+        color: var(--text-dim);
+        margin-bottom: 12px;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 20px;
+    }
+
+        .edu-details-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+/* THIẾT KẾ CỘT GIẢI THƯỞNG (BÊN PHẢI) */
+.awards-card-v2 {
+    background: rgba(17, 34, 64, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-left: 4px solid var(--accent-color); /* Vạch kẻ dọc bên trái */
+}
+
+    .awards-card-v2 h4 {
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+.awards-list-v2 {
+    list-style: none;
+    padding: 0;
+}
+
+    .awards-list-v2 li {
+        color: var(--text-main);
+        margin-bottom: 15px;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+
+        .awards-list-v2 li span {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
+    .edu-awards-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
     .education-item {
         flex-direction: column; /* Chuyển thành hàng dọc trên mobile */
         gap: 20px;
