@@ -448,30 +448,32 @@ h1 {
     border: 2px solid var(--accent-color);
     flex-shrink: 0;
 }
-/* --- LOGO ĐỐI TÁC THỰC TẾ --- */
 .partner-logos {
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 60px; /* Khoảng cách rộng rãi giữa các logo */
-    margin-top: 80px; /* Khoảng cách với phần trên */
-    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    display: flex !important;
+    flex-direction: row !important; /* 🔥 ÉP BUỘC nằm ngang trên PC */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px; /* Khoảng cách rộng giữa các logo kèm chữ */
+    margin: 80px 0;
+    width: 100%;
 }
 
     .partner-logos img {
-        height: 60px; /* Đặt chiều cao cố định lớn hơn (trước đây khoảng 30-40px) */
-        width: auto; /* Chiều rộng tự động theo tỉ lệ ảnh */
-        object-fit: contain; /* Đảm bảo logo không bị méo */
-        /* Hiệu ứng chuyên nghiệp: Ban đầu hơi tối và xám */
-        filter: grayscale(100%) opacity(0.6);
-        transition: all 0.4s ease;
-        cursor: pointer;
+        /* Khống chế chiều cao thấp xuống vì logo ngang thường dài hơn */
+        height: 35px !important;
+        width: auto !important;
+        object-fit: contain;
+        /* Hiệu ứng mờ nhẹ, sáng lên khi di chuột */
+        opacity: 0.6;
+        filter: brightness(1);
+        transition: all 0.3s ease;
     }
 
-        /* Khi di chuột vào: Hiện màu thực tế và sáng lên */
         .partner-logos img:hover {
-            filter: grayscale(0%) opacity(1) !important; /* !important để ghi đè các filter inline nếu có */
-            transform: scale(1.1); /* Phóng to nhẹ */
+            opacity: 1;
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.3));
         }
 
 /* --- 7. LIÊN HỆ & FOOTER --- */
@@ -674,11 +676,12 @@ h1 {
         font-size: 1.5rem;
     }
     .partner-logos {
-        gap: 30px; /* Thu hẹp khoảng cách trên mobile */
-        margin-top: 50px;
+        gap: 30px;
+        flex-direction: row !important; /* Vẫn giữ hàng ngang trên mobile nếu đủ chỗ */
     }
+
         .partner-logos img {
-            height: 45px; /* Logo nhỏ lại một chút trên mobile cho vừa vặn */
+            height: 25px !important;
         }
     .project-container {
         grid-template-columns: 1fr;
