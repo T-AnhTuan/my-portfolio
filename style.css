@@ -83,8 +83,7 @@ body {
     align-items: flex-start;
 }
 
-.name-highlight {
-    color: var(--accent-color);
+.name-highlight {color: var(--accent-color);
 }
 
 h1 {
@@ -181,17 +180,14 @@ h1 {
     }
 
 /* --- 4. GIÁO DỤC & GIẢI THƯỞNG (SPLIT GRID) --- */
-.section {
-    padding: 100px 10%;
+.section {padding: 100px 10%;
 }
-
 .section-heading {
     font-size: 2rem;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
 }
-
     .section-heading::after {
         content: "";
         display: block;
@@ -200,13 +196,11 @@ h1 {
         background: #233554;
         margin-left: 20px;
     }
-
 .split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
-
 .edu-card {
     background: var(--card-bg);
     padding: 25px;
@@ -324,7 +318,6 @@ h1 {
     align-items: center;
     margin-bottom: 10px;
 }
-
     .exp-header h3 {
         font-size: 1.4rem;
         color: var(--text-main);
@@ -395,11 +388,41 @@ h1 {
         transform: translateX(-50%);
     }
 }
+
+.review-text {
+    font-style: italic !important; /* 🔥 Nhận xét là chữ nghiêng */
+    color: var(--text-main);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: left; /* Nội dung nhận xét thường căn trái cho dễ đọc */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 🔥 Đưa toàn bộ thông tin sang bên PHẢI */
+    gap: 15px; /* Khoảng cách giữa ảnh và chữ */
+    text-align: right; /* Căn lề chữ sang phải */
+}
+
+.user-name {
+    font-weight: bold !important; /* 🔥 Tên người in đậm */
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.user-role {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
 .user-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
     object-fit: cover;
+    border: 2px solid var(--accent-color);
+    flex-shrink: 0;
 }
 /* --- 7. LIÊN HỆ & FOOTER --- */
 .contact-box {
