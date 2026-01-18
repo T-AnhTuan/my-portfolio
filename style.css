@@ -461,7 +461,7 @@ h1 {
 
     .partner-logos img {
         /* Khống chế chiều cao thấp xuống vì logo ngang thường dài hơn */
-        height: 70px !important;
+        height: 90px !important;
         width: auto !important;
         object-fit: contain;
         /* Hiệu ứng mờ nhẹ, sáng lên khi di chuột */
@@ -627,6 +627,52 @@ h1 {
     display: block !important; /* 🔥 ÉP BUỘC hiển thị */
     --direction: right;
 }
+/* --- BỐ CỤC CONTACT CĂN TRÁI --- */
+
+/* Đảm bảo tiêu đề phần này nằm bên trái */
+#contact .section-heading {
+    text-align: left;
+    /* Ẩn các đường gạch cũ nếu class gốc vẫn còn */
+    &::before, &::after {
+        display: none !important;
+    }
+}
+
+/* Layout chứa nội dung chính */
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 🔥 Căn tất cả phần tử con sang LỀ TRÁI */
+    text-align: left;
+    max-width: 650px; /* Giới hạn chiều rộng để dễ đọc trên màn hình lớn */
+}
+
+/* Định dạng đoạn văn */
+.contact-text {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 35px; /* Khoảng cách với nút bên dưới */
+    line-height: 1.7;
+}
+
+/* Định dạng riêng cho thanh MXH ở phần contact */
+.contact-socials {
+    margin-top: 35px; /* Khoảng cách với nút bên trên */
+    display: flex;
+    gap: 20px;
+}
+
+    /* Kế thừa icon từ hero section nhưng có thể chỉnh to hơn một chút nếu muốn */
+    .contact-socials .social-icon {
+        font-size: 1.4rem; /* Icon to hơn một chút cho dễ bấm ở cuối trang */
+        color: var(--text-dim);
+        transition: all 0.3s ease;
+    }
+
+        .contact-socials .social-icon:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
 
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
@@ -690,5 +736,18 @@ h1 {
     .project-content {
         flex-direction: column;
         gap: 15px;
+    }
+    #contact .section-heading {
+        text-align: center; /* Tiêu đề ra giữa */
+    }
+
+    .contact-layout {
+        align-items: center; /* Nội dung ra giữa */
+        text-align: center;
+        margin: 0 auto; /* Căn giữa khối layout */
+    }
+
+    .contact-text {
+        font-size: 1rem;
     }
 }
