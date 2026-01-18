@@ -351,6 +351,8 @@ h1 {
     margin-bottom: 25px;
     font-style: italic;
     font-size: 0.95rem;
+    line-height: 1.6; /* Tăng khoảng cách dòng cho dễ đọc */
+    display: block; /* Đảm bảo nó hoạt động như một khối văn bản */
 }
 
 .user-info {
@@ -433,8 +435,10 @@ h1 {
     background: #112240;
     border: 1px solid #233554; /* Viền mờ để phân biệt nhẹ giữa các thẻ */
     padding: 30px;
-    margin: 0; /* Đảm bảo không có lề ngoài */
-    border-radius: 0; /* Chỉnh về 0 nếu muốn chúng khít hoàn toàn như một dải băng */
+    margin: 0 15px; /* Khoảng cách giữa các thẻ (nên để số nhỏ để nối liền đẹp) */
+    border-radius: 12px;
+    white-space: normal !important;
+    word-wrap: break-word;
 }
 
 /* Animation chạy mượt không hẫng */
@@ -466,23 +470,15 @@ h1 {
 .marquee-content {
     display: flex;
     width: max-content; /* Để dải nội dung tự kéo dài theo số lượng thẻ */
-    animation: infinite-scroll 20s linear infinite; /* Chạy liên tục */
+    animation: infinite-scroll 25s linear infinite; /* Chạy liên tục */
+    /* Giữ nowrap ở đây để các THẺ nằm trên một hàng */
+    white-space: nowrap;
 }
 
     /* Hiệu ứng di chuột vào thì dừng lại để đọc */
     .marquee-content:hover {
         animation-play-state: paused;
     }
-
-/* Định dạng thẻ nhận xét */
-.testimonial-card {
-    flex-shrink: 0; /* Không cho thẻ bị bóp méo */
-    width: 450px; /* Độ rộng cố định cho mỗi thẻ */
-    margin: 0 15px; /* Khoảng cách giữa các thẻ (nên để số nhỏ để nối liền đẹp) */
-    background: #112240;
-    padding: 30px;
-    border-radius: 12px;
-}
 
 /* 🔥 KEYFRAME QUAN TRỌNG: Chạy đến đúng 50% rồi reset */
 @keyframes infinite-scroll {
