@@ -23,6 +23,12 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
 }
+.logo {
+    font-family: 'Space Mono', monospace;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
 
 /* --- 2. ĐIỀU HƯỚNG (NAVBAR) --- */
 .navbar {
@@ -40,7 +46,6 @@ body {
     /* 3. Viền mờ để tạo khối */
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 50px; /* Bo tròn dài như hình mẫu */
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,29 +54,19 @@ body {
     transition: all 0.3s ease;
 }
 
-    /* Hiệu ứng khi di chuột vào toàn thanh menu */
     .navbar:hover {
         background: rgba(17, 34, 64, 0.85) !important;
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-.logo {
-    font-family: 'Space Mono', monospace;
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
 }
-
     .nav-links li {
         margin-left: 25px;
     }
-
     .nav-links a {
         color: var(--text-main);
         text-decoration: none;
@@ -93,6 +88,7 @@ body {
     padding: 100px 8%;
     gap: 40px; /* Khoảng cách giữa chữ và ảnh */
     width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-text {
@@ -104,9 +100,11 @@ body {
     text-align: left;
 }
 .hero-img-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Đẩy ảnh về bên phải */
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    /* 🔥 Giới hạn kích thước container để không đẩy chữ đi */
+    max-width: 400px;
 }
 .name-highlight {color: var(--accent-color);
 }
