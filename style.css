@@ -1,155 +1,43 @@
-﻿:root {
-    --primary-color: #00c3a5; /* Màu xanh ngọc của logo */
-    --bg-dark: #222222;
-    --card-bg: #2d2d2d;
-    --text-color: #ffffff;
-}
-
-* {
+﻿/* 1. Định dạng toàn bộ trang */
+body {
+    background-color: #1a1a1a; /* Nền màu tối */
+    color: white; /* Chữ màu trắng */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #1a1a1a;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
-
-    .logo span {
-        background: var(--primary-color);
-        padding: 2px 8px;
-        margin-right: 5px;
-    }
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-}
-
-    .nav-menu li {
-        margin-left: 25px;
-    }
-
-    .nav-menu a {
-        text-decoration: none;
-        color: #bbb;
-        font-size: 13px;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-    margin-top: 50px;
-}
-
-.hero-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-content {
-    flex: 1;
-}
-
-.greeting {
-    background: var(--primary-color);
-    padding: 5px 15px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.job-title {
-    margin-top: 15px;
-    color: #888;
-    letter-spacing: 3px;
-    font-size: 14px;
-}
-
+/* 2. Khung chứa thông tin (giống mẫu Preface) */
 .info-card {
-    background: var(--card-bg);
+    background: #2d2d2d;
     padding: 40px;
-    margin-top: 20px;
-    border-radius: 4px;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-    .info-card h1 {
-        font-size: 45px;
-        margin-bottom: 25px;
-    }
+/* 3. Chỉnh lại kích thước ảnh (để không bị to quá) */
+img {
+    max-width: 400px; /* Chỉnh lại độ rộng ảnh phù hợp */
+    height: auto;
+    border: 10px solid #333;
+    display: block;
+    margin: 20px 0;
+}
 
-.personal-info {
+/* 4. Định dạng chữ */
+h1 {
+    font-size: 40px;
+    color: #00c3a5;
+}
+
+ul {
     list-style: none;
+    padding: 0;
 }
 
-    .personal-info li {
-        margin-bottom: 15px;
-        border-bottom: 1px dashed #444;
-        padding-bottom: 5px;
-        display: flex;
-    }
-
-        .personal-info li strong {
-            width: 100px;
-            color: #888;
-            font-size: 13px;
-        }
-
-        .personal-info li span {
-            color: #fff;
-            font-size: 13px;
-        }
-
-.hero-image img {
-    max-width: 450px;
-    border: 15px solid #2d2d2d;
-}
-
-/* Mobile Responsive */
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .personal-info li {
-        justify-content: center;
-    }
-
-    .hero-image {
-        margin-top: 40px;
-    }
+li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #444;
 }
