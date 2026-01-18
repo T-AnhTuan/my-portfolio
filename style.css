@@ -102,3 +102,135 @@ h1 {
     border: 10px solid #333;
     margin-left: 30px;
 }
+/* Thiết lập font tiếng Việt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Thanh điều hướng nằm ngang */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+    .logo span {
+        background-color: #00c3a5;
+        padding: 2px 10px;
+        margin-right: 5px;
+    }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+    .nav-links li {
+        margin-left: 25px;
+    }
+
+    .nav-links a {
+        color: #aaaaaa;
+        text-decoration: none; /* Bỏ gạch chân */
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+        .nav-links a:hover {
+            color: #00c3a5;
+        }
+
+/* Bố cục nội dung */
+.container {
+    padding: 60px 8%;
+}
+
+.info-box {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.greeting {
+    background: #00c3a5;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.role {
+    color: #888;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 15px 0 30px 0;
+    color: #fff;
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.personal-details {
+    list-style: none;
+    flex: 1;
+}
+
+    .personal-details li {
+        padding: 12px 0;
+        border-bottom: 1px dashed #333;
+        font-size: 15px;
+    }
+
+    .personal-details strong {
+        width: 120px;
+        display: inline-block;
+        color: #00c3a5;
+    }
+
+.image-area img {
+    max-width: 350px;
+    border: 12px solid #252525;
+    border-radius: 4px;
+}
+
+/* Tương thích điện thoại */
+@media (max-width: 768px) {
+    .profile-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    /* Ẩn menu trên mobile để đơn giản */
+}
