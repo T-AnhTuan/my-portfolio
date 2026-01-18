@@ -313,10 +313,11 @@ h1 {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 .exp-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid !important;
+    grid-template-columns: 1fr 180px;
     align-items: center;
     margin-bottom: 10px;
+    gap: 20px; /* Khoảng cách tối thiểu giữa tên và ngày */
 }
     .exp-header h3 {
         font-size: 1.4rem;
@@ -326,8 +327,8 @@ h1 {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
     font-size: 0.9rem;
-    white-space: nowrap;
-    min-width: 150px;
+    text-align: right; /* Căn thời gian về phía bên phải của cột cố định */
+    white-space: nowrap; /* Ngăn chặn việc ngày tháng bị xuống dòng */
 }
 .company {
     color: var(--accent-color);
@@ -469,8 +470,12 @@ h1 {
     .testimonial-card {width: 300px;
     }
     .exp-header {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+    }
+    .exp-date {
+        text-align: left; /* Căn trái ngày tháng trên mobile cho dễ đọc */
     }
 }
