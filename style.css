@@ -627,220 +627,221 @@ h1 {
 /* Hướng mờ dần cho bên phải */
 .centered-heading::after {
     --direction: right;
-    /* --- BỐ CỤC CONTACT CĂN TRÁI --- */
-    /* Đảm bảo tiêu đề phần này nằm bên trái */
-    #contact .section-heading {
-        text-align: left;
-        /* Ẩn các đường gạch cũ nếu class gốc vẫn còn */
-        &::before, &::after {
-            display: none !important;
-        }
+}
+/* --- BỐ CỤC CONTACT CĂN TRÁI --- */
+/* Đảm bảo tiêu đề phần này nằm bên trái */
+#contact .section-heading {
+    text-align: left;
+    /* Ẩn các đường gạch cũ nếu class gốc vẫn còn */
+    &::before, &::after {
+        display: none !important;
     }
-    /* Layout chứa nội dung chính */
-    .contact-layout {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* 🔥 Căn tất cả phần tử con sang LỀ TRÁI */
-        text-align: left;
-        max-width: 650px; /* Giới hạn chiều rộng để dễ đọc trên màn hình lớn */
-    }
-    /* Định dạng đoạn văn */
-    .contact-text {
-        font-size: 1.1rem;
+}
+/* Layout chứa nội dung chính */
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 🔥 Căn tất cả phần tử con sang LỀ TRÁI */
+    text-align: left;
+    max-width: 650px; /* Giới hạn chiều rộng để dễ đọc trên màn hình lớn */
+}
+/* Định dạng đoạn văn */
+.contact-text {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 35px; /* Khoảng cách với nút bên dưới */
+    line-height: 1.7;
+}
+/* Định dạng riêng cho thanh MXH ở phần contact */
+.contact-socials {
+    margin-top: 35px; /* Khoảng cách với nút bên trên */
+    display: flex;
+    gap: 20px;
+}
+    /* Kế thừa icon từ hero section nhưng có thể chỉnh to hơn một chút nếu muốn */
+    .contact-socials .social-icon {
+        font-size: 1.4rem; /* Icon to hơn một chút cho dễ bấm ở cuối trang */
         color: var(--text-dim);
-        margin-bottom: 35px; /* Khoảng cách với nút bên dưới */
-        line-height: 1.7;
-    }
-    /* Định dạng riêng cho thanh MXH ở phần contact */
-    .contact-socials {
-        margin-top: 35px; /* Khoảng cách với nút bên trên */
-        display: flex;
-        gap: 20px;
-    }
-        /* Kế thừa icon từ hero section nhưng có thể chỉnh to hơn một chút nếu muốn */
-        .contact-socials .social-icon {
-            font-size: 1.4rem; /* Icon to hơn một chút cho dễ bấm ở cuối trang */
-            color: var(--text-dim);
-            transition: all 0.3s ease;
-        }
-
-            .contact-socials .social-icon:hover {
-                color: var(--accent-color);
-                transform: translateY(-3px);
-            }
-    /* --- BỐ CỤC LƯỚI CHO CONTACT --- */
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Chia đều 2 cột */
-        gap: 80px;
-        align-items: center;
-    }
-    /* TỐI ƯU CỘT TRÁI */
-    .contact-left {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    /* SỬA LỖI NÚT EMAIL KHÓ ĐỌC */
-    .glow-button-wrapper {
-        width: fit-content;
-        padding: 2px;
-        background: linear-gradient(90deg, var(--accent-color), #fff, var(--accent-color));
-        background-size: 200%;
-        border-radius: 8px;
-        animation: glow-move 3s linear infinite;
+        transition: all 0.3s ease;
     }
 
-    .btn-primary-glow {
-        display: inline-block;
-        background: #0a192f !important; /* Màu nền tối của bạn */
-        color: var(--accent-color) !important; /* Chuyển sang xanh ngọc cho dễ đọc */
-        padding: 15px 35px;
-        border-radius: 6px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-
-        .btn-primary-glow:hover {
-            background: rgba(100, 255, 218, 0.1) !important;
-            box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
-        }
-    /* TỐI ƯU CỘT PHẢI (THẺ THÔNG TIN) */
-    .info-card {
-        background: rgba(17, 34, 64, 0.8);
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid rgba(100, 255, 218, 0.1);
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .info-item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-        .info-item i {
-            font-size: 1.5rem;
+        .contact-socials .social-icon:hover {
             color: var(--accent-color);
-            width: 30px;
+            transform: translateY(-3px);
         }
+/* --- BỐ CỤC LƯỚI CHO CONTACT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đều 2 cột */
+    gap: 80px;
+    align-items: center;
+}
+/* TỐI ƯU CỘT TRÁI */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+/* SỬA LỖI NÚT EMAIL KHÓ ĐỌC */
+.glow-button-wrapper {
+    width: fit-content;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--accent-color), #fff, var(--accent-color));
+    background-size: 200%;
+    border-radius: 8px;
+    animation: glow-move 3s linear infinite;
+}
 
-        .info-item span {
-            display: block;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.btn-primary-glow {
+    display: inline-block;
+    background: #0a192f !important; /* Màu nền tối của bạn */
+    color: var(--accent-color) !important; /* Chuyển sang xanh ngọc cho dễ đọc */
+    padding: 15px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        .info-item p {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-    /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
-    @media (max-width: 992px) {
-        .hero-section {
-            flex-direction: column-reverse !important; /* Trên mobile mới được dọc */
-            text-align: center;
-            padding-top: 120px;
-            gap: 30px;
-        }
-
-        .hero-text {
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 250px !important;
-            height: 250px !important;
-        }
-
-        .split-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-            display: none;
-        }
-
-        .section-heading::after {
-            width: 100px;
-        }
-
-        .social-bar {
-            justify-content: center;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
-        }
-
-        .testimonial-card {
-            width: 300px;
-        }
-
-        .exp-header {
-            grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
-            gap: 5px;
-        }
-
-        .exp-date {
-            text-align: left; /* Căn trái trên mobile cho dễ nhìn */
-            min-width: auto;
-        }
-
-        .edu-date {
-            text-align: left;
-        }
-
-        .centered-heading::before,
-        .centered-heading::after {
-            max-width: 50px;
-        }
-
-        .centered-heading {
-            font-size: 1.5rem;
-        }
-
-        .partner-logos {
-            gap: 30px;
-            flex-direction: row !important; /* Vẫn giữ hàng ngang trên mobile nếu đủ chỗ */
-        }
-
-            .partner-logos img {
-                height: 25px !important;
-            }
-
-        .project-container {
-            grid-template-columns: 1fr;
-        }
-
-        .project-content {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        #contact .section-heading {
-            text-align: center; /* Tiêu đề ra giữa */
-        }
-
-        .contact-layout {
-            align-items: center; /* Nội dung ra giữa */
-            text-align: center;
-            margin: 0 auto; /* Căn giữa khối layout */
-        }
-
-        .contact-text {
-            font-size: 1rem;
-        }
-
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 50px;
-        }
+    .btn-primary-glow:hover {
+        background: rgba(100, 255, 218, 0.1) !important;
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
     }
+/* TỐI ƯU CỘT PHẢI (THẺ THÔNG TIN) */
+.info-card {
+    background: rgba(17, 34, 64, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+    .info-item i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        width: 30px;
+    }
+
+    .info-item span {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .info-item p {
+        color: var(--text-main);
+        font-weight: 500;
+    }
+/* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column-reverse !important; /* Trên mobile mới được dọc */
+        text-align: center;
+        padding-top: 120px;
+        gap: 30px;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .split-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section-heading::after {
+        width: 100px;
+    }
+
+    .social-bar {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
+    }
+
+    .testimonial-card {
+        width: 300px;
+    }
+
+    .exp-header {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
+        gap: 5px;
+    }
+
+    .exp-date {
+        text-align: left; /* Căn trái trên mobile cho dễ nhìn */
+        min-width: auto;
+    }
+
+    .edu-date {
+        text-align: left;
+    }
+
+    .centered-heading::before,
+    .centered-heading::after {
+        max-width: 50px;
+    }
+
+    .centered-heading {
+        font-size: 1.5rem;
+    }
+
+    .partner-logos {
+        gap: 30px;
+        flex-direction: row !important; /* Vẫn giữ hàng ngang trên mobile nếu đủ chỗ */
+    }
+
+        .partner-logos img {
+            height: 25px !important;
+        }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #contact .section-heading {
+        text-align: center; /* Tiêu đề ra giữa */
+    }
+
+    .contact-layout {
+        align-items: center; /* Nội dung ra giữa */
+        text-align: center;
+        margin: 0 auto; /* Căn giữa khối layout */
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
