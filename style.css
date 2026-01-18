@@ -571,36 +571,39 @@ h1 {
 
 /* --- TIÊU ĐỀ CÓ GẠCH 2 BÊN CÂN XỨNG --- */
 .centered-heading {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    justify-content: center; /* Đưa tiêu đề ra giữa */
+    justify-content: center;
     text-align: center;
-    gap: 20px; /* Khoảng cách giữa chữ và đường gạch */
+    gap: 20px;
     width: 100%;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
-/* Xóa bỏ định dạng gạch cũ nếu có để tránh trùng lặp */
-.section-heading::after {display: none !important;
+/* Xóa bỏ hoàn toàn gạch cũ của section-heading để tránh xung đột */
+.section-heading.centered-heading::after {
+    display: none !important;
 }
 
-/* Tạo đường gạch bên trái và bên phải */
+/* Tạo 2 đường gạch mới bằng ::before và ::after */
 .centered-heading::before,
 .centered-heading::after {
-    content: "";
+    content: "" !important;
     height: 1px;
-    flex: 1; /* Tự động kéo dài để lấp đầy không gian */
-    max-width: 150px; /* Giới hạn độ dài đường gạch cho đẹp */
-    background: linear-gradient(to var(--direction, right), transparent, var(--accent-color)); /* Hiệu ứng mờ dần */
+    flex: 1; /* Tự động kéo dài để lấp đầy 2 bên */
+    max-width: 150px; /* Độ dài tối đa của mỗi gạch */
+    min-width: 30px; /* 🔥 Đảm bảo luôn có độ dài tối thiểu để hiện ra */
+    background: linear-gradient(to var(--direction, right), transparent, var(--accent-color));
 }
 
-/* Đảo ngược hướng gradient cho đường gạch bên trái */
+/* Gạch bên trái mờ dần về bên trái */
 .centered-heading::before {
     --direction: left;
 }
 
-/* Đảo ngược hướng gradient cho đường gạch bên phải */
+/* Gạch bên phải mờ dần về bên phải */
 .centered-heading::after {
+    display: block !important; /* 🔥 ÉP BUỘC hiển thị */
     --direction: right;
 }
 
