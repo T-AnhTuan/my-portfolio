@@ -1154,6 +1154,8 @@ h1 {
     flex-direction: column !important;
     align-items: center !important; /* Căn giữa logo và tên trong cột phải */
     text-align: center !important;
+    min-width: auto !important;
+    width: auto !important;
 }
 
 .company-branding {
@@ -1173,7 +1175,7 @@ h1 {
 
 
 .org-name {
-    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 1rem !important;
     font-weight: 800;
     color: var(--accent-color); /* Màu xanh ngọc chủ đạo */
