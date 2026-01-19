@@ -1576,12 +1576,14 @@ h1 {
         min-width: 0 !important;
         display: flex !important;
         flex-direction: column;
-        padding-left: 5px;
+        padding-left: 0;
+        width: 100%;
         max-width: calc(100% - 40px)!important;
     }
     .info-item i{
         margin-bottom: 5px;
-        font-size: 1.1rem;
+        margin-right: 0;
+        font-size: 1.2rem;
     }
         .info-item p {
             display: block;
@@ -1591,7 +1593,7 @@ h1 {
             overflow: visible;
             font-size: 0.85rem !important;
             line-height: 1.5 !important;
-            text-align: left;
+            text-align: center;
             word-break: break-word !important;
             overflow-wrap: break-word !important;
             margin-right: 10px;
