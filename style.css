@@ -6,6 +6,94 @@
     --text-main: #ccd6f6;
     --text-dim: #8892b0;
 }
+/* =========================================
+   HIỆU ỨNG BACKGROUND ĐỘNG (TECH NEBULA)
+   ========================================= */
+
+/* 1. Lớp nền cố định nằm sau cùng */
+.dynamic-bg {
+    position: fixed; /* Cố định để không bị cuộn theo trang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999; /* Đảm bảo nằm sau TẤT CẢ nội dung */
+    background-color: #0a192f; /* Màu nền tối gốc của bạn */
+    overflow: hidden; /* Ẩn những phần luồng sáng tràn ra ngoài */
+}
+
+    /* 2. Tạo 2 luồng sáng mờ (Blobs) bằng pseudo-elements */
+    .dynamic-bg::before,
+    .dynamic-bg::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150vmax; /* Kích thước rất lớn để bao phủ màn hình */
+        height: 150vmax;
+        border-radius: 50%; /* Hình tròn */
+        transform: translate(-50%, -50%); /* Căn giữa */
+        filter: blur(80px); /* Làm mờ mạnh để tạo hiệu ứng sương mù */
+        opacity: 0.15; /* 🔥 Độ trong suốt: Tăng lên 0.2 nếu muốn sáng hơn, giảm xuống 0.1 nếu muốn tối hơn */
+    }
+
+    /* Luồng sáng thứ 1 (Màu xanh ngọc chủ đạo) */
+    .dynamic-bg::before {
+        background: radial-gradient(circle, var(--accent-color), transparent 60%);
+        animation: moveBlob1 25s infinite linear; /* Chuyển động chậm trong 25s */
+    }
+
+    /* Luồng sáng thứ 2 (Màu xanh dương đậm hơn để tạo chiều sâu) */
+    .dynamic-bg::after {
+        background: radial-gradient(circle, #3b82f6, transparent 60%);
+        animation: moveBlob2 20s infinite linear reverse; /* Chuyển động ngược chiều */
+        opacity: 0.1;
+    }
+
+/* 3. Định nghĩa quỹ đạo chuyển động */
+
+/* Quỹ đạo 1: Xoay và di chuyển nhẹ 4 góc */
+@keyframes moveBlob1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-30%, -70%) rotate(90deg) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-70%, -30%) rotate(180deg) scale(0.9);
+    }
+
+    75% {
+        transform: translate(-40%, -60%) rotate(270deg) scale(1.05);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+/* Quỹ đạo 2: Đơn giản hơn, ngược chiều */
+@keyframes moveBlob2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-60%, -40%) rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* --- QUAN TRỌNG: Đảm bảo nội dung phía trên không có nền đặc --- */
+body, section {
+    background-color: transparent !important; /* Xóa màu nền tĩnh cũ nếu có */
+}
 * {
     margin: 0;
     padding: 0;
