@@ -1193,13 +1193,17 @@ h1 {
         letter-spacing: 1px;
     }
     .info-item p {
+        display: block;
         color: var(--text-main);
         font-weight: 500;
-        white-space: nowrap !important;
+        white-space: normal;
         line-height: 1.5 !important;
         margin: 0 !important;
         width: max-content !important;
+        max-width: 320px !important;
         font-size: 1rem !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
     }
 
 /* --- BỐ CỤC 2 CỘT: HỌC TẬP & CHỨNG CHỈ --- */
