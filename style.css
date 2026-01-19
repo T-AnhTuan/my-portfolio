@@ -1353,7 +1353,11 @@ h1 {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
+    .logo{
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        white-space: nowrap;
+    }
     .edu-logo img {
         width: 60px;
         height: 60px;
@@ -1380,7 +1384,7 @@ h1 {
     }
 
     .nav-links {
-        display: none;
+        display: none !;
     }
 
     .section-heading::after {
