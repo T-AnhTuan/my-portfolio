@@ -440,12 +440,13 @@ h1 {
     font-size: 0.9rem;
 }
 .exp-desc {
-    color: var(--text-main) !important; /* Màu trắng hoặc màu sáng nhất của bạn */
-    font-weight: 600 !important; /* Ép chữ đậm lên */
+    color: #ffffff !important; /* Độ sáng tối đa (Trắng tinh) */
+    font-weight: 400 !important; /* 🔥 Giảm từ 600 xuống 400 (mảnh hơn) */
     font-size: 1rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
+    opacity: 1 !important; /* Giữ nguyên độ sáng, không làm mờ */
     margin-top: 10px !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 12px !important;
     display: block !important;
 }
 .edu-details {
@@ -456,10 +457,10 @@ h1 {
     line-height: 1.6 !important;
 }
     .edu-details li {
-        position: relative !important;
-        padding-left: 20px !important; /* Tạo khoảng trống cho dấu tam giác */
-        margin-bottom: 10px !important;
-        color: var(--text-dim) !important; /* Đảm bảo màu chữ đồng nhất */
+        color: var(--text-dim) !important; /* Màu xám mờ nhẹ */
+        font-weight: 300 !important; /* 🔥 Để mức 300 cho chữ cực mảnh */
+        font-size: 0.92rem !important;
+        opacity: 0.75 !important; /* Làm mờ hơn một chút so với mô tả chính */
         line-height: 1.6 !important;
     }
         .edu-details li::before {
@@ -1146,7 +1147,7 @@ h1 {
         flex-shrink: 0;
     }
 
-.award-content {
+.award-content, detail-list {
     color: var(--text-main);
     font-size: 0.95rem;
     line-height: 1.4;
