@@ -130,7 +130,9 @@ body {
     margin: 0 auto; /* Căn giữa toàn bộ khối 1400px này */
     box-sizing: border-box;
 }
-
+.hero-section, main {
+    padding-top: 140px !important; /* Đẩy nội dung xuống dưới thanh Navbar cố định */
+}
 .hero-text {
     flex: 1.6 !important;
     max-width: 950px !important;
@@ -253,27 +255,24 @@ body {
 
 /* --- 2. ĐIỀU HƯỚNG (NAVBAR) --- */
 .navbar {
-    position: fixed;
-    top: 20px; /* Đặt cách mép trên một chút cho giống mẫu */
-    left: 50%;
-    transform: translateX(-50%); /* Căn giữa thanh menu */
-    padding: 0px 40px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    /* 1. Màu nền trong suốt (RGBA) */
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 95% !important;
+    max-width: 1200px !important;
+    /* Hiệu ứng nền mờ chuyên nghiệp */
     background: rgba(17, 34, 64, 0.7) !important;
-    /* 2. Hiệu ứng làm mờ lớp nền phía dưới */
     backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px); /* Hỗ trợ trình duyệt Safari */
-    /* 3. Viền mờ để tạo khối */
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(100, 255, 218, 0.1);
-    border-radius: 50px; /* Bo tròn dài như hình mẫu */
-    display: flex;
+    border-radius: 50px !important;
+    z-index: 2000 !important;
+    /* Bố cục Flexbox đẩy Logo sang trái, Menu sang phải */
+    display: flex !important;
     justify-content: space-between !important;
-    align-items: center;
-    z-index: 2000;
-    transition: all 0.3s ease;
+    align-items: center !important;
+    padding: 10px 40px !important;
 }
 
     .navbar:hover {
@@ -283,33 +282,24 @@ body {
     }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 25px !important;
+    list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    flex-shrink: 1 !important;
 }
-    .nav-links li {
-        margin-left: 25px;
-    }
-        .nav-links li a {
-            text-decoration: none !important;
-            white-space: nowrap !important; /* Ngăn các mục menu bị xuống dòng */
-            font-size: 0.95rem;
-        }
-    .nav-links a {
-        color: var(--text-main);
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: 0.3s;
-    }
 
+    .nav-links li a {
+        white-space: nowrap !important; /* Không cho phép "Trang chủ" bị xuống dòng */
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
         .nav-links a:hover {
             color: var(--accent-color);
         }
-
+        
 h1 {
     font-size: 3rem; /* Giảm nhẹ kích thước để chữ nằm gọn trên 1 dòng */
     line-height: 1.2;
