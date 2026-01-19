@@ -1346,22 +1346,32 @@ h1 {
         color: #fff;
     }
 
+/* --- MOBILE - THANH MENU --- */
+@media (max-width: 768px) {
+    /* 1. Ẩn toàn bộ danh sách menu */
+    .nav-links {
+        display: none !important;
+    }
 
+    /* 2. Căn giữa Logo để thanh Navbar trông cân đối hơn */
+    .navbar {
+        justify-content: center !important;
+        padding: 10px 0 !important;
+        width: 90% !important;
+    }
+
+    /* 3. Tinh chỉnh lại kích thước Logo trên điện thoại */
+    .logo {
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        white-space: nowrap;
+    }
+}
 /* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
 @media (max-width: 992px) {
     .edu-awards-layout {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-    .navbar{
-        justify-content: center !important;
-        padding: 10px 20px !important;
-        width: 90% !important;
-    }
-    .logo{
-        margin: 0 !important;
-        font-size: 1.2rem !important;
-        white-space: nowrap;
     }
     .edu-logo img {
         width: 60px;
@@ -1388,9 +1398,6 @@ h1 {
         grid-template-columns: 1fr;
     }
 
-    .nav-links {
-        display: none !;
-    }
 
     .section-heading::after {
         width: 100px;
