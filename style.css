@@ -1496,25 +1496,45 @@ h1 {
 }
 /* --- MOBILE - LIÊN HỆ --- */
 @media (max-width: 768px){
-    #contact .section-heading {
+    .section-heading {
         text-align: center; /* Tiêu đề ra giữa */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
-    .contact-layout {
-        align-items: center; /* Nội dung ra giữa */
-        text-align: center;
-        margin: 0 auto; /* Căn giữa khối layout */
+    .contact-left {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     .contact-text {
-        font-size: 1rem;
+        text-align: center !important;
+        margin: 0 auto 25px !important;
+        max-width: 90% !important;
     }
     .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
+        display: flex !important;
+        flex-direction: column !important; /* Xếp chồng cột trái và phải */
+        align-items: center !important;
+        gap: 40px !important;
+    }
+    .glow-button-wrapper, .social-bar {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .contact-right {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
     .info-divider {
         display: none;
     }
     .info-card {
+        margin: 0 auto !important;
         flex-direction: column !important; /* Chuyển từ ngang sang dọc */
         padding: 25px 20px !important; /* Giảm padding để rộng chỗ hơn */
         gap: 30px !important;
@@ -1525,6 +1545,7 @@ h1 {
         width: 100% !important;
         flex: none !important;
         min-width: unset !important;
+        text-align: left !important;
     }
     .org-name {
         white-space: normal !important; /* Cho phép xuống dòng nếu tên quá dài */
