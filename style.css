@@ -193,11 +193,24 @@ body {
 }
 /* Nút Contact (Dạng rỗng) */
 .btn-contact {
-    background: transparent;
-    color: var(--accent-color) !important;
+    background: #ffffff !important; /* 🔥 Nền trắng tinh */
+    color: #0a192f !important; /* 🔥 Chữ màu xanh đen tối (để dễ đọc trên nền trắng) */
+    border: 2px solid #ffffff !important; /* Viền trắng để nút trông đầy đặn, liền khối */
+    /* Các thuộc tính giữ nguyên để đồng bộ kích thước với nút bên cạnh */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 46px !important;
+    padding: 0 25px !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
     .btn-contact:hover {
-        background: rgba(100, 255, 218, 0.1);
+        background: var(--accent-color) !important; /* Đổi nền sang xanh ngọc */
+        color: #0a192f !important; /* Chữ vẫn giữ màu tối */
+        border-color: var(--accent-color) !important; /* Đổi viền sang xanh ngọc */
+        box-shadow: 0 0 15px var(--accent-color); /* Thêm hiệu ứng phát sáng nhẹ */
         transform: translateY(-2px);
     }
 
