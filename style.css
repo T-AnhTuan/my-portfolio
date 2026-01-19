@@ -261,20 +261,20 @@ body {
     transform: translateX(-50%) !important;
     width: 95% !important;
     max-width: 1200px !important;
-    /* Hiệu ứng nền mờ chuyên nghiệp */
-    background: rgba(17, 34, 64, 0.7) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    border-radius: 50px !important;
     z-index: 2000 !important;
     /* Bố cục Flexbox đẩy Logo sang trái, Menu sang phải */
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     padding: 10px 40px !important;
+    border-radius: 50px !important;
+    /* Hiệu ứng nền mờ chuyên nghiệp */
+    background: rgba(17, 34, 64, 0.7) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
 }
-
     .navbar:hover {
         background: rgba(17, 34, 64, 0.85) !important;
         border-color: var(--accent-color);
