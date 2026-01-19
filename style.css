@@ -1391,6 +1391,9 @@ h1 {
         width: 260px;
         height: 260px;
     }
+    .btn-primary, .btn-cv-glow {
+        margin: 0 auto !important;
+    }
 }
 /* --- MOBILE - HỌC TẬP & GIẢI THƯỞNG --- */
 @media (max-width: 768px){
@@ -1541,12 +1544,13 @@ h1 {
     .info-card {
         display: flex !important;
         flex-direction: column !important; /* Chuyển từ ngang sang dọc */
-        margin: 20px auto !important;
-        padding: 25px 20px !important; /* Giảm padding để rộng chỗ hơn */
+        margin: 0 auto !important;
+        padding: 25px 15px !important; /* Giảm padding để rộng chỗ hơn */
         gap: 30px !important;
-        width: 92% !important;
+        width: 100% !important;
         max-width: 100% !important;
         align-items: center;
+        box-sizing:border-box;
     }
     .info-left-col, .info-right-col {
         width: 100% !important;
@@ -1564,12 +1568,22 @@ h1 {
         width: 70px !important;
         height: 70px !important;
     }
+    .info-item{
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .info-item div{
+        flex: 1;
+        min-width: 0;
+    }
     .info-item p {
+        display: block;
         white-space: normal !important;
         font-size: 0.9rem !important;
-        line-height: 1.5 !important;
+        line-height: 1.4 !important;
         text-align: left;
-        word-break: break-word !important; /* Tránh email quá dài làm tràn card */
+        overflow-wrap: break-word;
+        word-break: break-all !important; /* Tránh email quá dài làm tràn card */
     }
     .social-bar {
         justify-content: center;
