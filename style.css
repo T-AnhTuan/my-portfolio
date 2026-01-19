@@ -114,7 +114,6 @@ body {
 .logo {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
-    margin-right: 150px !important;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -258,8 +257,10 @@ body {
     top: 20px; /* Đặt cách mép trên một chút cho giống mẫu */
     left: 50%;
     transform: translateX(-50%); /* Căn giữa thanh menu */
-    width: 90%;
-    max-width: 1000px;
+    padding: 0px 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     /* 1. Màu nền trong suốt (RGBA) */
     background: rgba(17, 34, 64, 0.7) !important;
     /* 2. Hiệu ứng làm mờ lớp nền phía dưới */
@@ -269,9 +270,8 @@ body {
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 50px; /* Bo tròn dài như hình mẫu */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between !important;
     align-items: center;
-    padding: 15px 30px;
     z-index: 2000;
     transition: all 0.3s ease;
 }
@@ -285,10 +285,20 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin: 0 !important;
+    padding: 0 !important;
 }
     .nav-links li {
         margin-left: 25px;
     }
+        .nav-links li a {
+            text-decoration: none !important;
+            white-space: nowrap !important; /* Ngăn các mục menu bị xuống dòng */
+            font-size: 0.95rem;
+        }
     .nav-links a {
         color: var(--text-main);
         text-decoration: none;
