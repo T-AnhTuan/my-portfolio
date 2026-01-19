@@ -1520,11 +1520,36 @@ h1 {
         justify-content: center !important;
         width: 100% !important;
     }
-    .glow-button-wrapper, {
-        border: 1px solid var(--accent-color);
+    .glow-button-wrapper {
+        /* 1. Xử lý "thừa trắng": Ép kích thước vừa vặn với nội dung */
+        display: inline-flex !important;
+        width: fit-content !important;
+        min-width: 160px !important;
+        /* 2. Căn chỉnh lại vị trí (Bỏ margin dư thừa nếu có) */
+        margin: 0 auto 20px 0 !important; /* Căn lề trái, cách dưới 20px */
+        /* 3. Làm đẹp nút: Nền tối, viền sáng đặc trưng IT */
+        background: #0a192f !important; /* Nền xanh đen sâu thẳm */
+        color: var(--accent-color) !important; /* Chữ xanh ngọc sáng */
+        border: 1.5px solid var(--accent-color) !important; /* Viền mỏng tinh tế */
+        /* 4. Hiệu ứng bo góc và khoảng cách */
+        padding: 10px 20px !important;
+        border-radius: 6px !important;
+        font-size: 0.9rem !important;
+        font-weight: 600;
+        /* 5. Hiệu ứng phát sáng nhẹ (Glow) */
         box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
-        margin: 0 auto !important;
+        transition: all 0.3s ease;
     }
+    /* Hiệu ứng khi chạm tay vào nút trên điện thoại */
+        .glow-button-wrapper:active {
+            background: var(--accent-color) !important;
+            color: #0a192f !important;
+            transform: scale(0.96); /* Nảy nhẹ tạo cảm giác thật */
+        }
+        .glow-button-wrapper i {
+            margin-right: 10px !important;
+            font-size: 1rem;
+        }
     .contact-right {
         width: 100% !important;
         display: flex !important;
