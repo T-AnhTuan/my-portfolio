@@ -13,17 +13,17 @@
     align-items: center;
     justify-content: space-between !important;
     min-height: 100vh;
-    padding: 160px 5% 100px 5% !important;
-    gap: 80px !important;
-    width: 100%;
-    max-width: 1400px; /* Khống chế độ rộng tối đa để không bị quá loãng trên màn hình 4K */
+    padding: 120px 3% !important;
+    gap: 120px !important;
+    width: 94%;
+    max-width: 1600px; /* Khống chế độ rộng tối đa để không bị quá loãng trên màn hình 4K */
     margin: 0 auto; /* Căn giữa toàn bộ khối 1400px này */
     box-sizing: border-box;
 }
 
 .hero-text {
-    flex: 1.5;
-    max-width: 850px !important;
+    flex: 1.6 !important;
+    max-width: 950px !important;
     display: flex;
     flex-direction: column; /* Chữ xếp chồng dọc bên trong là đúng */
     align-items: flex-start;
@@ -31,11 +31,11 @@
 }
 
 .hero-img-container {
-    flex: 1 !important;
-    display: flex !important;
-    justify-content: center !important;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end !important;
     /* 🔥 Giới hạn kích thước container để không đẩy chữ đi */
-    max-width: 500px !important;
+    max-width: 550px !important;
 }
 .hero-btns {
     display: flex;
@@ -43,6 +43,12 @@
     align-items: center; /* Căn giữa trục dọc */
     margin-top: 30px;
     flex-wrap: wrap; /* Tự động xuống hàng trên mobile */
+}
+.career-objective {
+    margin-top: 35px;
+    /* 🔥 Tăng độ rộng của box mục tiêu để lấp đầy không gian bên dưới */
+    width: 100%;
+    max-width: 850px;
 }
 /* --- PHONG CÁCH NÚT CV PHÁT SÁNG --- */
 .btn-cv-glow {
