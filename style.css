@@ -1130,17 +1130,17 @@ h1 {
     flex-direction: column;
     gap: 25px;
     position: relative !important; /* 🔥 Bắt buộc để làm mốc cho góc phải */
-    padding-top: 50px !important; /* Tăng không gian phía trên để không bị đè logo */
+    padding-top: 70px !important; /* Tăng không gian phía trên để không bị đè logo */
     overflow: hidden;
 }
 .company-branding {
     position: absolute;
-    top: 25px; /* Khoảng cách từ lề trên */
-    right: 30px; /* Khoảng cách từ lề phải */
+    top: 25px; /* Giữ nguyên vị trí lề trên */
+    right: 30px; /* Giữ nguyên vị trí lề phải */
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Căn toàn bộ về phía bên phải */
-    gap: 8px;
+    align-items: flex-end;
+    gap: 12px;
 }
 
 .branding-main {
@@ -1150,30 +1150,33 @@ h1 {
 }
 
 .org-name {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-color); /* Màu xanh ngọc chủ đạo của bạn */
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-size: 1rem !important;
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: 1.5px;
 }
 
 .org-logo {
-    width: 42px; /* Kích thước logo cân đối với thẻ */
-    height: 42px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05); /* Nền mờ nhẹ cho logo nổi bật */
-    padding: 5px;
+    width: 65px !important;
+    height: 65px !important;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.company-branding:hover .org-logo {
+    transform: scale(1.1); /* Phóng to nhẹ logo khi hover */
 }
 
 .org-socials {
     display: flex;
-    gap: 12px;
+    gap: 18px;
 }
 
     .org-socials a {
-        color: var(--text-dim); /* Màu xám mờ giống các label của bạn */
-        font-size: 0.85rem;
+        font-size: 1.2rem !important;
+        color: var(--text-dim);
         transition: all 0.3s ease;
     }
 
