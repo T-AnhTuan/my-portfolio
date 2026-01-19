@@ -37,8 +37,9 @@
 }
 .hero-btns {
     display: flex;
-    gap: 20px; /* Khoảng cách giữa 2 nút */
+    gap: 15px; /* Khoảng cách giữa 2 nút */
     margin-top: 30px;
+    align-items: center;
     flex-wrap: wrap; /* Tự động xuống dòng trên điện thoại */
 }
 /* --- PHONG CÁCH NÚT CV PHÁT SÁNG --- */
@@ -60,12 +61,55 @@
     .btn-cv-glow:hover {
         background: var(--accent-color); /* Đổi màu nền khi di chuột */
         color: #0a192f !important; /* Chữ tối trên nền sáng */
-        box-shadow: 0 0 25px var(--accent-color); /* Phát sáng mạnh khi hover */
-        transform: translateY(-3px);
+        box-shadow: 0 0 20px var(--accent-color); /* Phát sáng mạnh khi hover */
+        transform: translateY(-2px);
     }
 .name-highlight {
     color: var(--accent-color);
 }
+.btn-contact {
+    background: transparent;
+    color: var(--accent-color) !important;
+    padding: 12px 28px;
+    border-radius: 8px;
+    /* Giữ nguyên các thuộc tính cũ của bạn */
+}
+    .btn-contact:hover {
+        background: rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+    }
+
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.btn-contact,
+.btn-cv-glow {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    /* 🔥 KHÓA CHIỀU CAO: Ép 2 nút cao bằng nhau */
+    height: 48px;
+    padding: 0 25px;
+    /* 🔥 ĐỒNG NHẤT VIỀN: Dùng chung độ dày 2px */
+    border: 2px solid var(--accent-color) !important;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước nút */
+}
+    .btn-primary:hover {
+        background: rgba(100, 255, 218, 0.1);
+    }
+
 
 * {
     margin: 0;
@@ -209,26 +253,6 @@ h1 {
             }
             .social-bar a:hover .fa-tiktok {color: #ff0050;
             }
-
-.btn-contact {
-    padding: 12px 28px;
-    border-radius: 8px;
-    /* Giữ nguyên các thuộc tính cũ của bạn */
-}
-.btn-primary {
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-
-    .btn-primary:hover {
-        background: rgba(100, 255, 218, 0.1);
-    }
 
 .profile-img {
     /* Khóa chết kích thước để không bao giờ bị méo */
