@@ -1543,7 +1543,7 @@ h1 {
         max-width: 100% !important;
         align-items: center;
         box-sizing:border-box !important;
-        overflow:hidden;
+        overflow: visible;
     }
     .info-left-col, .info-right-col {
         width: 100% !important;
@@ -1562,12 +1562,15 @@ h1 {
         height: 70px !important;
     }
     .info-item{
+        display: flex;
         gap: 10px;
         align-items: flex-start;
+        width: 100%;
     }
     .info-item div{
         flex: 1 !important;
         min-width: 0 !important;
+        padding-left: 12px;
     }
         .info-item p {
             display: block;
