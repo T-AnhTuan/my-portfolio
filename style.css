@@ -1353,6 +1353,11 @@ h1 {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    .navbar{
+        justify-content: center !important;
+        padding: 10px 20px !important;
+        width: 90% !important;
+    }
     .logo{
         margin: 0 !important;
         font-size: 1.2rem !important;
