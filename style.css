@@ -1543,7 +1543,9 @@ h1 {
         max-width: 100% !important;
         align-items: center;
         box-sizing:border-box !important;
-        overflow: hidden;
+        height: auto;
+        min-height: max-content;
+        overflow: visible;
     }
     .info-left-col, .info-right-col {
         width: 100% !important;
@@ -1586,10 +1588,11 @@ h1 {
             width: 100% !important;
             max-width: 100% !important;
             white-space: normal !important;
+            overflow: visible;
             font-size: 0.85rem !important;
             line-height: 1.5 !important;
             text-align: left;
-            word-break: normal !important;
+            word-break: break-word !important;
             overflow-wrap: break-word !important;
             margin-right: 10px;
             flex-shrink: 0 !important;
