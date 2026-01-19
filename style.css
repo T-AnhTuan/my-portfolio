@@ -1562,23 +1562,29 @@ h1 {
         height: 70px !important;
     }
     .info-item{
+        flex-direction: column;
         display: flex;
-        gap: 10px;
+        gap: 5px;
         align-items: flex-start;
         width: 100%;
+        margin-bottom: 20px;
     }
     .info-item div{
         flex: 1 !important;
         min-width: 0 !important;
         display: flex !important;
         flex-direction: column;
-        padding-left: 12px;
+        padding-left: 5px;
         max-width: calc(100% - 40px)!important;
+    }
+    .info-item i{
+        margin-bottom: 5px;
+        font-size: 1.1rem;
     }
         .info-item p {
             display: block;
-            width: 100%;
-            max-width: 100%;
+            width: 100% !important;
+            max-width: 100% !important;
             white-space: normal !important;
             font-size: 0.85rem !important;
             line-height: 1.5 !important;
@@ -1586,7 +1592,7 @@ h1 {
             word-break: normal !important;
             overflow-wrap: break-word !important;
             margin-right: 10px;
-            flex-shrink: 0!important;
+            flex-shrink: 0 !important;
         }
     .social-bar {
         justify-content: center;
@@ -1594,8 +1600,7 @@ h1 {
         margin: 0 auto !important;
     }
         .social-bar a {
-            justify-content: center;
-            align-items: center !important;
-            margin: 0 auto !important;
+            justify-content: center !important;
+            margin-bottom: 25px !important;
         }
 }
