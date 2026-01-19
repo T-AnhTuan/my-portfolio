@@ -1525,6 +1525,11 @@ h1 {
         justify-content: center !important;
         width: 100% !important;
     }
+    .glow-button-wrapper, {
+        border: 1px solid var(--accent-color);
+        box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
+        margin: 0 auto !important;
+    }
     .contact-right {
         width: 100% !important;
         display: flex !important;
@@ -1534,12 +1539,14 @@ h1 {
         display: none;
     }
     .info-card {
-        margin: 0 auto !important;
+        display: flex !important;
         flex-direction: column !important; /* Chuyển từ ngang sang dọc */
+        margin: 20px auto !important;
         padding: 25px 20px !important; /* Giảm padding để rộng chỗ hơn */
         gap: 30px !important;
-        width: 100% !important;
+        width: 92% !important;
         max-width: 100% !important;
+        align-items: center;
     }
     .info-left-col, .info-right-col {
         width: 100% !important;
@@ -1558,8 +1565,11 @@ h1 {
         height: 70px !important;
     }
     .info-item p {
+        white-space: normal !important;
         font-size: 0.9rem !important;
-        word-break: break-all !important; /* Tránh email quá dài làm tràn card */
+        line-height: 1.5 !important;
+        text-align: left;
+        word-break: break-word !important; /* Tránh email quá dài làm tràn card */
     }
     .social-bar {
         justify-content: center;
