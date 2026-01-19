@@ -549,20 +549,22 @@ h1 {
     padding: 0 !important;
     margin: 0 !important;
 }
-    .edu-details li,
-    .detail-list li,
-    .awards-list-v2 li {
+    .edu-details li, .detail-list li, .awards-list-v2 li {
         position: relative !important; /* 🔥 CỰC KỲ QUAN TRỌNG: Giữ icon không bị bay mất */
         padding-left: 28px !important; /* Khoảng cách đủ rộng để chứa dấu tam giác */
         margin-bottom: 12px !important;
+        color: #8892b0 !important; /* Tông màu xám trầm chuyên nghiệp */
+        opacity: 0.8 !important;
         list-style-type: none !important;
         display: block !important;
+        font-weight: 400 !important;
+        font-size: 0.92rem !important; /* Nhỏ hơn một chút so với exp-desc */
+        line-height: 1.6 !important;
         text-align: left !important;
     }
-        .edu-details li::before,
-        .detail-list li::before,
-        .awards-list-v2 li::before {
+        .edu-details li::before, .detail-list li::before, .awards-list-v2 li::before {
             content: "▹" !important;
+            opacity: 1 !important;
             position: absolute !important; /* Định vị theo thẻ li gần nhất */
             left: 0 !important; /* Dính chặt vào lề trái của đúng dòng đó */
             top: 0 !important; /* Căn theo đỉnh dòng chữ */
