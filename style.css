@@ -11,17 +11,19 @@
     display: flex !important;
     flex-direction: row !important; /* 🔥 ÉP BUỘC nằm ngang trên PC */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between !important;
     min-height: 100vh;
-    padding: 100px 8%;
-    gap: 40px; /* Khoảng cách giữa chữ và ảnh */
+    padding: 160px 5% 100px 5% !important;
+    gap: 80px !important;
     width: 100%;
+    max-width: 1400px; /* Khống chế độ rộng tối đa để không bị quá loãng trên màn hình 4K */
+    margin: 0 auto; /* Căn giữa toàn bộ khối 1400px này */
     box-sizing: border-box;
 }
 
 .hero-text {
     flex: 1.5;
-    max-width: 700px;
+    max-width: 850px !important;
     display: flex;
     flex-direction: column; /* Chữ xếp chồng dọc bên trong là đúng */
     align-items: flex-start;
@@ -33,7 +35,7 @@
     display: flex !important;
     justify-content: center !important;
     /* 🔥 Giới hạn kích thước container để không đẩy chữ đi */
-    max-width: 400px;
+    max-width: 500px !important;
 }
 .hero-btns {
     display: flex;
