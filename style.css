@@ -15,12 +15,10 @@
 html {
     scroll-behavior: smooth;
 }
-/* =========================================
-   HIỆU ỨNG BACKGROUND ĐỘNG (TECH NEBULA)
-   ========================================= */
+/* ================ HIỆU ỨNG BACKGROUND =============*/
 
 /* 1. Lớp nền cố định nằm sau cùng */
-.dynamic-bg {
+.background {
     position: fixed; /* Cố định để không bị cuộn theo trang */
     top: 0;
     left: 0;
@@ -32,7 +30,7 @@ html {
 }
 
     /* 2. Tạo 2 luồng sáng mờ (Blobs) bằng pseudo-elements */
-    .dynamic-bg::before,.dynamic-bg::after {
+    .background::before, .background::after {
         content: '';
         position: absolute;
         top: 50%;
@@ -46,13 +44,13 @@ html {
     }
 
     /* Luồng sáng thứ 1 (Màu xanh ngọc chủ đạo) */
-    .dynamic-bg::before {
+    .background::before {
         background: radial-gradient(circle, var(--accent-color), transparent 60%);
         animation: moveBlob1 25s infinite linear; /* Chuyển động chậm trong 25s */
     }
 
     /* Luồng sáng thứ 2 (Màu xanh dương đậm hơn để tạo chiều sâu) */
-    .dynamic-bg::after {
+    .background::after {
         background: radial-gradient(circle, #3b82f6, transparent 60%);
         animation: moveBlob2 20s infinite linear reverse; /* Chuyển động ngược chiều */
         opacity: 0.1;
@@ -109,6 +107,7 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
 }
+/* ================ THIẾT KẾ THẺ TRANG CHỦ =============*/
 .hero-section {
     display: flex !important;
     flex-direction: row !important; /* 🔥 ÉP BUỘC nằm ngang trên PC */
@@ -121,9 +120,7 @@ body {
     max-width: 1600px; /* Khống chế độ rộng tối đa để không bị quá loãng trên màn hình 4K */
     margin: 0 auto; /* Căn giữa toàn bộ khối 1400px này */
     box-sizing: border-box;
-}
-.hero-section, main {
-    padding-top: 140px !important; /* Đẩy nội dung xuống dưới thanh Navbar cố định */
+    padding-top: 140px !important;
 }
 .hero-text {
     flex: 1.6 !important;
@@ -134,7 +131,7 @@ body {
     text-align: left;
 }
 
-.hero-img-container {
+.profile {
     flex: 1;
     display: flex;
     justify-content: flex-end !important;
@@ -149,8 +146,11 @@ body {
     flex-wrap: wrap; /* Tự động xuống hàng trên mobile */
 }
 .career-objective {
-    margin-top: 35px;
-    /* 🔥 Tăng độ rộng của box mục tiêu để lấp đầy không gian bên dưới */
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: rgba(100, 255, 218, 0.05); /* Nền xanh ngọc rất mờ để tạo điểm nhấn */
+    border-left: 3px solid var(--accent-color); /* Vạch kẻ dọc màu xanh ngọc của bạn */
+    border-radius: 4px;
     width: 100%;
     max-width: 850px;
 }
@@ -185,9 +185,7 @@ body {
 .name-highlight {
     color: var(--accent-color);
 }
-/* Nút Contact (Dạng rỗng) */
-
-.btn-primary {
+.nut-contact {
     /* 🔥 Kích thước khớp 100% với btn-cv-glow */
     padding: 12px 28px !important;
     /* 🔥 Nền trắng và chữ tối để nổi bật */
@@ -205,7 +203,7 @@ body {
 }
 
     /* Hiệu ứng khi di chuột vào nút Contact */
-    .btn-primary:hover {
+    .nut-contact:hover {
         background-color: transparent !important;
         color: #ffffff !important;
         border-color: var(--accent-color) !important;
@@ -214,7 +212,7 @@ body {
         transform: translateY(-2px) !important;
     }
 /* --- 2. ĐIỀU HƯỚNG (NAVBAR) --- */
-.navbar {
+.menu {
     position: fixed !important;
     top: 20px !important;
     left: 50% !important;
@@ -237,13 +235,13 @@ body {
     border: 1px solid rgba(100, 255, 218, 0.1);
     transition: all 0.3s ease;
 }
-    .navbar:hover {
+    .menu:hover {
         background: rgba(17, 34, 64, 0.85) !important;
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-.nav-links {
+.menu-links {
     display: flex !important;
     flex-direction: row !important;
     gap: 25px !important;
@@ -253,17 +251,17 @@ body {
     flex-shrink: 1 !important;
 }
 
-    .nav-links li a {
+    .menu-links li a {
         white-space: nowrap !important; /* Không cho phép "Trang chủ" bị xuống dòng */
         text-decoration: none;
         color: #a8b2d1 !important;
         font-size: 0.95rem;
     }
-        .nav-links li a:hover {
+        .menu-links li a:hover {
             color: var(--accent-color) !important;
             text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
         }
-        .nav-links a:hover {
+        .menu-links a:hover {
             color: var(--accent-color);
         }
         
@@ -281,18 +279,11 @@ h1 {
     font-size: 1rem;
 }
 
-.description-extended p {
+.gioi-thieu p {
     color: var(--text-dim);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-}
-.career-objective {
-    margin-top: 25px;
-    padding: 15px 20px;
-    background: rgba(100, 255, 218, 0.05); /* Nền xanh ngọc rất mờ để tạo điểm nhấn */
-    border-left: 3px solid var(--accent-color); /* Vạch kẻ dọc màu xanh ngọc của bạn */
-    border-radius: 4px;
 }
 
 .objective-title {
@@ -315,6 +306,8 @@ h1 {
     flex-direction: row !important; /* 🔥 ÉP icon nằm ngang */
     gap: 20px;
     margin: 20px 0;
+    justify-content: center !important;
+    width: 100% !important;
 }
 
     .social-bar a {
@@ -339,26 +332,6 @@ h1 {
             .social-bar a:hover .fa-tiktok {color: #ff0050;
             }
 
-.profile-img {
-    /* Khóa chết kích thước để không bao giờ bị méo */
-    width: 350px !important;
-    height: 350px !important;
-    /* Cắt ảnh theo tỉ lệ 1:1 chuẩn */
-    object-fit: cover;
-    /* Thay đổi từ 50% sang 30px để tạo hình vuông bo góc cách điệu */
-    border-radius: 40px !important;
-    /* Hiệu ứng viền và bóng đổ sáng lạn */
-    border: 5px solid var(--accent-color);
-    padding: 5px;
-    box-shadow: 15px 15px 0px rgba(100, 255, 218, 0.2); /* Đổ bóng lệch tạo kiểu cách điệu */
-    transition: all 0.4s ease;
-}
-
-    .profile-img:hover {
-        transform: rotate(3deg) scale(1.05); /* Xoay nhẹ khi di chuột tạo hiệu ứng động */
-        border-radius: 20px !important;
-        box-shadow: 20px 20px 0px rgba(100, 255, 218, 0.4);
-    }
 /* =========================================
    NEW DYNAMIC PROFILE IMAGE DESIGN
    ========================================= */
@@ -393,7 +366,7 @@ h1 {
 }
 
 /* 3. Hộp chứa ảnh chính - Nổi lên trên */
-.profile-img-box-dynamic {
+.profile-box {
     position: relative;
     width: 350px; /* Nhỏ hơn lớp nền một chút để lộ viền */
     height: 350px;
@@ -408,7 +381,7 @@ h1 {
 }
 
 /* 4. Ảnh chân dung bên trong */
-.profile-img-dynamic {
+.profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
@@ -418,12 +391,12 @@ h1 {
 
 /* --- HIỆU ỨNG TƯƠNG TÁC (HOVER) --- */
 /* Khi di chuột vào wrapper, ảnh chính sẽ phóng to nhẹ và sáng hơn */
-.profile-wrapper-dynamic:hover .profile-img-box-dynamic {
+.profile-wrapper-dynamic:hover .profile-box {
     transform: scale(1.03);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(100, 255, 218, 0.6); /* Phát sáng mạnh hơn */
 }
 
-.profile-wrapper-dynamic:hover .profile-img-dynamic {
+.profile-wrapper-dynamic:hover .profile-img {
     transform: scale(1.1); /* Zoom nhẹ ảnh bên trong */
 }
 
@@ -1216,7 +1189,6 @@ h1 {
         text-transform: uppercase;
         letter-spacing: 1px;
     }
-
     .info-item p {
         color: var(--text-main);
         font-weight: 500;
@@ -1341,10 +1313,10 @@ h1 {
 /* --- MOBILE - THANH MENU --- */
 @media (max-width: 768px) {
     /* 1. Ẩn toàn bộ danh sách menu */
-    .nav-links {
+    .menu-links {
         display: none !important;
     }
-    .navbar {
+    .menu {
         justify-content: center !important;
         padding: 15px 0 !important;
         width: 95% !important;
@@ -1370,20 +1342,16 @@ h1 {
     .hero-text {
         align-items: center;
     }
-    .profile-img {
-        width: 250px !important;
-        height: 250px !important;
-    }
     .profile-wrapper-dynamic {
         width: 300px;
         height: 300px;
     }
 
-    .profile-img-box-dynamic {
+    .profile-box{
         width: 260px;
         height: 260px;
     }
-    .btn-primary, .btn-cv-glow {
+    .nut-contact, .btn-cv-glow {
         margin: 0 auto !important;
     }
 }
@@ -1515,7 +1483,7 @@ h1 {
         align-items: center !important;
         gap: 40px !important;
     }
-    .glow-button-wrapper, .social-bar {
+    .glow-button-wrapper {
         display: flex !important;
         justify-content: center !important;
         width: 100% !important;
@@ -1593,15 +1561,15 @@ h1 {
         flex: 1;
         min-width: 0;
     }
-    .info-item p {
-        display: block;
-        white-space: normal !important;
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
-        text-align: left;
-        overflow-wrap: break-word;
-        word-break: break-all !important; /* Tránh email quá dài làm tràn card */
-    }
+        .info-item p {
+            display: block;
+            white-space: normal !important;
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+            text-align: left;
+            overflow-wrap: anywhere;
+            word-break: break-word !important;
+        }
     .social-bar {
         justify-content: center;
     }
