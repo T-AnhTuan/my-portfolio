@@ -549,7 +549,16 @@ h1 {
     padding: 0 !important;
     margin: 0 !important;
 }
-    .edu-details li, .detail-list li, .awards-list-v2 li {
+    .detail-list li {
+        color: #ccd6f6 !important; /* Màu sáng thanh thoát */
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 0.95rem !important;
+        position: relative !important;
+        padding-left: 28px !important;
+        margin-bottom: 12px !important;
+    }
+    .edu-details li, .awards-list-v2 li {
         position: relative !important; /* 🔥 CỰC KỲ QUAN TRỌNG: Giữ icon không bị bay mất */
         padding-left: 28px !important; /* Khoảng cách đủ rộng để chứa dấu tam giác */
         margin-bottom: 12px !important;
