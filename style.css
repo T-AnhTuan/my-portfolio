@@ -1101,13 +1101,20 @@ h1 {
     }
 
     .exp-header {
-        grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
-        gap: 5px;
+        /* 🔥 Chuyển từ hàng ngang sang hàng dọc cho tiêu đề và ngày tháng */
+        flex-direction: column !important;
+        align-items: flex-start !important; /* Căn lề trái toàn bộ */
+        gap: 8px; /* Khoảng cách giữa tiêu đề và ngày tháng */
     }
-
+    .exp-title {
+        font-size: 1.2rem !important;
+        line-height: 1.4;
+    }
     .exp-date {
-        text-align: left; /* Căn trái trên mobile cho dễ nhìn */
-        min-width: auto;
+        /* 🔥 Bỏ lề trái cũ và đảm bảo ngày tháng nằm riêng một dòng */
+        margin-left: 0 !important;
+        font-size: 0.85rem !important;
+        opacity: 0.8;
     }
 
     .edu-date {
