@@ -1352,23 +1352,48 @@ h1 {
     .nav-links {
         display: none !important;
     }
-
-    /* 2. Căn giữa Logo để thanh Navbar trông cân đối hơn */
     .navbar {
         justify-content: center !important;
-        padding: 10px 0 !important;
-        width: 90% !important;
+        padding: 15px 0 !important;
+        width: 95% !important;
     }
-
-    /* 3. Tinh chỉnh lại kích thước Logo trên điện thoại */
     .logo {
         margin: 0 !important;
         font-size: 1.2rem !important;
         white-space: nowrap;
     }
 }
-/* --- 8. ĐÁP ỨNG (MEDIA QUERIES) - GOM LẠI LÀM MỘT --- */
-@media (max-width: 992px) {
+/* --- MOBILE - HOME --- */
+@media (max-width: 768px){
+    h1 {
+        font-size: 2.2rem;
+        white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
+    }
+    .hero-section {
+        flex-direction: column-reverse !important; /* Trên mobile mới được dọc */
+        text-align: center;
+        padding-top: 120px;
+        gap: 30px;
+    }
+    .hero-text {
+        align-items: center;
+    }
+    .profile-img {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .profile-wrapper-dynamic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-img-box-dynamic {
+        width: 260px;
+        height: 260px;
+    }
+}
+/* --- MOBILE - HỌC TẬP & GIẢI THƯỞNG --- */
+@media (max-width: 768px){
     .edu-awards-layout {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1377,45 +1402,21 @@ h1 {
         width: 60px;
         height: 60px;
     }
-
-    .hero-section {
-        flex-direction: column-reverse !important; /* Trên mobile mới được dọc */
-        text-align: center;
-        padding-top: 120px;
-        gap: 30px;
+    .edu-date {
+        text-align: left;
     }
-
-    .hero-text {
-        align-items: center;
-    }
-
-    .profile-img {
-        width: 250px !important;
-        height: 250px !important;
-    }
-
-    .split-grid {
+}
+/* --- MOBILE - KỸ NĂNG --- */
+@media (max-width: 768px){
+    .skills-grid {
         grid-template-columns: 1fr;
     }
-
-
-    .section-heading::after {
-        width: 100px;
+    .skill-card {
+        padding: 20px;
     }
-
-    .social-bar {
-        justify-content: center;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
-    }
-
-    .testimonial-card {
-        width: 300px;
-    }
-
+}
+/* --- MOBILE - KINH NGHIỆM --- */
+@media (max-width: 768px){
     /* 1. Ép toàn bộ khung chứa phải căn trái */
     .exp-info {
         display: flex !important;
@@ -1424,12 +1425,10 @@ h1 {
         text-align: left !important;
         width: 100% !important;
     }
-
     /* 2. Giải phóng các thành phần bên trong header */
     .exp-header {
         display: contents !important; /* 🔥 Cho phép trộn lẫn title và date */
     }
-
     /* 3. Thứ tự 1: Tên vị trí (h3) */
     .exp-info h3 {
         order: 1 !important;
@@ -1437,7 +1436,6 @@ h1 {
         text-align: left !important;
         width: 100% !important;
     }
-
     /* 4. Thứ tự 2: Tên tổ chức (Học viện Tài chính) */
     .exp-info .company {
         order: 2 !important;
@@ -1447,7 +1445,6 @@ h1 {
         color: var(--accent-color) !important;
         font-weight: bold !important;
     }
-
     /* 5. Thứ tự 3: Thời gian (Nằm dưới cùng và căn trái) */
     .exp-info .exp-date {
         order: 3 !important;
@@ -1458,35 +1455,14 @@ h1 {
         color: var(--text-dim) !important;
         margin-bottom: 15px !important;
     }
-
     /* 6. Thứ tự 4: Phần mô tả chi tiết */
     .exp-desc, .edu-details {
         order: 4 !important;
         text-align: left !important;
     }
-
-    .edu-date {
-        text-align: left;
-    }
-
-    .centered-heading::before,
-    .centered-heading::after {
-        max-width: 50px;
-    }
-
-    .centered-heading {
-        font-size: 1.5rem;
-    }
-
-    .partner-logos {
-        gap: 30px;
-        flex-direction: row !important; /* Vẫn giữ hàng ngang trên mobile nếu đủ chỗ */
-    }
-
-        .partner-logos img {
-            height: 25px !important;
-        }
-
+}
+/* --- MOBILE - DỰ ÁN --- */
+@media (max-width: 768px){
     .project-container {
         grid-template-columns: 1fr;
     }
@@ -1495,39 +1471,45 @@ h1 {
         flex-direction: column;
         gap: 15px;
     }
-
+}
+/* --- MOBILE - ĐỐI TÁC --- */
+@media (max-width: 768px){
+    .testimonial-card {
+        width: 300px;
+    }
+    .partner-logos {
+        gap: 30px;
+        flex-direction: row !important; /* Vẫn giữ hàng ngang trên mobile nếu đủ chỗ */
+    }
+        .partner-logos img {
+            height: 25px !important;
+        }
+    .section-heading::after {
+        width: 100px;
+    }
+    .centered-heading::before,.centered-heading::after {
+        max-width: 50px;
+    }
+    .centered-heading {
+        font-size: 1.5rem;
+    }
+}
+/* --- MOBILE - LIÊN HỆ --- */
+@media (max-width: 768px){
     #contact .section-heading {
         text-align: center; /* Tiêu đề ra giữa */
     }
-
     .contact-layout {
         align-items: center; /* Nội dung ra giữa */
         text-align: center;
         margin: 0 auto; /* Căn giữa khối layout */
     }
-
     .contact-text {
         font-size: 1rem;
     }
-
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 50px;
-    }
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        padding: 20px;
-    }
-    .profile-wrapper-dynamic {
-        width: 300px;
-        height: 300px;
-    }
-    .profile-img-box-dynamic {
-        width: 260px;
-        height: 260px;
     }
     .info-divider {
         display: none;
@@ -1544,7 +1526,6 @@ h1 {
         flex: none !important;
         min-width: unset !important;
     }
-
     .org-name {
         white-space: normal !important; /* Cho phép xuống dòng nếu tên quá dài */
         font-size: 0.95rem !important; /* Giảm cỡ chữ một chút */
@@ -1559,8 +1540,7 @@ h1 {
         font-size: 0.9rem !important;
         word-break: break-all !important; /* Tránh email quá dài làm tràn card */
     }
-    .btn-contact {
-        width: 100% !important; /* Nút chiếm hết chiều rộng cho dễ bấm */
-        margin-bottom: 20px;
+    .social-bar {
+        justify-content: center;
     }
 }
