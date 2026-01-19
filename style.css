@@ -1198,54 +1198,51 @@ h1 {
         width: 300px;
     }
 
+    /* 1. Ép toàn bộ khung chứa phải căn trái */
     .exp-info {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important; /* 🔥 Ép căn trái toàn bộ */
-        text-align: left !important; /* 🔥 Ép chữ căn trái */
-        width: 100% !important;
-    }
-
-    /* Giải phóng title và date để sắp xếp lại */
-    .exp-header {
-        display: contents !important;
-    }
-
-        /* Thứ tự 1: Tên vị trí */
-        .exp-info h3,
-        .exp-header h3 {
-            order: 1 !important;
-            margin-bottom: 4px !important;
-            text-align: left !important;
-            width: 100% !important;
-        }
-
-    /* Thứ tự 2: Tên tổ chức (Học viện Tài chính) */
-    .exp-info .company {
-        order: 2 !important;
-        margin-bottom: 4px !important;
-        color: var(--accent-color) !important;
-        font-weight: bold !important;
+        align-items: flex-start !important; /* 🔥 Ép bám lề trái */
         text-align: left !important;
         width: 100% !important;
     }
 
-    /* Thứ tự 3: Thời gian (2023 - Hiện tại) */
-    .exp-info .exp-date,
-    .exp-header .exp-date {
-        order: 3 !important;
-        display: block !important;
-        margin-left: 0 !important;
-        margin-right: auto !important; /* 🔥 Đẩy về bên trái */
-        text-align: left !important; /* 🔥 Xóa bỏ trạng thái căn giữa */
-        font-size: 0.85rem !important;
-        color: var(--text-dim) !important;
-        margin-bottom: 12px !important;
+    /* 2. Giải phóng các thành phần bên trong header */
+    .exp-header {
+        display: contents !important; /* 🔥 Cho phép trộn lẫn title và date */
     }
 
-    /* Thứ tự 4: Các dòng mô tả */
-    .exp-info .exp-desc,
-    .exp-info .edu-details {
+    /* 3. Thứ tự 1: Tên vị trí (h3) */
+    .exp-info h3 {
+        order: 1 !important;
+        margin-bottom: 5px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    /* 4. Thứ tự 2: Tên tổ chức (Học viện Tài chính) */
+    .exp-info .company {
+        order: 2 !important;
+        margin-bottom: 5px !important;
+        text-align: left !important;
+        width: 100% !important;
+        color: var(--accent-color) !important;
+        font-weight: bold !important;
+    }
+
+    /* 5. Thứ tự 3: Thời gian (Nằm dưới cùng và căn trái) */
+    .exp-info .exp-date {
+        order: 3 !important;
+        display: block !important;
+        margin: 0 !important; /* 🔥 Xóa bỏ mọi margin gây lệch */
+        text-align: left !important;
+        font-size: 0.85rem !important;
+        color: var(--text-dim) !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 6. Thứ tự 4: Phần mô tả chi tiết */
+    .exp-desc, .edu-details {
         order: 4 !important;
         text-align: left !important;
     }
