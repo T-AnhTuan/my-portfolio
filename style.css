@@ -1598,12 +1598,16 @@ h1 {
             flex-shrink: 0 !important;
         }
     .social-bar {
-        justify-content: center;
-        align-items: center !important;
-        margin: 0 auto !important;
+        display: flex;
+        margin-top: 55px;
+        justify-content: center !important;
+        gap: 25px;
+        margin-bottom: 30px;
+        width: 100%;
     }
         .social-bar a {
-            justify-content: center !important;
-            margin-bottom: 25px !important;
+            font-size: 1.6rem;
+            color: #a8b2d1;
+            text-decoration: none;
         }
 }
