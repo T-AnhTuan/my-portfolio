@@ -1537,13 +1537,13 @@ h1 {
         display: flex !important;
         flex-direction: column !important; /* Chuyển từ ngang sang dọc */
         margin: 0 auto !important;
-        padding: 25px 15px !important; /* Giảm padding để rộng chỗ hơn */
+        padding: 25px 15px !important; 
         gap: 30px !important;
         width: 100% !important;
         max-width: 100% !important;
         align-items: center;
         box-sizing:border-box !important;
-        overflow: visible;
+        overflow: hidden;
     }
     .info-left-col, .info-right-col {
         width: 100% !important;
@@ -1570,18 +1570,23 @@ h1 {
     .info-item div{
         flex: 1 !important;
         min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column;
         padding-left: 12px;
+        max-width: calc(100% - 40px)!important;
     }
         .info-item p {
             display: block;
             width: 100%;
             max-width: 100%;
             white-space: normal !important;
-            font-size: 0.9rem !important;
-            line-height: 1.4 !important;
+            font-size: 0.85rem !important;
+            line-height: 1.5 !important;
             text-align: left;
             word-break: normal !important;
             overflow-wrap: break-word !important;
+            margin-right: 10px;
+            flex-shrink: 0!important;
         }
     .social-bar {
         justify-content: center;

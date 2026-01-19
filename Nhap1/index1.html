@@ -3,138 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trần Anh Tuấn | MIS-er</title>
+    <title>Trần Anh Tuấn | Portfolio</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap&subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="dynamic-bg"></div>
     <nav class="navbar">
         <div class="logo">T-<span>ANH TUAN</span></div>
         <ul class="nav-links">
-            <li><a href="#hero">TRANG CHỦ</a></li>
-            <li><a href="#about">PROFILE</a></li>
-            <li><a href="#analytics">KỸ NĂNG</a></li>
-            <li><a href="#work">PROJECTS</a></li>
-            <li><a href="#contact">LIÊN HỆ</a></li>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#education">Học tập & Giải thưởng</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#experience">Kinh nghiệm</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#testimonials">Đối tác</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
         </ul>
     </nav>
 
-    <section id="hero" class="dark-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h3>HỌC VIỆN TÀI CHÍNH | HỆ THỐNG THÔNG TIN QUẢN LÝ</h3>
-                    <h1>TRẦN ANH TUẤN</h1>
-                    <span class="badge">Thực tập sinh Hệ thống</span>
-                </div>
-                <div class="hero-main-img">
-                    <img src="pictures/anhto.jpg" alt="Profile Large" class="profile-main">
-                    <div class="img-decorator"></div>
-                </div>
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Hello, I'm <span class="name-highlight">Anh Tuấn</span> <span class="wave">👋</span></h1>
+            <p class="title-sub">QUẢN TRỊ DỮ LIỆU | THỰC TẬP SINH HỆ THỐNG</p>
+
+            <div class="description-extended">
+                <p>
+                    Là sinh viên chuyên ngành <strong>Hệ thống thông tin Quản lý (MIS)</strong>, mình sở hữu nền tảng vững chắc về quản trị dữ liệu và phân tích quy trình nghiệp vụ. Đam mê của mình là thiết kế và xây dựng các <strong>hệ thống quản trị thông minh</strong> để tối ưu hóa hiệu suất vận hành.
+                </p>
+                <p>
+                    Với kỹ năng <strong>SQL & Database</strong> và tư duy logic, mình luôn nỗ lực tìm kiếm những giải pháp kỹ thuật số giúp doanh nghiệp thực hiện chuyển đổi số hiệu quả. Mình tự tin trong việc giao thoa giữa nhu cầu kinh doanh và các giải pháp kỹ thuật phức tạp.
+                </p>
             </div>
 
-            <div id="about" class="about-card">
-                <div class="about-img">
-                    <img src="pictures/avatar.jpg" alt="Profile Small" class="profile-thumb">
-                </div>
-                <div class="about-text">
-                    <p class="sub-title">Who am I?</p>
-                    <h2>SYSTEM ANALYST</h2>
-                    <p>Chuyên gia tối ưu hóa quy trình doanh nghiệp và khai phá giá trị từ dữ liệu. Tôi xây dựng cầu nối giữa mục tiêu kinh doanh và giải pháp công nghệ.</p>
+            <div class="career-objective">
+                <h4 class="objective-title">Mục tiêu nghề nghiệp</h4>
+                <p>
+                    Khát khao ứng dụng kiến thức về <strong>Hệ thống thông tin Quản lý</strong> và kỹ năng phân tích dữ liệu chuyên sâu (<strong>SQL, C#</strong>) để trích xuất các thông tin giá trị cho doanh nghiệp.
+                    Mục tiêu của mình là đóng góp vào quá trình ra quyết định dựa trên dữ liệu và hỗ trợ doanh nghiệp tối ưu hóa chiến lược kinh doanh.
+                </p>
+            </div>
+
+            <div class="social-bar">
+                <a href="https://github.com/T-AnhTuan" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/anh-tuan-hvtc" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com/tuanproid" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/tuanproid" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@tuan.ptvn" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://threads.net/@tuanproid" target="_blank"><i class="fa-brands fa-threads"></i></a>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">Contact with me</a>
+                <a href="CV-mis.pdf" class="btn-cv-glow" download>
+                    <i class="fas fa-file-download" style="margin-right: 8px;"></i> Tải CV (PDF)
+                </a>
+            </div>
+        </div>
+        <div class="hero-img-container">
+            <div class="profile-wrapper-dynamic">
+                <div class="profile-halo-spin"></div>
+
+                <div class="profile-img-box-dynamic">
+                    <img src="pictures/avatar.jpg" alt="Trần Anh Tuấn" class="profile-img-dynamic">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="analytics" class="analytics-section">
-        <div class="container">
-            <div class="analytics-grid">
-                <div class="chart-container">
-                    <h3>Core Technical Skills</h3>
-                    <canvas id="skillsChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3>Project Performance Radar</h3>
-                    <canvas id="impactChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="education" class="section">
+        <div class="edu-awards-layout">
+            <div class="column-container">
+                <h2 class="column-title">Học tập</h2>
 
-    <section id="work" class="light-section">
-        <div class="container">
-            <div class="work-header">
-                <h1>MY WORK<span>.</span></h1>
-                <p>Strategic Systems & Data Solutions</p>
-            </div>
-
-            <div class="filter-menu">
-                <button class="filter-btn active" data-filter="all">ALL</button>
-                <button class="filter-btn" data-filter="data">DATA ANALYTICS</button>
-                <button class="filter-btn" data-filter="erp">ERP SYSTEM</button>
-                <button class="filter-btn" data-filter="db">DATABASE</button>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 1"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 2"></div>
-                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 3"></div>
-                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 4"></div>
-                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 5"></div>
-                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 6"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">LIÊN HỆ</h2>
-            <div class="contact-card">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <span class="icon">📧</span>
-                        <div>
-                            <strong>EMAIL:</strong>
-                            <p>tuan2k5.ptvn@gmail.com</p>
+                <div class="info-box">
+                    <div class="school-header">
+                        <img src="logo/hvtc.png" alt="Học viện Tài chính" class="school-logo-round">
+                        <div class="school-meta">
+                            <h3>Học viện Tài chính</h3>
+                            <p class="sub-text">Cử nhân Hệ thống thông tin quản lý (MIS)</p>
+                            <p class="time-text">Tháng 9/2023 - Hiện tại</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <span class="icon">📞</span>
-                        <div>
-                            <strong>SỐ ĐIỆN THOẠI:</strong>
-                            <p>.........</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">📍</span>
-                        <div>
-                            <strong>ĐỊA CHỈ:</strong>
-                            <p>...... Hà Nội</p>
-                        </div>
+                    <ul class="detail-list">
+                        <li>Sinh viên chuyên ngành MIS, tập trung vào phân tích dữ liệu và quản trị hệ thống.</li>
+                        <li>Học tập và tìm hiểu các ngôn ngữ lập trình như SQL, Python, C/C++, C#....</li>
+                        <li>Học tập và tìm hiểu các kiến thức về nghiệp vụ kế toán, tài chính...</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="column-container">
+                <h2 class="column-title">Chứng chỉ</h2>
+
+                <div class="info-box award-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="award-content">
+                        Hoàn thành xuất sắc khóa học Google Analytics Certification
                     </div>
                 </div>
 
-                <div class="contact-social">
-                    <h3>KẾT NỐI VỚI TÔI</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">Facebook</a>
-                        <a href="#" class="social-btn">Instagram</a>
-                        <a href="#" class="social-btn">TikTok</a>
+                <div class="info-box award-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="award-content">
+                        <strong>Quý quân</strong> - Festival Chuyển đổi số năm 2023
+                    </div>
+                </div>
+
+                <div class="info-box award-item">
+                    <i class="fas fa-medal"></i>
+                    <div class="award-content">
+                        <strong>Học bổng 30%</strong> - FPTU Scholarship 1000 năm 2023
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-heading">Kỹ năng chuyên môn</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>SQL & Database</h3>
+                    <p>Thành thạo truy vấn dữ liệu phức tạp, tối ưu hóa cấu trúc bảng và quản trị hệ thống SQL Server/MySQL.</p>
+                    <div class="skill-level-container">
+                        <div class="skill-level-bar" style="width: 85%;"></div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Data Analysis</h3>
+                    <p>Sử dụng Python (Pandas/Matplotlib), Excel Advanced và Power BI để trích xuất thông tin giá trị từ dữ liệu thô.</p>
+                    <div class="skill-level-container">
+                        <div class="skill-level-bar" style="width: 80%;"></div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>HTML/CSS & UI/UX</h3>
+                    <p>Xây dựng giao diện Web Responsive hiện đại, tối ưu trải nghiệm người dùng với tư duy thiết kế hệ thống.</p>
+                    <div class="skill-level-container">
+                        <div class="skill-level-bar" style="width: 75%;"></div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>MIS System</h3>
+                    <p>Phân tích quy trình doanh nghiệp, thiết kế hệ thống thông tin quản lý và tích hợp giải pháp kỹ thuật số.</p>
+                    <div class="skill-level-container">
+                        <div class="skill-level-bar" style="width: 90%;"></div>
+                        <span class="skill-percentage">90%</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-heading">Kinh nghiệm làm việc</h2>
+        <div class="exp-container">
+            <div class="exp-card">
+                <div class="exp-info">
+                    <div class="exp-header">
+                        <h3>Data Analyst Intern</h3>
+                        <span class="exp-date">2023 - Hiện tại</span>
+                    </div>
+                    <p class="company">Học viện Tài chính</p>
+                    <p class="exp-desc">Tối ưu hóa quy trình quản lý thông tin sinh viên và phân tích dữ liệu MIS.</p>
+                    <ul class="edu-details">
+                        <li>Ứng dụng các công cụ phân tích để xử lý tập dữ liệu lớn.</li>
+                        <li>Đề xuất các giải pháp kỹ thuật số giúp thu hẹp khoảng cách giữa quản trị và công nghệ.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-info">
+                    <div class="exp-header">
+                        <h3>Freelance Web Developer</h3>
+                        <span class="exp-date">2022 - 2023</span>
+                    </div>
+                    <p class="company">Dự án cá nhân / Khách hàng tự do</p>
+                    <p class="exp-desc">Thiết kế và triển khai các giao diện website Portfolio hiện đại.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-heading">Dự án tiêu biểu</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <div class="bg-glow"></div>
+
+                <div class="project-content">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hệ thống Dự báo Tài chính MIS</h3>
+                        <p>Xây dựng mô hình phân tích dữ liệu hỗ trợ ra quyết định chiến lược cho doanh nghiệp vừa và nhỏ.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="bg-glow"></div>
+                <div class="project-content">
+                    <div class="project-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tối ưu quy trình Quản trị Dữ liệu</h3>
+                        <p>Chuẩn hóa cấu trúc dữ liệu sinh viên tại Học viện Tài chính, giảm 30% thời gian truy xuất thông tin.</p>
+                        <div class="tags">
+                            <span>Excel Advanced</span>
+                            <span>System Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2 class="section-heading centered-heading">Đối tác nói gì về tôi???</h2>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="testimonial-card">
+                    <p class="review-text">"Sự am hiểu về hệ thống và dữ liệu của Tuấn đã giúp dự án của chúng tôi đạt kết quả vượt mong đợi. Một cộng sự cực kỳ chuyên nghiệp."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Michael Johnson</p>
+                            <p class="user-role">Director of TechSolution</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="review-text">"Khả năng phân tích chiến lược dữ liệu tuyệt vời. Cách Tuấn trình bày giải pháp rất rõ ràng và dễ hiểu."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Adrian Hajdin</p>
+                            <p class="user-role">Founder of JSM</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="review-text">"Sự am hiểu về hệ thống và dữ liệu của Tuấn đã giúp dự án của chúng tôi đạt kết quả vượt mong đợi. Một cộng sự cực kỳ chuyên nghiệp."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Michael Johnson</p>
+                            <p class="user-role">Director of TechSolution</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="review-text">"Sự am hiểu về hệ thống và dữ liệu của Tuấn đã giúp dự án của chúng tôi đạt kết quả vượt mong đợi. Một cộng sự cực kỳ chuyên nghiệp."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Michael Johnson</p>
+                            <p class="user-role">Director of TechSolution</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="review-text">"Khả năng phân tích chiến lược dữ liệu tuyệt vời. Cách Tuấn trình bày giải pháp rất rõ ràng và dễ hiểu."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Adrian Hajdin</p>
+                            <p class="user-role">Founder of JSM</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="review-text">"Sự am hiểu về hệ thống và dữ liệu của Tuấn đã giúp dự án của chúng tôi đạt kết quả vượt mong đợi. Một cộng sự cực kỳ chuyên nghiệp."</p>
+                    <div class="user-info">
+                        <div>
+                            <p class="user-name">Michael Johnson</p>
+                            <p class="user-role">Director of TechSolution</p>
+                        </div>
+                        <img src="pictures/avatar.jpg" alt="Partner">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partner-logos">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" style="filter: brightness(0) invert(1);">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: brightness(0) invert(1);">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png" alt="Docker">
+            <img src="logo/hsv.png" alt="Hội Sinh viên Việt Nam">
+            <img src="logo/dtn.png" alt="Đoàn TNCS HCM Học viện Tài chính">
+            <img src="logo/hvtc.png" alt="Học viện Tài chính">
+            <img src="logo/19aof.png" alt="Đội SVTN Đồng hương Phú Thọ HVTC">
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-heading">Contact with me</h2>
+
+        <div class="contact-grid">
+            <div class="contact-left">
+                <p class="contact-text">
+                    Luôn sẵn sàng cho những thử thách mới về Dữ liệu và Chiến lược. Cho dù bạn có một ý tưởng thú vị hay chỉ muốn gửi lời chào, đừng ngần ngại, mình sẽ phản hồi sớm nhất có thể!
+                </p>
+
+                <div class="glow-button-wrapper">
+                    <a href="mailto:tuan2k5.work@gmail.com" class="btn-primary-glow">
+                        <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> Gửi Email Ngay
+                    </a>
+                </div>
+
+                <div class="social-bar">
+                    <a href="https://github.com/T-AnhTuan" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/anh-tuan-hvtc" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://facebook.com/tuanproid" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/tuanproid" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@tuan.ptvn" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://threads.net/@tuanproid" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <div class="info-card">
+                    <div class="info-left-col">
+                        <div class="info-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div><span>Họ tên</span><p>Trần Anh Tuấn</p></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><span>Địa chỉ</span><p>Vinhomes Smart City, Tây Mỗ, Hà Nội</p></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div><span>SĐT/Zalo</span><p>0789 060 891 | 0868 936 960</p></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div><span>Email cá nhân</span><p>tuan2k5.work@gmail.com</p></div>
+                        </div>
+                    </div>
+
+                    <div class="info-divider"></div>
+
+                    <div class="info-right-col">
+                        <div class="company-branding">
+                            <img src="logo/hvtc.png" alt="Logo HVTC" class="org-logo">
+                            <h4 class="org-name">HỌC VIỆN TÀI CHÍNH</h4>
+                            <div class="org-socials">
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/aof.fanpage"><i class="fab fa-facebook-f"></i></a>
+                                <a href="mailto:hocvientaichinh@hvtc.edu.vn" title="Gửi Email Tổ chức"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 - Bản quyền thuộc về T-ANH TUAN</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script src="script.js"></script>
-
-    <footer id="main-footer">
-        <div class="footer-bottom">
-            <p>@2026 - Bản quyền thuộc về T-AnhTuan</p>
-            <p>Khi sử dụng lại thông tin từ website này, xin vui lòng ghi rõ nguồn "AnhTuanPro.id.vn"</p>
-        </div>
-    </footer>
 </body>
 </html>
