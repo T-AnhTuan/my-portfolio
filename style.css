@@ -1197,6 +1197,8 @@ h1 {
 
 .org-socials {
     display: flex;
+    width: 15px;
+    height: 15px;
     gap: 20px;
 }
 
