@@ -528,13 +528,20 @@ h1 {
     font-size: 0.9rem;
 }
 .exp-desc {
-    list-style: none !important;
-    position: relative !important;
-    padding-left: 25px !important;
-    color: #ccd6f6 !important; /* Màu xám trắng sáng giống ô nhận xét */
-    opacity: 1 !important; /* Đảm bảo độ hiển thị rõ nét nhất */
-    font-weight: 400 !important; /* Giữ nét chữ mảnh, thanh lịch */
+    /* 🔥 QUAN TRỌNG: Xóa padding để thẳng hàng với tiêu đề bên trên */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    /* Giữ nguyên các định dạng màu sắc và font chữ bạn đã chọn */
+    color: #ccd6f6 !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
     margin-bottom: 12px !important;
+    display: block !important;
+    /* Dọn dẹp các dòng không cần thiết cho thẻ <p> */
+    position: static !important;
+    list-style: none !important;
     list-style-type: none !important;
 }
 .edu-details, .detail-list, .exp-info ul, .awards-list-v2 {
