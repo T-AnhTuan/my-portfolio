@@ -1173,7 +1173,7 @@ h1 {
 
 
 .org-name {
-    font-family: 'Montserrat', 'Inter', sans-serif !important;
+    font-family: 'Montserrat', Arial, sans-serif !important;
     font-size: 1.1rem !important;
     font-weight: 800;
     color: var(--accent-color); /* Màu xanh ngọc chủ đạo */
@@ -1205,10 +1205,12 @@ h1 {
 }
 
     .org-socials a {
-        font-size: 1.3rem !important;
+        text-decoration: none !important;
+        font-size: 1.4rem !important;
         color: #a8b2d1 !important;
         transition: all 0.3s ease;
         display: inline-flex !important;
+        border: none;
     }
 
         .org-socials a:hover {
