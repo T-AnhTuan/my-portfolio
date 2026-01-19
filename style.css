@@ -131,7 +131,28 @@ h1 {
     line-height: 1.8;
     margin-bottom: 15px;
 }
+.career-objective {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: rgba(100, 255, 218, 0.05); /* Nền xanh ngọc rất mờ để tạo điểm nhấn */
+    border-left: 3px solid var(--accent-color); /* Vạch kẻ dọc màu xanh ngọc của bạn */
+    border-radius: 4px;
+}
 
+.objective-title {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.career-objective p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin: 0;
+}
 /* Mạng xã hội & Nút */
 .social-bar {
     display: flex !important;
