@@ -1,10 +1,19 @@
-﻿/* --- 1. BIẾN MÀU SẮC & RESET --- */
+﻿/* --- THIẾT LẬP CHUNG --- */
 :root {
     --bg-color: #0b192e;
     --card-bg: #112240;
     --accent-color: #64ffda;
     --text-main: #ccd6f6;
     --text-dim: #8892b0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 /* =========================================
    HIỆU ỨNG BACKGROUND ĐỘNG (TECH NEBULA)
@@ -23,8 +32,7 @@
 }
 
     /* 2. Tạo 2 luồng sáng mờ (Blobs) bằng pseudo-elements */
-    .dynamic-bg::before,
-    .dynamic-bg::after {
+    .dynamic-bg::before,.dynamic-bg::after {
         content: '';
         position: absolute;
         top: 50%;
@@ -57,34 +65,27 @@
     0% {
         transform: translate(-50%, -50%) rotate(0deg) scale(1);
     }
-
     25% {
         transform: translate(-30%, -70%) rotate(90deg) scale(1.1);
     }
-
     50% {
         transform: translate(-70%, -30%) rotate(180deg) scale(0.9);
     }
-
     75% {
         transform: translate(-40%, -60%) rotate(270deg) scale(1.05);
     }
-
     100% {
         transform: translate(-50%, -50%) rotate(360deg) scale(1);
     }
 }
-
 /* Quỹ đạo 2: Đơn giản hơn, ngược chiều */
 @keyframes moveBlob2 {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
     50% {
         transform: translate(-60%, -40%) rotate(180deg) scale(1.1);
     }
-
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -93,15 +94,6 @@
 /* --- QUAN TRỌNG: Đảm bảo nội dung phía trên không có nền đặc --- */
 body, section {
     background-color: transparent !important; /* Xóa màu nền tĩnh cũ nếu có */
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
