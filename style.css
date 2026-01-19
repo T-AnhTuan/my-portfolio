@@ -315,6 +315,7 @@ h1 {
         font-size: 1.5rem;
         transition: 0.3s;
         text-decoration: none;
+        justify-content: flex-start !important;
     }
 
         .social-bar a:hover {
