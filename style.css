@@ -1585,8 +1585,12 @@ h1 {
         }
     .social-bar {
         justify-content: center;
+        align-items: center !important;
+        margin: 0 auto !important;
     }
-    .social-bar a{
-        justify-content: center;
-    }
+        .social-bar a {
+            justify-content: center;
+            align-items: center !important;
+            margin: 0 auto !important;
+        }
 }
