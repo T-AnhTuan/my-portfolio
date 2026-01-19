@@ -446,18 +446,24 @@ h1 {
     margin-bottom: 10px;
     list-style: none !important;
 }
-
-    .edu-details li::before {
-        content: "▹";
-        position: absolute;
-        left: 0;
-        top: 0; /* Cố định vị trí từ trên xuống */
-        color: var(--accent-color);
-        font-weight: bold;
-        /* Đảm bảo icon không bị ảnh hưởng bởi các hiệu ứng transition của cha */
-        transition: none !important;
+    .edu-details li {
+        position: relative !important;
+        padding-left: 20px !important; /* Tạo khoảng trống cho dấu tam giác */
+        margin-bottom: 10px !important;
+        color: var(--text-dim) !important; /* Đảm bảo màu chữ đồng nhất */
+        line-height: 1.6 !important;
     }
-
+        .edu-details li::before {
+            content: "▹" !important;
+            position: absolute !absolute;
+            left: 0 !important;
+            color: var(--accent-color) !important; /* Màu xanh ngọc đồng nhất */
+            font-weight: bold !important;
+        }
+.edu-details, .exp-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
 /* --- 5. KỸ NĂNG & DỰ ÁN --- */
 .skills-grid {
     display: grid;
