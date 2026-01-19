@@ -530,6 +530,7 @@ h1 {
 .exp-desc,
 .detail-list li,
 .edu-details li {
+    list-style: none !important;
     color: #ccd6f6 !important; /* Màu xám trắng sáng giống ô nhận xét */
     opacity: 1 !important; /* Đảm bảo độ hiển thị rõ nét nhất */
     font-weight: 400 !important; /* Giữ nét chữ mảnh, thanh lịch */
@@ -538,8 +539,10 @@ h1 {
     /* Đảm bảo dấu tam giác vẫn giữ màu xanh ngọc đặc trưng để tạo điểm nhấn */
     .detail-list li::before,
     .edu-details li::before {
-        color: var(--text-main);!important;
+        color: var(--text-main) !important;
+        left: 0 !important;
         content: "▹" !important;
+        position: absolute !important;
         font-weight: bold !important;
         font-size: 1.3rem;
         margin-bottom: 10px;
@@ -1220,7 +1223,7 @@ h1 {
         flex-shrink: 0;
     }
 
-.award-content, detail-list {
+.award-content, .detail-list, .skill-info p , .project-info p{
     color: var(--text-main);
     font-size: 0.95rem;
     line-height: 1.4;
