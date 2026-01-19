@@ -1128,20 +1128,21 @@ h1 {
     display: flex !important;
     flex-direction: row !important; /* Luôn nằm ngang trên máy tính */
     justify-content: space-between !important;
-    align-items: center !important;
-    padding: 40px !important;
-    gap: 30px !important; /* Giảm gap một chút để nhường chỗ cho chữ */
+    align-items: stretch !important;
+    padding: 40px 50px !important;
+    gap: 40px !important; /* Giảm gap một chút để nhường chỗ cho chữ */
     width: 100% !important;
     max-width: 900px !important; /* Đảm bảo card đủ rộng để chứa thông tin */
     margin: 0 auto !important;
 }
-}
+
 .info-left-col {
-    flex: 1.5 !important; /* Chiếm nhiều diện tích hơn một chút */
+    flex: 1 !important; /* Chiếm nhiều diện tích hơn một chút */
     display: flex !important;
     flex-direction: column !important;
-    min-width: 280px !important;
-    gap: 15px !important;
+    justify-content: center;
+    min-width: 0 !important;
+    gap: 20px !important;
 }
 .info-divider {
     width: 1px !important;
@@ -1225,9 +1226,13 @@ h1 {
         }
 .info-item {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100% !important;
 }
+    .info-item div {
+        flex: 1 !important; /* 🔥 Đảm bảo div chứa text giãn ra hết cỡ */
+    }
 
     .info-item i {
         font-size: 1.5rem;
@@ -1246,6 +1251,10 @@ h1 {
     .info-item p {
         color: var(--text-main);
         font-weight: 500;
+        white-space: normal !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
 /* --- BỐ CỤC 2 CỘT: HỌC TẬP & CHỨNG CHỈ --- */
@@ -1541,6 +1550,7 @@ h1 {
         flex: none !important;
         min-width: unset !important;
     }
+
     .org-name {
         white-space: normal !important; /* Cho phép xuống dòng nếu tên quá dài */
         font-size: 0.95rem !important; /* Giảm cỡ chữ một chút */
