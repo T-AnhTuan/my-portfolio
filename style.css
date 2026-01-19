@@ -1567,9 +1567,9 @@ h1 {
         flex-direction: column;
         display: flex;
         gap: 5px;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .info-item div{
         flex: 1 !important;
