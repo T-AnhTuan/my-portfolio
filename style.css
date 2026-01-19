@@ -527,39 +527,22 @@ h1 {
     color: var(--accent-color);
     font-size: 0.9rem;
 }
-.exp-desc {
-    color: #ffffff !important; /* Độ sáng tối đa (Trắng tinh) */
-    font-weight: 400 !important; /* 🔥 Giảm từ 600 xuống 400 (mảnh hơn) */
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    opacity: 1 !important; /* Giữ nguyên độ sáng, không làm mờ */
-    margin-top: 10px !important;
-    margin-bottom: 12px !important;
-    display: block !important;
+.exp-desc,
+.detail-list li,
+.edu-details li {
+    color: #ccd6f6 !important; /* Màu xám trắng sáng giống ô nhận xét */
+    opacity: 1 !important; /* Đảm bảo độ hiển thị rõ nét nhất */
+    font-weight: 400 !important; /* Giữ nét chữ mảnh, thanh lịch */
 }
-.edu-details {
-    color: var(--text-dim) !important; /* Màu xám mờ (opacity thấp hơn) */
-    font-weight: 400 !important; /* Chữ mảnh bình thường */
-    font-size: 0.92rem !important; /* Nhỏ hơn một chút để phân biệt */
-    opacity: 0.85 !important;
-    line-height: 1.6 !important;
-}
-    .edu-details li {
-        color: var(--text-dim) !important; /* Màu xám mờ nhẹ */
-        font-weight: 300 !important; /* 🔥 Để mức 300 cho chữ cực mảnh */
-        font-size: 0.92rem !important;
-        opacity: 0.75 !important; /* Làm mờ hơn một chút so với mô tả chính */
-        line-height: 1.6 !important;
+
+    /* Đảm bảo dấu tam giác vẫn giữ màu xanh ngọc đặc trưng để tạo điểm nhấn */
+    .detail-list li::before,
+    .edu-details li::before {
+        color: var(--accent-color) !important;
+        content: "▹" !important;
+        font-weight: bold !important;
     }
-        .edu-details li::before {
-            content: "▹" !important;
-            color: var(--accent-color) !important;
-            font-weight: bold !important;
-        }
-.edu-details, .exp-list {
-    list-style: none !important;
-    padding-left: 0 !important;
-}
+
 /* --- 5. KỸ NĂNG & DỰ ÁN --- */
 .skills-grid {
     display: grid;
