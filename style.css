@@ -1173,6 +1173,7 @@ h1 {
 
 
 .org-name {
+    font-family: 'Montserrat', 'Inter', sans-serif !important;
     font-size: 1.1rem !important;
     font-weight: 800;
     color: var(--accent-color); /* Màu xanh ngọc chủ đạo */
