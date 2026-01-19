@@ -1224,7 +1224,7 @@ h1 {
         }
 .info-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     width: 100% !important;
 }
@@ -1238,6 +1238,7 @@ h1 {
         color: var(--accent-color);
         width: 35px;
         flex-shrink: 0 !important;
+        margin-top: 2px;
     }
 
     .info-item span {
