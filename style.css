@@ -433,6 +433,10 @@ h1 {
     font-family: 'Space Mono', monospace;
 }
 /* --- THIẾT KẾ Ô KINH NGHIỆM --- */
+.exp-info {
+    flex: 1; /* Để phần thông tin chiếm hết khoảng trống còn lại */
+    width: 100%;
+}
 .exp-container {
     display: flex;
     flex-direction: column;
@@ -453,26 +457,41 @@ h1 {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 .exp-header {
-    display: grid !important;
-    /* Cột 1 (Tên): Tự động giãn | Cột 2 (Ngày): Cố định 160px */
+    display: flex !important;
     grid-template-columns: 1fr 160px;
+    align-items: center;
+    justify-content: space-between;
     align-items: baseline; /* Căn theo chân chữ để trông tự nhiên nhất */
     gap: 20px;
-    width: 100%;
+    width: 100% !important;
+    margin-bottom: 10px;
 }
     .exp-header h3 {
         font-size: 1.4rem;
         color: var(--text-main);
     }
+.exp-title {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin: 0;
+}
 .exp-date {
-    font-family: 'Space Mono', monospace;
+    white-space: nowrap; /* Không cho phép xuống dòng */
+    margin-left: 20px;
     color: var(--accent-color);
+    font-family: 'Space Mono', monospace;
     font-size: 0.9rem;
     /* 🔥 CÁC DÒNG QUAN TRỌNG ĐỂ THẲNG HÀNG */
     text-align: right; /* Căn chữ về lề phải */
     min-width: 160px; /* Đảm bảo mọi ô chứa ngày đều rộng bằng nhau */
-    white-space: nowrap; /* Không cho phép xuống dòng */
     display: inline-block;
+}
+.experience-card {
+    background: rgba(17, 34, 64, 0.6); /* Nền mờ */
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color); /* Vạch kẻ dọc bên trái */
+    margin-bottom: 25px;
 }
 .company {
     color: var(--accent-color);
