@@ -227,8 +227,7 @@ body {
     .btn-primary:hover {
         background: rgba(100, 255, 218, 0.1);
     }
-.btn-contact,
-.btn-cv-glow {
+.btn-contact,.btn-cv-glow {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -1523,7 +1522,6 @@ h1 {
         width: 300px;
         height: 300px;
     }
-
     .profile-img-box-dynamic {
         width: 260px;
         height: 260px;
@@ -1531,16 +1529,34 @@ h1 {
     .info-divider {
         display: none;
     }
-    /* Ẩn vạch ngăn cách */
     .info-card {
-        flex-direction: column;
-        text-align: left;
+        flex-direction: column !important; /* Chuyển từ ngang sang dọc */
+        padding: 25px 20px !important; /* Giảm padding để rộng chỗ hơn */
+        gap: 30px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-
-    .info-right-col {
-        width: 100%;
-        margin-top: 30px;
-        border-top: 1px solid rgba(100, 255, 218, 0.1);
-        padding-top: 30px;
+    .info-left-col, .info-right-col {
+        width: 100% !important;
+        flex: none !important;
+        min-width: unset !important;
+    }
+    .org-name {
+        white-space: normal !important; /* Cho phép xuống dòng nếu tên quá dài */
+        font-size: 0.95rem !important; /* Giảm cỡ chữ một chút */
+        text-align: center !important;
+        word-break: break-word !important;
+    }
+    .org-logo {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .info-item p {
+        font-size: 0.9rem !important;
+        word-break: break-all !important; /* Tránh email quá dài làm tràn card */
+    }
+    .btn-contact {
+        width: 100% !important; /* Nút chiếm hết chiều rộng cho dễ bấm */
+        margin-bottom: 20px;
     }
 }
