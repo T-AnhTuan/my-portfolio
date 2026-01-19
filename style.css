@@ -527,9 +527,7 @@ h1 {
     color: var(--accent-color);
     font-size: 0.9rem;
 }
-.exp-desc,
-.detail-list li,
-.edu-details li {
+.exp-desc, .detail-list li, .edu-details li {
     list-style: none !important;
     color: #ccd6f6 !important; /* Màu xám trắng sáng giống ô nhận xét */
     opacity: 1 !important; /* Đảm bảo độ hiển thị rõ nét nhất */
@@ -537,8 +535,7 @@ h1 {
 }
 
     /* Đảm bảo dấu tam giác vẫn giữ màu xanh ngọc đặc trưng để tạo điểm nhấn */
-    .detail-list li::before,
-    .edu-details li::before {
+    .detail-list li::before, .edu-details li::before {
         color: var(--text-main) !important;
         left: 0 !important;
         content: "▹" !important;
@@ -1194,21 +1191,6 @@ h1 {
     line-height: 1.4;
 }
 
-    .detail-list li {
-        color: var(--text-dim);
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 8px;
-        padding-left: 20px;
-        position: relative;
-    }
-
-        .detail-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
 
 /* Chi tiết cho cột Chứng chỉ */
 .award-item {
