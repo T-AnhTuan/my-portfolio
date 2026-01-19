@@ -1144,9 +1144,11 @@ h1 {
 }
 
 .branding-main {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important; /* 🔥 Xếp chồng lên nhau */
+    align-items: flex-end !important; /* Căn lề phải toàn bộ khối */
+    gap: 5px !important; /* Khoảng cách nhỏ giữa logo và tên */
+    margin-bottom: 10px !important;
 }
 
 .org-name {
@@ -1157,6 +1159,9 @@ h1 {
 }
 
 .org-logo {
+    order: 1 !important;
+    text-align: right !important;
+    margin-bottom: 5px !important;
     width: 65px !important;
     height: 65px !important;
     border-radius: 8px;
