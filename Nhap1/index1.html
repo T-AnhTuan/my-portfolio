@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Anh Tuấn | MIS-er</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">T-<span>ANH TUAN</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">TRANG CHỦ</a></li>
+            <li><a href="#about">PROFILE</a></li>
+            <li><a href="#analytics">KỸ NĂNG</a></li>
+            <li><a href="#work">PROJECTS</a></li>
+            <li><a href="#contact">LIÊN HỆ</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="dark-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h3>HỌC VIỆN TÀI CHÍNH | HỆ THỐNG THÔNG TIN QUẢN LÝ</h3>
+                    <h1>TRẦN ANH TUẤN</h1>
+                    <span class="badge">Thực tập sinh Hệ thống</span>
+                </div>
+                <div class="hero-main-img">
+                    <img src="pictures/anhto.jpg" alt="Profile Large" class="profile-main">
+                    <div class="img-decorator"></div>
+                </div>
+            </div>
+
+            <div id="about" class="about-card">
+                <div class="about-img">
+                    <img src="pictures/avatar.jpg" alt="Profile Small" class="profile-thumb">
+                </div>
+                <div class="about-text">
+                    <p class="sub-title">Who am I?</p>
+                    <h2>SYSTEM ANALYST</h2>
+                    <p>Chuyên gia tối ưu hóa quy trình doanh nghiệp và khai phá giá trị từ dữ liệu. Tôi xây dựng cầu nối giữa mục tiêu kinh doanh và giải pháp công nghệ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <div class="analytics-grid">
+                <div class="chart-container">
+                    <h3>Core Technical Skills</h3>
+                    <canvas id="skillsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Project Performance Radar</h3>
+                    <canvas id="impactChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="light-section">
+        <div class="container">
+            <div class="work-header">
+                <h1>MY WORK<span>.</span></h1>
+                <p>Strategic Systems & Data Solutions</p>
+            </div>
+
+            <div class="filter-menu">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="data">DATA ANALYTICS</button>
+                <button class="filter-btn" data-filter="erp">ERP SYSTEM</button>
+                <button class="filter-btn" data-filter="db">DATABASE</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 1"></div>
+                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 2"></div>
+                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 3"></div>
+                <div class="project-item data"><img src="https://via.placeholder.com/400" alt="Work 4"></div>
+                <div class="project-item erp"><img src="https://via.placeholder.com/400" alt="Work 5"></div>
+                <div class="project-item db"><img src="https://via.placeholder.com/400" alt="Work 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">LIÊN HỆ</h2>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>EMAIL:</strong>
+                            <p>tuan2k5.ptvn@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>SỐ ĐIỆN THOẠI:</strong>
+                            <p>.........</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>ĐỊA CHỈ:</strong>
+                            <p>...... Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <h3>KẾT NỐI VỚI TÔI</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">Facebook</a>
+                        <a href="#" class="social-btn">Instagram</a>
+                        <a href="#" class="social-btn">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer id="main-footer">
+        <div class="footer-bottom">
+            <p>@2026 - Bản quyền thuộc về T-AnhTuan</p>
+            <p>Khi sử dụng lại thông tin từ website này, xin vui lòng ghi rõ nguồn "AnhTuanPro.id.vn"</p>
+        </div>
+    </footer>
+</body>
+</html>

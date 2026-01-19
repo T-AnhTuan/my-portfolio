@@ -538,9 +538,11 @@ h1 {
     /* Đảm bảo dấu tam giác vẫn giữ màu xanh ngọc đặc trưng để tạo điểm nhấn */
     .detail-list li::before,
     .edu-details li::before {
-        color: var(--accent-color) !important;
+        color: var(--text-main);!important;
         content: "▹" !important;
         font-weight: bold !important;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
     }
 
 /* --- 5. KỸ NĂNG & DỰ ÁN --- */
