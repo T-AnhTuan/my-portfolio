@@ -294,8 +294,13 @@ body {
     .nav-links li a {
         white-space: nowrap !important; /* Không cho phép "Trang chủ" bị xuống dòng */
         text-decoration: none;
+        color: #a8b2d1 !important;
         font-size: 0.95rem;
     }
+        .nav-links li a:hover {
+            color: var(--accent-color) !important;
+            text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+        }
         .nav-links a:hover {
             color: var(--accent-color);
         }
