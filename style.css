@@ -194,65 +194,33 @@ body {
     color: var(--accent-color);
 }
 /* Nút Contact (Dạng rỗng) */
-.btn-contact {
-    background: #ffffff !important; /* 🔥 Nền trắng tinh */
-    color: #0a192f !important; /* 🔥 Chữ màu xanh đen tối (để dễ đọc trên nền trắng) */
-    border: 2px solid #ffffff !important; /* Viền trắng để nút trông đầy đặn, liền khối */
-    /* Các thuộc tính giữ nguyên để đồng bộ kích thước với nút bên cạnh */
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    height: 46px !important;
-    padding: 0 25px !important;
-    border-radius: 8px !important;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-    .btn-contact:hover {
-        background: var(--accent-color) !important; /* Đổi nền sang xanh ngọc */
-        color: #0a192f !important; /* Chữ vẫn giữ màu tối */
-        border-color: var(--accent-color) !important; /* Đổi viền sang xanh ngọc */
-        box-shadow: 0 0 15px var(--accent-color); /* Thêm hiệu ứng phát sáng nhẹ */
-        transform: translateY(-2px);
-    }
 
 .btn-primary {
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-    .btn-primary:hover {
-        background: rgba(100, 255, 218, 0.1);
-    }
-.btn-contact,.btn-cv-glow {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    /* 🔥 KHÓA CHIỀU CAO: Ép 2 nút cao bằng nhau */
-    height: 46px !important;
-    padding: 0 25px !important;
-    /* 🔥 ĐỒNG NHẤT VIỀN: Dùng chung độ dày 2px */
-    border: 2px solid var(--accent-color) !important;
+    /* 🔥 Kích thước khớp 100% với btn-cv-glow */
+    padding: 12px 28px !important;
+    /* 🔥 Nền trắng và chữ tối để nổi bật */
+    background-color: #ffffff !important;
+    color: #0a192f !important;
+    /* Các thông số khác lấy theo chuẩn hình mẫu */
+    border: 2px solid #ffffff !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
     border-radius: 8px !important;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-sizing: border-box !important; /* Đảm bảo padding không làm tăng kích thước nút */
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2) !important;
 }
 
-    .btn-contact:hover, .btn-cv-glow:hover {
-        background: var(--accent-color);
-        color: #0a192f !important;
-        box-shadow: 0 0 15px var(--accent-color);
-        transform: translateY(-2px);
+    /* Hiệu ứng khi di chuột vào nút Contact */
+    .btn-primary:hover {
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border-color: var(--accent-color) !important;
+        /* Hiệu ứng nảy và phát sáng giống nút CV */
+        box-shadow: 0 0 20px var(--accent-color) !important;
+        transform: translateY(-2px) !important;
     }
-
 /* --- 2. ĐIỀU HƯỚNG (NAVBAR) --- */
 .navbar {
     position: fixed !important;
