@@ -1574,8 +1574,8 @@ h1 {
             font-size: 0.9rem !important;
             line-height: 1.4 !important;
             text-align: left;
-            overflow-wrap: anywhere;
-            word-break: break-word !important;
+            word-break: normal !important;
+            overflow-wrap: break-word !important;
         }
     .social-bar {
         justify-content: center;
