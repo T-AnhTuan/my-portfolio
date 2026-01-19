@@ -1537,11 +1537,12 @@ h1 {
         display: flex !important;
         flex-direction: column !important; /* Chuyển từ ngang sang dọc */
         margin: 0 auto !important;
-        padding: 25px 15px !important; 
+        padding: 25px 15px !important;
         gap: 30px !important;
         width: 100% !important;
         max-width: 100% !important;
         align-items: center;
+        text-align: center;
         box-sizing:border-box !important;
         height: auto;
         min-height: max-content;
@@ -1566,20 +1567,19 @@ h1 {
     .info-item{
         flex-direction: column;
         display: flex;
-        gap: 5px;
+        gap: 2px;
         align-items: center;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
-    .info-item div{
-        flex: 1 !important;
-        min-width: 0 !important;
-        display: flex !important;
-        flex-direction: column;
-        padding-left: 0;
-        width: 100%;
-        max-width: calc(100% - 40px)!important;
-    }
+        .info-item div {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            max-width: 100% !important; /* Mở rộng tối đa để căn giữa chuẩn */
+            padding-left: 0 !important;
+        }
     .info-item i{
         margin-bottom: 5px;
         margin-right: 0;
