@@ -1197,20 +1197,24 @@ h1 {
 
 .org-socials {
     display: flex;
-    width: 15px;
-    height: 15px;
+    justify-content: center !important;
+    align-items: center !important;
     gap: 20px;
+    margin-top: 15px !important; /* Tạo khoảng cách với tên tổ chức bên trên */
+    width: 100% !important;
 }
 
-    .org-socials-v2 a {
+    .org-socials a {
         font-size: 1.3rem !important;
-        color: var(--text-dim);
+        color: #a8b2d1 !important;
         transition: all 0.3s ease;
+        display: inline-flex !important;
     }
 
-        .org-socials-v2 a:hover {
-            color: #ffffff;
+        .org-socials a:hover {
+            color: var(--accent-color) !important;
             transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
         }
 .info-item {
     display: flex;
