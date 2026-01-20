@@ -448,8 +448,13 @@ h2 {
         font-size: 0.95rem;
         line-height: 1.4;
     }
+.detail-list {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
     .detail-list li {
-        color: #ccd6f6 !important; 
+        color: #ccd6f6 !important;
         opacity: 1 !important;
         font-weight: 400 !important;
         font-size: 0.95rem !important;
@@ -891,7 +896,6 @@ h2 {
         background: rgba(100, 255, 218, 0.1) !important;
         box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
     }
-/* TỐI ƯU CỘT PHẢI (THẺ THÔNG TIN) */
 .info-card {
     background: rgba(17, 34, 64, 0.8);
     padding: 50px 40px !important;
@@ -1041,7 +1045,7 @@ h2 {
         height: 2px;
         background: var(--accent-color);
     }
-.edu-box, .award-item {
+.edu-box {
     background: rgba(17, 34, 64, 0.6);
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 15px;
@@ -1086,19 +1090,32 @@ h2 {
     display: flex;
     align-items: center;
     gap: 20px;
+    background: #112240 !important; 
+    border: 1px solid rgba(100, 255, 218, 0.1) !important; 
+    border-radius: 8px !important; 
+    padding: 15px 20px !important; 
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
 }
+    .award-item:hover {
+        transform: translateX(5px) !important; 
+        border-color: var(--accent-color) !important;
+        background: rgba(100, 255, 218, 0.05) !important;
+    }
     .award-item i {
         font-size: 1.5rem;
-        color: var(--accent-color);
+        color: var(--accent-color, #64ffda);
         flex-shrink: 0;
     }
-.award-content, .detail-list{
-    color: var(--text-main);
-    font-size: 0.95rem;
-    line-height: 1.4;
+.award-content {
+    font-size: 0.95rem !important;
+    color: var(--text-main, #ccd6f6) !important;
+    line-height: 1.5 !important;
 }
     .award-content strong {
         color: #fff;
+        font-weight: 700;
     }
 @media (max-width: 768px) {
     .menu-links {
