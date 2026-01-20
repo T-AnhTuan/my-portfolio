@@ -363,6 +363,7 @@ h2 {
     color: var(--text-main, #ccd6f6) !important;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 700 !important;
+    font-size: 2rem !important;
 }
     h2::after {
         content: "" !important;
@@ -375,7 +376,7 @@ h2 {
         opacity: 0.6 !important;
     }
 .section-heading {
-    font-size: 2rem;
+    font-size: 2rem!important;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -849,9 +850,10 @@ h2 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 25px; 
+    gap: 25px;
     width: 100% !important;
     text-align: center;
+    font-size: 2rem;
 }
 .centered-heading::before,.centered-heading::after {
     content: "" !important;
@@ -1041,9 +1043,9 @@ h2 {
     align-items: start;
 }
 .column-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--text-main);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     position: relative;
     padding-bottom: 10px;
 }
