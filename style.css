@@ -82,6 +82,13 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
 }
+@media (max-width: 768px) {
+    .logo {
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        white-space: nowrap;
+    }
+}
 .menu {
     position: fixed !important;
     top: 20px !important;
@@ -103,13 +110,18 @@ body {
     border: 1px solid rgba(100, 255, 218, 0.1);
     transition: all 0.3s ease;
 }
-
     .menu:hover {
         background: rgba(17, 34, 64, 0.85) !important;
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center !important;
+        padding: 15px 0 !important;
+        width: 95% !important;
+    }
+}
 .menu-links {
     display: flex !important;
     flex-direction: row !important;
@@ -134,7 +146,12 @@ body {
 
     .menu-links a:hover {
         color: var(--accent-color);
-    } 
+    }
+@media (max-width: 768px) {
+    .menu-links {
+        display: none !important;
+    }
+}
 .hero-section {
     display: flex !important;
     flex-direction: row !important; /* 🔥 ÉP BUỘC nằm ngang trên PC */
@@ -149,6 +166,14 @@ body {
     box-sizing: border-box;
     padding-top: 140px !important;
 }
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse !important;
+        text-align: center;
+        padding-top: 120px;
+        gap: 30px;
+    }
+}
 .hero-text {
     flex: 1.6 !important;
     max-width: 950px !important;
@@ -156,6 +181,11 @@ body {
     flex-direction: column; /* Chữ xếp chồng dọc bên trong là đúng */
     align-items: flex-start;
     text-align: left;
+}
+@media (max-width: 768px) {
+    .hero-text {
+        align-items: center;
+    }
 }
 .profile {
     flex: 1;
@@ -288,6 +318,22 @@ h1 {
             }
             .social-bar a:hover .fa-tiktok {color: #ff0050;
             }
+@media (max-width: 768px) {
+    .social-bar {
+        display: flex;
+        margin-top: 55px;
+        justify-content: center !important;
+        gap: 25px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+        .social-bar a {
+            font-size: 1.6rem;
+            color: #a8b2d1;
+            text-decoration: none;
+        }
+}
 .profile-wrapper-dynamic {
     position: relative;
     width: 400px;
@@ -296,6 +342,12 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: float-up-down 6s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+    .profile-wrapper-dynamic {
+        width: 300px;
+        height: 300px;
+    }
 }
 .profile-halo-spin {
     position: absolute;
@@ -309,6 +361,10 @@ h1 {
     z-index: 1;
     animation: spin-slow 20s linear infinite;
 }
+.profile-wrapper-dynamic:hover .profile-halo-spin {
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(10, 25, 47, 0.7));
+}
 .profile-box {
     position: relative;
     width: 350px; 
@@ -321,6 +377,16 @@ h1 {
     overflow: hidden;
     transition: all 0.4s ease;
 }
+.profile-wrapper-dynamic:hover .profile-box {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(100, 255, 218, 0.6); /* Phát sáng mạnh hơn */
+}
+@media (max-width: 768px) {
+    .profile-box {
+        width: 260px;
+        height: 260px;
+    }
+}
 .profile-img {
     width: 100%;
     height: 100%;
@@ -328,31 +394,19 @@ h1 {
     transition: all 0.5s ease;
     filter: brightness(1.05) contrast(1.05); 
 }
-.profile-wrapper-dynamic:hover .profile-box {
-    transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(100, 255, 218, 0.6); /* Phát sáng mạnh hơn */
-}
 .profile-wrapper-dynamic:hover .profile-img {
     transform: scale(1.1); 
 }
-.profile-wrapper-dynamic:hover .profile-halo-spin {
-    border-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(10, 25, 47, 0.7));
-}
 @keyframes float-up-down {
-    0%, 100% {
-        transform: translateY(0);
+    0%, 100% {transform: translateY(0);
     }
-    50% {
-        transform: translateY(-15px);
+    50% {transform: translateY(-15px);
     }
 }
 @keyframes spin-slow {
-    0% {
-        transform: rotate(45deg);
+    0% {transform: rotate(45deg);
     }
-    100% {
-        transform: rotate(405deg); 
+    100% {transform: rotate(405deg); 
     }
 }
 h2 {
@@ -390,6 +444,17 @@ h2 {
         background: #233554;
         margin-left: 20px;
     }
+@media (max-width: 768px) {
+    .section-heading {
+        text-align: center; /* Tiêu đề ra giữa */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+        .section-heading::after {
+            width: 100px;
+        }
+}
 .edu-card {
     background: var(--card-bg);
     padding: 25px;
@@ -402,16 +467,15 @@ h2 {
         transform: translateY(-5px);
         background: rgba(100, 255, 218, 0.05);
     }
-.edu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
 .edu-date {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
     font-size: 0.9rem;
+}
+@media (max-width: 768px){
+    .edu-date {
+        text-align: left;
+    }
 }
 .exp-mota {
     padding-left: 0 !important;
@@ -513,6 +577,15 @@ h2 {
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
     }
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+}
 .skill-icon {
     font-size: 2.5rem;
     color: var(--accent-color);
@@ -1128,42 +1201,10 @@ h2 {
         color: #fff;
         font-weight: 700;
     }
-@media (max-width: 768px) {
-    .menu-links {
-        display: none !important;
-    }
-    .menu {
-        justify-content: center !important;
-        padding: 15px 0 !important;
-        width: 95% !important;
-    }
-    .logo {
-        margin: 0 !important;
-        font-size: 1.2rem !important;
-        white-space: nowrap;
-    }
-}
 @media (max-width: 768px){
     h1 {
         font-size: 2.2rem;
-        white-space: normal; /* Trên điện thoại thì cho phép xuống dòng để không tràn màn hình */
-    }
-    .hero-section {
-        flex-direction: column-reverse !important; /* Trên mobile mới được dọc */
-        text-align: center;
-        padding-top: 120px;
-        gap: 30px;
-    }
-    .hero-text {
-        align-items: center;
-    }
-    .profile-wrapper-dynamic {
-        width: 300px;
-        height: 300px;
-    }
-    .profile-box{
-        width: 260px;
-        height: 260px;
+        white-space: normal;
     }
     .nut-contact, .downCV {
         margin: 0 auto !important;
@@ -1177,17 +1218,6 @@ h2 {
     .edu-logo img {
         width: 60px;
         height: 60px;
-    }
-    .edu-date {
-        text-align: left;
-    }
-}
-@media (max-width: 768px){
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    .skill-card {
-        padding: 20px;
     }
 }
 @media (max-width: 768px){
@@ -1403,18 +1433,5 @@ h2 {
             margin-right: 10px;
             margin: 0 auto;
             flex-shrink: 0 !important;
-        }
-    .social-bar {
-        display: flex;
-        margin-top: 55px;
-        justify-content: center !important;
-        gap: 25px;
-        margin-bottom: 30px;
-        width: 100%;
-    }
-        .social-bar a {
-            font-size: 1.6rem;
-            color: #a8b2d1;
-            text-decoration: none;
         }
 }
