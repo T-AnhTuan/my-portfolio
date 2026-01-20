@@ -520,6 +520,10 @@ h2 {
     transform: rotate(0deg);
     display: inline-block;
 }
+.skill-card:hover .skill-icon {
+    transform: rotate(-15deg) scale(1.1) !important;
+    color: #64ffda !important;
+}
     .skill-icon:hover {
         transform: rotate(-15deg) scale(1.1) !important; 
         color: #64ffda !important;
