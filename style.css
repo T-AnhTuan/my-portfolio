@@ -626,11 +626,6 @@ h1 {
     font-family: 'Space Mono', monospace;
     color: var(--accent-color);
 }
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
 
 .project-card {
     background: var(--card-bg);
@@ -747,13 +742,6 @@ h1 {
     flex-direction: column !important;
     align-items: flex-end !important;
 }
-.experience-card {
-    background: rgba(17, 34, 64, 0.6); /* Nền mờ */
-    padding: 30px;
-    border-radius: 12px;
-    border-left: 4px solid var(--accent-color); /* Vạch kẻ dọc bên trái */
-    margin-bottom: 25px;
-}
 .company {
     color: var(--accent-color);
     font-weight: bold;
@@ -782,6 +770,9 @@ h1 {
     white-space: nowrap; /* Ngăn chặn việc tự động xuống dòng */
     animation: infinite-scroll 25s linear infinite;
 }
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
 
 /* --- THẺ NHẬN XÉT --- */
 .testimonial-card {
@@ -793,23 +784,15 @@ h1 {
     border-radius: 15px;
     white-space: normal; /* Chữ bên trong thẻ vẫn xuống dòng bình thường */
 }
-
-/* HIỆU ỨNG DỪNG KHI DI CHUỘT */
-.marquee-content:hover {
-    animation-play-state: paused;
-}
-
 /* ANIMATION CHẠY 50% ĐỂ NỐI LIỀN */
 @keyframes infinite-scroll {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-50%);
     }
 }
-
 .review-text {
     font-style: italic !important; /* 🔥 Nhận xét là chữ nghiêng */
     color: var(--text-main);
@@ -817,7 +800,6 @@ h1 {
     line-height: 1.6;
     text-align: left; /* Nội dung nhận xét thường căn trái cho dễ đọc */
 }
-
 .partner-info {
     display: flex;
     align-items: center;
@@ -825,14 +807,12 @@ h1 {
     gap: 15px; /* Khoảng cách giữa ảnh và chữ */
     text-align: right; /* Căn lề chữ sang phải */
 }
-
 .partner-name {
     font-weight: bold !important; /* 🔥 Tên người in đậm */
     color: var(--text-main);
     font-size: 1rem;
     margin-bottom: 2px;
 }
-
 .partner-role {
     color: var(--text-dim);
     font-size: 0.85rem;
@@ -855,7 +835,6 @@ h1 {
     margin: 80px 0;
     width: 100%;
 }
-
     .partner-logos img {
         /* Khống chế chiều cao thấp xuống vì logo ngang thường dài hơn */
         height: 90px !important;
@@ -866,7 +845,6 @@ h1 {
         filter: brightness(1);
         transition: all 0.3s ease;
     }
-
         .partner-logos img:hover {
             opacity: 1;
             transform: scale(1.1);
@@ -892,7 +870,6 @@ h1 {
     grid-template-columns: 1fr 1fr; /* Chia 2 cột như mẫu */
     gap: 25px;
 }
-
 .project-card {
     background: var(--card-bg);
     border-radius: 20px;
