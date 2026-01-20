@@ -503,9 +503,11 @@ h2 {
     list-style-type: none !important;
 }
 @media (max-width: 768px){
-    .exp-mota{
+    .exp-mota {
         order: 3 !important;
+        text-align: justify !important;
         margin-top: 5px !important;
+        line-height: 1.6 !important;
     }
 }
 .exp-info {
@@ -523,32 +525,20 @@ h2 {
     .exp-info {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-        gap: 8px;
+        gap: 10px !important;
         width: 100% !important;
         padding-left: 0 !important;
     }
 
         .exp-info h3 {
+            display: block !important; 
+            order: 1 !important; 
             white-space: normal !important;
             word-break: break-word !important;
-            display: contents !important;
-            order: 1 !important;
-            margin-bottom: 5px !important;
-            text-align: left !important;
-            width: 100% !important;
+            font-size: 1.2rem !important;
             line-height: 1.4 !important;
-            font-size: 1.2rem;
-            color: var(--text-main);
-            display: flex !important;
-            grid-template-columns: 1fr 160px;
-            align-items: center;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 20px;
-            width: 100% !important;
-            margin-bottom: 10px;
+            margin-bottom: 5px !important;
+            color: var(--text-main, #ccd6f6) !important;
         }
 }
 .exp-chitiet, .detail-list, .exp-info ul{
@@ -566,9 +556,11 @@ h2 {
         line-height: 1.4;
     }
 @media (max-width: 768px){
-    .exp-chitiet{
-        order: 4!important;
-        margin-top: 5px!important;
+    .exp-chitiet {
+        order: 4 !important;
+        text-align: justify !important;
+        margin-top: 5px !important;
+        padding-left: 0 !important;
     }
 }
 .detail-list {
@@ -804,6 +796,7 @@ h2 {
         order: 2 !important;
         font-weight: 600;
         color: var(--accent-color);
+        margin-bottom: 5px !important;
     }
 }
 .marquee-container {
