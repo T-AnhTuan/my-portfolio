@@ -606,17 +606,17 @@ h2 {
 .exp-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 15px; 
 }
 .exp-card {
     background: var(--card-bg); 
-    padding: 30px;
+    padding: 25px 30px;
     border-radius: 12px;
     border-left: 4px solid var(--accent-color); 
     display: flex;
     gap: 30px;
     transition: 0.3s;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     position: relative;
 }
     .exp-card:hover {
@@ -649,8 +649,8 @@ h2 {
     font-weight: 600;
     text-align: right;
     padding-top: 5px;
-    gap: 4px;
-    display: inline-block;
+    gap: 5px;
+    display: flex!important;
     flex-direction: column !important;
     align-items: flex-end !important;
 }
