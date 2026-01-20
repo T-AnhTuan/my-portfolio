@@ -804,7 +804,7 @@ h1 {
     text-align: left; /* Nội dung nhận xét thường căn trái cho dễ đọc */
 }
 
-.user-info {
+.partner-info {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* 🔥 Đưa toàn bộ thông tin sang bên PHẢI */
@@ -812,18 +812,18 @@ h1 {
     text-align: right; /* Căn lề chữ sang phải */
 }
 
-.user-name {
+.partner-name {
     font-weight: bold !important; /* 🔥 Tên người in đậm */
     color: var(--text-main);
     font-size: 1rem;
     margin-bottom: 2px;
 }
 
-.user-role {
+.partner-role {
     color: var(--text-dim);
     font-size: 0.85rem;
 }
-.user-info img {
+.partner-info img {
     width: 60px !important;
     height: 60px !important;
     border-radius: 50% !important;
