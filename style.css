@@ -565,6 +565,12 @@ h2 {
         font-size: 0.95rem;
         line-height: 1.4;
     }
+@media (max-width: 768px){
+    .exp-chitiet{
+        order: 4!important;
+        margin-top: 5px!important;
+    }
+}
 .detail-list {
     color: var(--text-main);
     font-size: 0.95rem;
@@ -1295,12 +1301,6 @@ h2 {
         font-size: 0.85rem !important;
         color: var(--text-dim) !important;
         margin-bottom: 15px !important;
-    }
-    .exp-chitiet {
-        width: 100% !important;
-        margin-left: 0 !important;
-        word-break: break-word !important;
-        padding-left: 20px !important;
     }
 }
 @media (max-width: 768px){
