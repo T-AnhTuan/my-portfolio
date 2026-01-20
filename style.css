@@ -493,6 +493,12 @@ h2 {
     list-style: none !important;
     list-style-type: none !important;
 }
+@media (max-width: 768px){
+    .exp-mota{
+        order: 3 !important;
+        margin-top: 5px !important;
+    }
+}
 .exp-info {
     flex: 1;
     width: 100%;
@@ -504,6 +510,38 @@ h2 {
         margin: 0 0 5px 0 !important;
         color: #ccd6f6 !important;
     }
+@media (max-width: 768px){
+    .exp-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 8px;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+
+        .exp-info h3 {
+            white-space: normal !important;
+            word-break: break-word !important;
+            display: contents !important;
+            order: 1 !important;
+            margin-bottom: 5px !important;
+            text-align: left !important;
+            width: 100% !important;
+            line-height: 1.4 !important;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            display: flex !important;
+            grid-template-columns: 1fr 160px;
+            align-items: center;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+            width: 100% !important;
+            margin-bottom: 10px;
+        }
+}
 .exp-chitiet, .detail-list, .exp-info ul{
     list-style: none !important;
     padding: 0 !important;
@@ -702,6 +740,7 @@ h2 {
     }
 @media (max-width: 768px){
     .exp-card {
+        display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
         padding: 20px !important; 
@@ -730,10 +769,11 @@ h2 {
 @media (max-width: 768px) {
     .exp-date {
         flex: none !important;
+        flex-direction: row !important;
         width: 100% !important;
         min-width: 0 !important;
         text-align: left !important; 
-        align-items: flex-start !important;
+        justify-content: flex-start !important;
         margin-right: 0 !important;
         margin-bottom: 5px !important;
     }
@@ -743,6 +783,13 @@ h2 {
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 1.1rem;
+}
+@media (max-width: 768px){
+    .exp-company {
+        order: 2 !important;
+        font-weight: 600;
+        color: var(--accent-color);
+    }
 }
 .marquee-container {
     width: 100%;
@@ -1223,31 +1270,6 @@ h2 {
     }
 }
 @media (max-width: 768px){
-    .exp-info {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-    }
-        .exp-info h3 {
-            display: contents !important;
-            order: 1 !important;
-            margin-bottom: 5px !important;
-            text-align: left !important;
-            width: 100% !important;
-            font-size: 1.4rem;
-            color: var(--text-main);
-            display: flex !important;
-            grid-template-columns: 1fr 160px;
-            align-items: center;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 20px;
-            width: 100% !important;
-            margin-bottom: 10px;
-        }
     .exp-info .exp-company {
         order: 2 !important;
         margin-bottom: 5px !important;
@@ -1265,12 +1287,10 @@ h2 {
         color: var(--text-dim) !important;
         margin-bottom: 15px !important;
     }
-    .exp-mota, .exp-chitiet {
+    .exp-chitiet {
         width: 100% !important;
         margin-left: 0 !important;
         word-break: break-word !important;
-    }
-    .exp-chitiet {
         padding-left: 20px !important;
     }
 }
