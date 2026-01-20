@@ -1061,7 +1061,7 @@ h2 {
     transition: all 0.3s ease;
 }
     .edu-box:hover, .award-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px)!important;
         border-color: var(--accent-color,#64ffda) !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
         background: rgba(17, 34, 64, 0.8) !important;
@@ -1070,14 +1070,14 @@ h2 {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: rgba(17, 34, 64, 0.6) !important;
+    background: rgba(17, 34, 64, 0.6);
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 15px !important;
     padding: 25px !important;
     margin-bottom: 20px;
     display: flex !important;
     align-items: center !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
     .award-item i {
