@@ -651,6 +651,34 @@ h1 {
     margin-right: 10px;
     font-family: 'Space Mono', monospace;
 }
+.project-footer {
+    display: flex !important;
+    justify-content: flex-end !important; /* 🔥 Đẩy nút sang góc phải */
+    margin-top: 20px !important;
+    border-top: 1px solid rgba(100, 255, 218, 0.1) !important; /* Đường kẻ mờ ngăn cách */
+    padding-top: 15px !important;
+}
+.view-detail-link {
+    color: var(--accent-color) !important; /* Màu xanh ngọc */
+    text-decoration: none !important;
+    font-size: 0.85rem !important; /* Chữ nhỏ tinh tế */
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 6px 12px !important;
+    border: 1px solid rgba(100, 255, 218, 0.3) !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+    .view-detail-link:hover {
+        background: rgba(100, 255, 218, 0.1) !important;
+        box-shadow: 0 0 10px rgba(100, 255, 218, 0.2) !important;
+        transform: translateX(3px) !important; /* Nhích nhẹ sang phải tạo cảm giác dẫn dắt */
+    }
+    .view-detail-link i {
+        font-size: 0.75rem !important;
+    }
 /* --- THIẾT KẾ Ô KINH NGHIỆM --- */
 .exp-info {
     flex: 1; /* Để phần thông tin chiếm hết khoảng trống còn lại */
