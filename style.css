@@ -1057,20 +1057,16 @@ h2 {
     flex-direction: column;
     gap: 25px;
 }
-.gui-mail {
-    display: inline-block;
-    background: #0a192f !important; 
-    color: var(--accent-color) !important; 
-    padding: 15px 35px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-    .gui-mail:hover {
-        background: rgba(100, 255, 218, 0.1) !important;
-        box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+@media (max-width: 768px){
+    .contact-left {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        line-height: 1.2; 
+        flex-direction: column !important;
+        align-items: center !important;
     }
+}
 .info-card {
     background: rgba(17, 34, 64, 0.8);
     padding: 50px 40px !important;
@@ -1365,13 +1361,6 @@ h2 {
         .section-heading::after {
             width: 100px;
         }  
-    .contact-left {
-        width: 100% !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
     .contact-text {
         text-align: center !important;
         margin: 0 auto 25px !important;
