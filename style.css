@@ -680,6 +680,11 @@ h1 {
         font-size: 0.75rem !important;
     }
 /* --- THIẾT KẾ Ô KINH NGHIỆM --- */
+.exp-title {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin: 0;
+}
 .exp-info {
     flex: 1; /* Để phần thông tin chiếm hết khoảng trống còn lại */
     width: 100%;
@@ -726,11 +731,6 @@ h1 {
         font-size: 1.4rem;
         color: var(--text-main);
     }
-.exp-title {
-    font-size: 1.3rem;
-    color: var(--text-main);
-    margin: 0;
-}
 .exp-date {
     white-space: nowrap;
     flex: 0 0 160px;
@@ -738,7 +738,7 @@ h1 {
     margin-left: 20px;
     color: var(--accent-color);
     font-family: 'Space Mono', monospace;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 600;
     text-align: right;
     padding-top: 5px;
