@@ -1099,7 +1099,7 @@ h2 {
     justify-content: center;
     gap: 25px !important;
 }
-.info-divider {
+.vach-ngan {
     width: 1px !important;
     height: 180px !important;
     background: rgba(100, 255, 218, 0.2) !important; 
@@ -1419,7 +1419,7 @@ h2 {
         display: flex !important;
         justify-content: center !important;
     }
-    .info-divider {
+    .vach-ngan {
         display: none;
     }
     .info-card {
