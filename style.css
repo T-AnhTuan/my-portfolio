@@ -131,19 +131,16 @@ body {
     padding: 0 !important;
     flex-shrink: 1 !important;
 }
-
     .menu-links li a {
         white-space: nowrap !important; /* Không cho phép "Trang chủ" bị xuống dòng */
         text-decoration: none;
         color: #a8b2d1 !important;
         font-size: 0.95rem;
     }
-
         .menu-links li a:hover {
             color: var(--accent-color) !important;
             text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
         }
-
     .menu-links a:hover {
         color: var(--accent-color);
     }
@@ -574,6 +571,7 @@ h2 {
         padding-left: 0 !important;
     }
         .exp-chitiet li {
+            text-align: justify !important;
             margin-bottom: 5px !important;
             font-size: 0,9rem;
         }
