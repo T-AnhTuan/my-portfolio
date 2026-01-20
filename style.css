@@ -1464,10 +1464,16 @@ h1 {
     .project-container {
         grid-template-columns: 1fr;
     }
-
     .project-content {
         flex-direction: column;
         gap: 15px;
+    }
+    .project-footer {
+        padding-top: 20px !important;
+    }
+    .view-detail-link {
+        font-size: 0.9rem !important;
+        padding: 8px 15px !important; 
     }
 }
 /* --- MOBILE - ĐỐI TÁC --- */
