@@ -1041,15 +1041,15 @@ h2 {
         height: 2px;
         background: var(--accent-color);
     }
-.info-box {
-    background: rgba(17, 34, 64, 0.6); 
+.edu-box, .award-item {
+    background: rgba(17, 34, 64, 0.6);
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
-    .info-box:hover {
+    .edu-box:hover {
         transform: translateY(-5px);
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
