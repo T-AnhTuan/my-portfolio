@@ -742,7 +742,10 @@ h1 {
     font-weight: 600;
     text-align: right;
     padding-top: 5px;
+    gap: 4px;
     display: inline-block;
+    flex-direction: column !important;
+    align-items: flex-end !important;
 }
 .experience-card {
     background: rgba(17, 34, 64, 0.6); /* Nền mờ */
