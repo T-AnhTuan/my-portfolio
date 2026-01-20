@@ -418,6 +418,10 @@ h1 {
     100% {transform: rotate(405deg); 
     }
 }
+.tu-noi{
+    white-space: nowrap!important;
+    display: inline-block !important;
+}
 h2 {
     display: flex !important;
     align-items: center !important;
@@ -540,6 +544,14 @@ h2 {
             margin-bottom: 5px !important;
             color: var(--text-main, #ccd6f6) !important;
         }
+        .exp-info, .exp-info p{
+            border-left: none !important;
+            padding-left: 0!important;
+            margin-left: 0!important;
+            display: flex;
+            flex-direction: column!important;
+            gap: 4px;
+        }
 }
 .exp-chitiet, .detail-list, .exp-info ul{
     list-style: none !important;
@@ -562,6 +574,10 @@ h2 {
         margin-top: 5px !important;
         padding-left: 0 !important;
     }
+        .exp-chitiet li {
+            margin-bottom: 5px !important;
+            font-size: 0,9rem;
+        }
 }
 .detail-list {
     color: var(--text-main);
@@ -577,30 +593,31 @@ h2 {
         padding-left: 28px !important;
         margin-bottom: 12px !important;
     }
-    .exp-chitiet li {
-        position: relative !important;  
-        padding-left: 28px !important; 
-        margin-bottom: 12px !important;
-        color: #8892b0 !important; 
-        opacity: 0.8 !important;
-        list-style-type: none !important;
-        display: block !important;
-        font-weight: 400 !important;
-        font-size: 0.92rem !important; 
-        line-height: 1.6 !important;
-        text-align: left !important;
-    }
-        .exp-chitiet li::before, .detail-list li::before {
-            content: "▹" !important;
-            opacity: 1 !important;
-            position: absolute !important; 
-            left: 0 !important;
-            top: 0 !important;
-            color: var(--accent-color) !important;
-            font-weight: bold !important;
-            font-size: 1.1rem;
-            line-height: 1.6; 
-        }
+.exp-chitiet li {
+    position: relative !important;
+    padding-left: 28px !important;
+    margin-bottom: 12px !important;
+    color: #8892b0 !important;
+    opacity: 0.8 !important;
+    list-style-type: none !important;
+    display: block !important;
+    font-weight: 400 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+}
+
+    .exp-chitiet li::before, .detail-list li::before {
+        content: "▹" !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        color: var(--accent-color) !important;
+        font-weight: bold !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }    
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -729,6 +746,11 @@ h2 {
     flex-direction: column;
     gap: 15px; 
 }
+@media (max-width: 768px){
+    .exp-container {
+        gap: 12px;
+    }
+}
 .exp-card {
     background: var(--card-bg); 
     padding: 25px 30px;
@@ -749,10 +771,11 @@ h2 {
     .exp-card {
         display: flex !important;
         flex-direction: column !important;
-        gap: 15px !important;
-        padding: 20px !important; 
+        gap: 9px !important;
+        padding: 15px 20px !important; 
         width: 100% !important;
         box-sizing: border-box !important;
+        margin-bottom: 0!important;
     }
 }
 .exp-date {
