@@ -645,7 +645,7 @@ h1 {
         transform: translateY(-5px);
     }
 
-.tags span {
+.project-tags span {
     font-size: 0.8rem;
     color: var(--accent-color);
     margin-right: 10px;
@@ -958,13 +958,13 @@ h1 {
 }
 
 /* Dòng kỹ năng ở cuối cùng */
-.tags {
+.project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-    .tags span {
+    .project-tags span {
         font-family: 'Space Mono', monospace;
         font-size: 0.8rem;
         color: var(--accent-color);
