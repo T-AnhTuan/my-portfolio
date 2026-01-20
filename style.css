@@ -633,21 +633,7 @@ h2 {
         width: 100% !important;
         box-sizing: border-box !important;
     }
-} 
-.exp-header {
-    display: flex !important;
-    grid-template-columns: 1fr 160px;
-    align-items: center;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 20px;
-    width: 100% !important;
-    margin-bottom: 10px;
 }
-    .exp-header h3 {
-        font-size: 1.4rem;
-        color: var(--text-main);
-    }
 .exp-date {
     white-space: nowrap;
     flex: 0 0 100px;
@@ -1208,19 +1194,28 @@ h2 {
     .exp-info {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important; 
+        align-items: flex-start !important;
         text-align: left !important;
         width: 100% !important;
+        padding-left: 0 !important;
     }
         .exp-info h3 {
+            display: contents !important;
             order: 1 !important;
             margin-bottom: 5px !important;
             text-align: left !important;
             width: 100% !important;
+            font-size: 1.4rem;
+            color: var(--text-main);
+            display: flex !important;
+            grid-template-columns: 1fr 160px;
+            align-items: center;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+            width: 100% !important;
+            margin-bottom: 10px;
         }
-    .exp-header {
-        display: contents !important; 
-    }
     .exp-info .exp-company {
         order: 2 !important;
         margin-bottom: 5px !important;
