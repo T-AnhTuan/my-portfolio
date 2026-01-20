@@ -482,7 +482,7 @@ h1 {
     color: var(--accent-color);
     font-size: 0.9rem;
 }
-.exp-desc {
+.exp-mota {
     /* 🔥 QUAN TRỌNG: Xóa padding để thẳng hàng với tiêu đề bên trên */
     padding-left: 0 !important;
     margin-left: 0 !important;
@@ -499,7 +499,7 @@ h1 {
     list-style: none !important;
     list-style-type: none !important;
 }
-.edu-details, .detail-list, .exp-info ul, .awards-list-v2 {
+.exp-chitiet, .detail-list, .exp-info ul, .awards-list-v2 {
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -513,7 +513,7 @@ h1 {
         padding-left: 28px !important;
         margin-bottom: 12px !important;
     }
-    .edu-details li, .awards-list-v2 li {
+    .exp-chitiet li, .awards-list-v2 li {
         position: relative !important; /* 🔥 CỰC KỲ QUAN TRỌNG: Giữ icon không bị bay mất */
         padding-left: 28px !important; /* Khoảng cách đủ rộng để chứa dấu tam giác */
         margin-bottom: 12px !important;
@@ -522,11 +522,11 @@ h1 {
         list-style-type: none !important;
         display: block !important;
         font-weight: 400 !important;
-        font-size: 0.92rem !important; /* Nhỏ hơn một chút so với exp-desc */
+        font-size: 0.92rem !important; 
         line-height: 1.6 !important;
         text-align: left !important;
     }
-        .edu-details li::before, .detail-list li::before, .awards-list-v2 li::before {
+        .exp-chitiet li::before, .detail-list li::before, .awards-list-v2 li::before {
             content: "▹" !important;
             opacity: 1 !important;
             position: absolute !important; /* Định vị theo thẻ li gần nhất */
@@ -1454,7 +1454,7 @@ h1 {
         margin-bottom: 15px !important;
     }
     /* 6. Thứ tự 4: Phần mô tả chi tiết */
-    .exp-desc, .edu-details {
+    .exp-mota, .exp-chitiet {
         order: 4 !important;
         text-align: left !important;
     }
