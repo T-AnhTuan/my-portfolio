@@ -683,20 +683,28 @@ h1 {
 .exp-info {
     flex: 1; /* Để phần thông tin chiếm hết khoảng trống còn lại */
     width: 100%;
+    padding-left: 20px;
+    border-left: 2px solid rgba(100, 255, 218, 0.2);
 }
+    .exp-info h3 {
+        margin: 0 0 5px 0 !important;
+        color: #ccd6f6 !important;
+    }
 .exp-container {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Khoảng cách giữa các ô */
 }
 .exp-card {
-    background: var(--card-bg); /* #112240 */
+    background: var(--card-bg); 
     padding: 30px;
     border-radius: 12px;
     border-left: 4px solid var(--accent-color); /* Vạch xanh ngọc đặc trưng */
     display: flex;
     gap: 30px;
     transition: 0.3s;
+    margin-bottom: 40px;
+    position: relative;
 }
     .exp-card:hover {
         transform: translateY(-5px); /* Nhấc nhẹ ô lên khi di chuột */
@@ -723,14 +731,16 @@ h1 {
     margin: 0;
 }
 .exp-date {
-    white-space: nowrap; /* Không cho phép xuống dòng */
+    white-space: nowrap;
+    flex: 0 0 160px;
+    min-width: 160px;
     margin-left: 20px;
     color: var(--accent-color);
     font-family: 'Space Mono', monospace;
     font-size: 0.9rem;
-    /* 🔥 CÁC DÒNG QUAN TRỌNG ĐỂ THẲNG HÀNG */
-    text-align: right; /* Căn chữ về lề phải */
-    min-width: 160px; /* Đảm bảo mọi ô chứa ngày đều rộng bằng nhau */
+    font-weight: 600;
+    text-align: right;
+    padding-top: 5px;
     display: inline-block;
 }
 .experience-card {
@@ -1422,17 +1432,17 @@ h1 {
         align-items: flex-start !important; /* 🔥 Ép bám lề trái */
         text-align: left !important;
         width: 100% !important;
+        color: var(--accent-color);
     }
+        .exp-info h3 {
+            order: 1 !important;
+            margin-bottom: 5px !important;
+            text-align: left !important;
+            width: 100% !important;
+        }
     /* 2. Giải phóng các thành phần bên trong header */
     .exp-header {
         display: contents !important; /* 🔥 Cho phép trộn lẫn title và date */
-    }
-    /* 3. Thứ tự 1: Tên vị trí (h3) */
-    .exp-info h3 {
-        order: 1 !important;
-        margin-bottom: 5px !important;
-        text-align: left !important;
-        width: 100% !important;
     }
     /* 4. Thứ tự 2: Tên tổ chức (Học viện Tài chính) */
     .exp-info .company {
