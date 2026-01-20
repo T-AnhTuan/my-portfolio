@@ -640,8 +640,8 @@ h2 {
     }
 .exp-date {
     white-space: nowrap;
-    flex: 0 0 160px;
-    min-width: 160px;
+    flex: 0 0 100px;
+    min-width: 100px;
     margin-left: 20px;
     color: var(--accent-color);
     font-family: 'Space Mono', monospace;
@@ -650,9 +650,11 @@ h2 {
     text-align: right;
     padding-top: 5px;
     gap: 5px;
-    display: flex!important;
+    display: flex !important;
     flex-direction: column !important;
     align-items: flex-end !important;
+    margin-left: 0 !important;
+    margin-right: 15px !important;
 }
 .exp-company {
     color: var(--accent-color);
