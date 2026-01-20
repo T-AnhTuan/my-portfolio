@@ -371,7 +371,7 @@ h2 {
     h2::after {
         content: "" !important;
         flex: 1 !important; 
-        height: 2px !important;
+        height: 1px !important;
         opacity: 1 !important;
         background: linear-gradient(to right, var(--accent-color, #64ffda), transparent) !important;
         display: block !important;
