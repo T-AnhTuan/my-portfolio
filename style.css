@@ -330,11 +330,10 @@ h1 {
 @media (max-width: 768px) {
     .social-bar {
         display: flex;
-        margin-top: 55px;
         justify-content: center !important;
         gap: 25px;
-        margin-bottom: 30px;
         width: 100%;
+        margin: 0 auto !important;
     }
 
         .social-bar a {
