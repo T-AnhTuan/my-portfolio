@@ -368,6 +368,8 @@ h2 {
         content: "" !important;
         display: block !important;
         height: 1px !important;
+        margin-left: 20px;
+        background: linear-gradient(to right, var(--accent-color, #64ffda), transparent);
         background-color: var(--accent-color, #64ffda) !important;
         flex: 1 !important;
         opacity: 0.6 !important;
@@ -1053,10 +1055,30 @@ h2 {
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
-    .edu-box:hover {
+    .edu-box:hover, .award-item:hover {
         transform: translateY(-5px);
         border-color: var(--accent-color);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+.award-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(17, 34, 64, 0.6) !important;
+    border: 1px solid rgba(100, 255, 218, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 25px !important;
+    margin-bottom: 20px;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box;
+}
+    .award-item i {
+        font-size: 1.5rem;
+        color: var(--accent-color, #64ffda);
+        flex-shrink: 0;
+        filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.3));
     }
 .school-header {
     display: flex;
@@ -1086,28 +1108,6 @@ h2 {
     font-size: 0.85rem;
     font-style: italic;
 }
-.award-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #112240 !important; 
-    border: 1px solid rgba(100, 255, 218, 0.1) !important; 
-    border-radius: 8px !important; 
-    padding: 15px 20px !important; 
-    display: flex !important;
-    align-items: center !important;
-    transition: all 0.3s ease !important;
-}
-    .award-item:hover {
-        transform: translateX(5px) !important; 
-        border-color: var(--accent-color) !important;
-        background: rgba(100, 255, 218, 0.05) !important;
-    }
-    .award-item i {
-        font-size: 1.5rem;
-        color: var(--accent-color, #64ffda);
-        flex-shrink: 0;
-    }
 .award-content {
     font-size: 0.95rem !important;
     color: var(--text-main, #ccd6f6) !important;
