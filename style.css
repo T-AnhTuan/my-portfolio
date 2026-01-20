@@ -685,6 +685,7 @@ h1 {
     width: 100%;
     padding-left: 20px;
     border-left: 2px solid rgba(100, 255, 218, 0.2);
+    color: var(--accent-color);
 }
     .exp-info h3 {
         margin: 0 0 5px 0 !important;
@@ -737,7 +738,7 @@ h1 {
     margin-left: 20px;
     color: var(--accent-color);
     font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: right;
     padding-top: 5px;
@@ -1432,7 +1433,6 @@ h1 {
         align-items: flex-start !important; /* 🔥 Ép bám lề trái */
         text-align: left !important;
         width: 100% !important;
-        color: var(--accent-color);
     }
         .exp-info h3 {
             order: 1 !important;
