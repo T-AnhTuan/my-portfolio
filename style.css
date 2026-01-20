@@ -753,6 +753,12 @@ h2 {
             transform: scale(1.1);
             filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.3));
         }
+#contact h2::after,
+#contact .section-heading::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+}
 .contact-box {
     background: var(--card-bg);
     padding: 40px;
